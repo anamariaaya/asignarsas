@@ -550,6 +550,7 @@ footer{
 	width:800px;
 	margin:auto;
 	padding-top:30px;
+	padding-bottom:40px;
 }
 
 .quienestxt p{
@@ -563,8 +564,17 @@ footer{
 
 /*Dropdown Servicios*/
 
+/*
 .infoquienes{
 	width:25%;
+}
+
+.ajusteinfo{
+	padding-top:16px;
+}
+
+.ajusteinfo2{
+	padding-top:2px;
 }
 
 #demo {
@@ -575,9 +585,8 @@ footer{
 }
    
 #demo .wrapper {
-    display: inline-flex;
-    width: 280px;
-    margin-left: 7%;
+    width: 250px;
+    margin: auto;
     height: 65px;
     position: relative;
 }
@@ -590,22 +599,22 @@ footer{
     line-height: 30px;
     height: 65px;
     border-radius: 5px;
-    background: #F9F9F9;
+    background: #060057;
     border: 1px solid #AAA;
     border-bottom: 1px solid #777;
-    color: #282D31;
+    color: #ffffff;
 	font-size:16px;
     font-weight: bold;
     z-index: 2;
     position: relative;
     -webkit-transition: border-radius .1s linear, background .1s linear, z-index 0s linear;
-    -webkit-transition-delay: .8s;
+    -webkit-transition-delay: .1s;
     text-align: center;
 }
     
 #demo .parent:hover,
 #demo .content:hover ~ .parent {
-    background: #fff;
+    background: rgba(122,105,105,1.00);
     -webkit-transition-delay: 0s, 0s, 0s;
 }
     
@@ -621,7 +630,7 @@ footer{
     display: block;
     z-index: 1;
     height: 0;
-    width: 280px;
+    width: 250px;
     padding-top: 62px;
     -webkit-transition: height .5s ease;
     -webkit-transition-delay: .4s;
@@ -644,11 +653,61 @@ footer{
     
     
 #demo .content .div1 {
-    background: #fff;
-    margin: 0;
-    padding: 0;
+    background: #BDB9B9;
+    padding-left: 9px;
+	padding-right:9px;
+	padding-top:20px;
     overflow: hidden;
     height: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+	text-align:justify;
+}
+*/
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #060057;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 260px;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  height:65px;
+  margin:auto;
+  font-family: open-sans, sans-serif;
+  font-weight:bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: rgba(0,170,242,1.0);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 15px 18px;
+  background-color: #ffffff;
+  display: none;
+  overflow: hidden;
+  width:260px;
+  color:#000000;
+  border:2px solid black;
+  border-radius:10px;
+}
+
+.infoquienes{
+	width:100%;
+	display:inline-flex;
+}
+
+.ajusteinfo{
+	width:25%;
+}
+
+.ajusteinfo2{
+	margin-left:8%;
 }

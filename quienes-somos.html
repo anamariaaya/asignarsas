@@ -47,7 +47,7 @@
 </div>
 
 <!--Dropdown-->
-
+<!--
 <div id="demo">
 <div class="infoquienes">
     <div class="wrapper">
@@ -56,7 +56,7 @@
             En Asignar S.A.S. creemos en la gente, la oportunidad y la calidad de nuestros servicios, nos comprometemos con procesos confiables, oportunos y asertivos con acompañamiento continuo. Contamos con un capital humano capacitado y recursos adecuados para mantener nuestros sistemas integrados de gestión desde la promoción y prevención de los riesgos;  con un adecuado control a las causas y al impacto de los efectos de calidad, socioambientales y de seguridad y salud en el trabajo.  Promovemos el bienestar, un ambiente laboral pertinente, el desempeño y mejoramiento continuo de nuestra organización. Con pasión damos cumplimento a las necesidades y requisitos, para la satisfacción de nuestros colaboradores y partes interesadas. Para lograr esto brindamos servicios de administración de personal en misión, que cubre los procesos de selección, vinculación y compensación.
             </div>
         </div>
-        <div class="parent">POLÍTICA MISIONAL DE GESTIÓN INTEGRAL</div>
+        <div class="parent ajusteinfo2">POLÍTICA MISIONAL DE GESTIÓN INTEGRAL</div>
     </div>
 </div>
 <div class="infoquienes">   
@@ -67,7 +67,7 @@
 <br>Mantendremos el posicionamiento, crecimiento y rentabilidad esperada de la empresa, contribuyendo así a la empleabilidad y al desarrollo socioeconómico de nuestro país.
             </div>
         </div>
-        <div class="parent">VISIÓN DE GESTIÓN INTEGRAL</div>
+        <div class="parent ajusteinfo2">VISIÓN DE GESTIÓN <br>INTEGRAL</div>
     </div>
 </div>
 <div class="infoquienes">        
@@ -95,7 +95,7 @@ Administrativo y servicios:<br>
 Manejamos profesionales de alto perfil para cargos ejecutivos y administrativos.
             </div>
         </div>
-        <div class="parent">CLIENTES</div>
+        <div class="parent ajusteinfo">CLIENTES</div>
     </div>
 </div>
 <div class="infoquienes">    
@@ -108,12 +108,69 @@ Certificada por el Sistema de Gestión de Calidad en el cumplimiento de los est�
 Empresa a la vanguardia del mercado actual, trabajando por la mejora continua.
             </div>
         </div>
-        <div class="parent">CERTIFICACIÓN</div>
+        <div class="parent ajusteinfo">CERTIFICACIÓN</div>
     </div>
 </div>  
 </div>
+-->
 
+<div class="infoquienes">
+	<div class="ajusteinfo">
+   		<div class="ajusteinfo2">
+			<button class="accordion">POLÍTICA MISIONAL DE GESTIÓN INTEGRAL</button>
+			<div class="panel">
+  			<p>En Asignar S.A.S. creemos en la gente, la oportunidad y la calidad de nuestros servicios, nos comprometemos con procesos confiables, oportunos y asertivos con acompañamiento continuo. Contamos con un capital humano capacitado y recursos adecuados para mantener nuestros sistemas integrados de gestión desde la promoción y prevención de los riesgos;  con un adecuado control a las causas y al impacto de los efectos de calidad, socioambientales y de seguridad y salud en el trabajo.  Promovemos el bienestar, un ambiente laboral pertinente, el desempeño y mejoramiento continuo de nuestra organización. Con pasión damos cumplimento a las necesidades y requisitos, para la satisfacción de nuestros colaboradores y partes interesadas. Para lograr esto brindamos servicios de administración de personal en misión, que cubre los procesos de selección, vinculación y compensación.</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="ajusteinfo">
+    	<div class="ajusteinfo2">
+			<button class="accordion">VISIÓN DE GESTIÓN INTEGRAL</button>
+			<div class="panel">
+  			<p>Para el 2.020 en Asignar S.A.S., buscaremos cumplir las expectativas de nuestras partes interesadas, manteniendo y mejorando las condiciones de la administración de personal en misión, la fidelización y el fortalecimiento de las relaciones estratégicas con nuestros colaboradores, proveedores y clientes.
+<br>Mantendremos el posicionamiento, crecimiento y rentabilidad esperada de la empresa, contribuyendo así a la empleabilidad y al desarrollo socioeconómico de nuestro país.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="ajusteinfo">
+    	<div class="ajusteinfo2">
+			<button class="accordion">CLIENTES</button>
+			<div class="panel">
+  			<p>Hotelería:<br>
+Manejamos más del 80% de la hotelería a nivel nacional, principalmente en  Bogotá, Medellín y San Andrés.
+<br>
+<br> 
+Manufacturas:<br>
+Manejamos operarios de producción y planta.
+<br>
+<br>
+Industrias:<br>
+Manejamos el personal de industria automotriz y pinturas, entre otros.
+<br>
+<br>
+Alimentos:<br>
+Manejamos el personal de alimentos y bebidas para plantas de producción y restaurantes.
+<br> 
+<br>
+Administrativo y servicios:<br>
+Manejamos profesionales de alto perfil para cargos ejecutivos y administrativos.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="ajusteinfo">
+		<div class="ajusteinfo2">
+			<button class="accordion">CERTIFICACIÓN</button>
+			<div class="panel">
+  			<p>Certificada por el Sistema de Gestión de Calidad en el cumplimiento de los estándares internacionales de la NORMA ISO 9001-2008, por ICONTEC proyectándonos como una de las empresas líderes en selección y administración de talento humano.
+<br>
+Empresa a la vanguardia del mercado actual, trabajando por la mejora continua.</p>
+			</div>
+		</div>
+	</div>
+</div>
 <!--Footer-->
 <footer>
 	<div class="divfooter">
@@ -143,6 +200,29 @@ Empresa a la vanguardia del mercado actual, trabajando por la mejora continua.
         </div>
     </div>
 </footer>
+
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
 
 </body>
 </html>
