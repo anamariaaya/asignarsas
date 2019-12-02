@@ -571,13 +571,13 @@ footer{
     margin: 30px 0 50px 0;
     font-family: open-sans, sans-serif;
 	display:inline-flex;
-	width:100%;
+	width:100%
 }
    
 #demo .wrapper {
     display: inline-flex;
     width: 280px;
-    margin: auto;
+    margin-left: 5%;
     height: 65px;
     position: relative;
 }
