@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Asignar SAS</title>
+
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
+    <link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!--Menú principal-->
+<nav>
+	<div class="topnav" id="myTopnav">
+	<a href="index.html" class="mainlogo"><img class="logo" alt="logo" src="img/logo.png"></a>
+	<div class="menuitems">
+        <a href="#home">Inicio</a>
+        <a href="#news">Quiénes somos</a>
+        <a href="#contact">Servicios</a>
+        <a href="#about">Contratación</a>
+        <a href="#about">Asignar Online</a>
+        <a href="#about" class="active">Responsabilidad Social Empresarial</a>
+        <a href="#about">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myNavbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+ 	</div>
+  </div>
+</nav>
+
+<!--Banner-->
+
+<div style="background-image:url(img/banners/quienessomos.jpg)" class="banner">
+
+	<div class="quienestitulo">
+	<h2>RESPONSABILIDAD SOCIAL EMPRESARIAL</h2>
+	</div>
+</div>
+
+<!--Fin Banner-->
+
+<div class="resptxt">
+	<h2>CAPACITACIONES Y ALIANZAS</h2>
+	<p>ASIGNAR SAS ofrece capacitaciones especializadas al personal en misión, como camareras, steward, mesa y bar, entre otras.<br><br>
+Trabajamos en alianza estratégica con empresas como el SENA, y la Alta Consejería para la Paz, para capacitación y vinculación de personas en estado de vulnerabilidad, procurando reducir la tasa de desempleo y haciendo un aporte al país.<br><br>
+Trabajamos de la mano con las Cajas de compensación Familiar de la respectiva ciudad.</p>
+</div>
+
+<!--Inicio Slideshow-->
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="img/contratamain.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="img/contratamainh.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="img/respmain.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="img/servmain.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="img/serviciosmain.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="img/servmainh.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+<!--Fin Slideshow-->
+
+<!--Footer-->
+<footer>
+	<div class="divfooter">
+    	<p>Sede principal Envigado: Cl 25 Sur No 46-109 Casa 108 Villa Grande<br>
+			Teléfono: (574) 322 0310<br><br> 
+
+            Sede Bogotá: Carrera 19 # 44-27 - Entrada vehícular: Carrera 20 # 44-40-Barrio Palermo<br>
+            Teléfonos: (571) 6091029 - 2873133<br><br><br>
+    
+            <a href="#">Consulte aquí nuestros términos, condiciones y políticas de privacidad</a></p>
+    </div>
+    
+    <div class="divfooter">
+    	<div class="redes">
+        	<div class="fbciudades">
+                <div class="fbmed"></div>
+                <div class="fbbog"></div>
+            </div>
+                <div class="sde"></div>
+        </div>
+        
+        <div class="conexion">
+        	<a href="https://www.conexionoutsourcing.com" target="_blank">
+            	<div class="conexlogo"></div>
+            	<p>Conozca nuestra empresa filial aquí</p>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+</body>
+</html>
