@@ -31,6 +31,7 @@ body {
 	width:272px;
 	margin: 0.8% 1.5% 0% 3%;
 }
+
 .mainlogo:hover{
 	background-color:transparent !important;
 }
@@ -1001,3 +1002,56 @@ input[type=submit]{
 }
 
 /*Fin Asignar Online*/
+
+
+/*Inicio Terminos*/
+
+.termtxt{
+	width:100%;
+	margin:auto;
+	padding-top:15px;
+	padding-bottom:40px;
+}
+
+.termtxt p{
+	font-size:15px;
+	color:#303030;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	line-height: 17px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.termtxt h2{
+	color: #060057;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	line-height: 17px;
+	margin-bottom:10px;
+}
+
+.termtxt h3{
+	color: #000000;
+	font-size:15px;
+	font-weight:bold;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	line-height: 17px;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.termtxt p span{
+	font-weight:bold;
+}
+
+
+.termlist{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color:#303030;
+	padding-left:50px;
+	font-size:15px;
+}
+
+/*Fin Terminos*/
