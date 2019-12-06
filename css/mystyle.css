@@ -1140,4 +1140,29 @@ input[type=submit]{
 	padding-left:15px;
 }
 
+.contdocs{
+	width:50%;
+	margin:auto;
+}
+
+.contdoc{
+	width:70%;
+	margin-left:15%;
+	height:400px;
+}
+
+.regltxt{
+	width:100%;
+	margin-top:50px;
+}
+
+.regltxt h2{
+	color: #060057;
+	font-size:16px;
+	font-weight:bold;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	text-align:center;
+	margin-bottom:30px;
+}
+
 /*Fin Contratacion*/
