@@ -571,7 +571,7 @@ footer{
 	line-height: 23px;
 }
 
-/*Dropdown Servicios*/
+/*Dropdown*/
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -1092,7 +1092,7 @@ input[type=submit]{
   background-color: #060057;
   color: #ffffff;
   cursor: pointer;
-  width: 350px;
+  width: 320px;
   text-align: center;
   border: none;
   outline: none;
@@ -1115,7 +1115,7 @@ input[type=submit]{
   background-color: #ffffff;
   display: none;
   overflow: hidden;
-  width:350px;
+  width:320px;
   color:#000000;
   border:2px solid black;
   border-radius:10px;
@@ -1158,7 +1158,7 @@ input[type=submit]{
 
 .regltxt h2{
 	color: #060057;
-	font-size:16px;
+	font-size:18px;
 	font-weight:bold;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	text-align:center;
@@ -1166,3 +1166,117 @@ input[type=submit]{
 }
 
 /*Fin Contratacion*/
+
+/*Inicio Ofertas*/
+
+.ofertasprin{
+	width:100%;
+	display:inline-flex;
+}
+
+.ofertastxt{
+	width:65%;
+}
+
+.ofertasimg{
+	width:35%;
+	display:block;
+}
+
+.ofertasimg img{
+	width:75%;
+	padding-top:10px;
+	margin-left:40px;
+}
+
+.solicitarservofe{
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:10px;
+	color:#ffffff;
+	background-color: rgba(0,170,242,0.5);
+	text-align:center;
+	padding:7px;
+	font-size:18px;
+	border-radius:10px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.row{
+	width:100%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 520px;
+	box-sizing: border-box;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ciudad {
+	width:99.9%;
+	height:500px;
+	margin-left:auto;
+	margin-right:auto;
+	overflow-y:scroll;
+	border-style:solid;
+	border-color:#060057;
+	border-radius:10px;
+	padding:10px;
+}
+
+.ofertas{
+	text-align:left;
+	margin: 20px 0;
+	border-bottom:solid rgba(217,217,217,1.00);
+}
+
+.ofertas p{
+	font-size:14px;
+	margin:4px;
+	text-transform:capitalize;	
+}
+
+.ofertas h4{
+	font-size:16px;
+	text-transform: lowercase;
+	text-transform:capitalize;
+	margin:5px;
+	color:#060057;
+}
+
+.postular{
+	box-shadow:none;
+	width:90px;
+	height:25px;
+	color:#ffffff;
+	font-size:14px;
+	background-color:#060057;
+	border-radius: 10px;
+	border-color:#060057;
+	cursor:pointer;
+	text-align:center;
+	text-decoration: none;
+	cursor:pointer;
+	padding-top:5px;
+	margin: 7px 0;
+}
+
+.column h3{
+	color: #060057;
+	font-size:18px;
+	font-weight:bold;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	text-align:center;
+	margin-bottom:10px;
+}
+/*Fin Ofertas*/
