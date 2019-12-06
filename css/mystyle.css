@@ -871,7 +871,7 @@ label{
 	font-size: 15px;
 }
 
-input[type=submit]{
+.submit2{
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	background-color:rgba(0,170,242,1.0);
 	border: 1px solid transparent;
@@ -1393,6 +1393,18 @@ input[type=radio]{
     border-radius: 4px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-size:14px;
+}
+
+.submit{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	background-color:#060057;
+	border: 1px solid transparent;
+	padding:3px 25px;
+	color:#fff;
+	font-size:20px;
+	margin-left:40%;
+	cursor:pointer;
+	margin-top:20px;
 }
 
 @media (max-width:550px){
