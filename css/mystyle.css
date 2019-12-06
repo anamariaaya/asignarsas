@@ -1055,3 +1055,89 @@ input[type=submit]{
 }
 
 /*Fin Terminos*/
+
+/*Inicio Contratacion*/
+
+.princontra{
+	width:100%;
+	display:inline-flex;
+}
+
+.conttxt{
+	width:50%;
+}
+
+.conttxt ul{
+	font-size:15px;
+	color:#303030;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	line-height: 17px;
+	padding-left:20%;
+}
+
+.conttxt h2{
+	color: #060057;
+	font-size:16px;
+	font-weight:bold;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	line-height: 17px;
+	margin-bottom:10px;
+	padding-left:15%;
+}
+
+/*Dropdown Contratacion*/
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion2 {
+  background-color: #060057;
+  color: #ffffff;
+  cursor: pointer;
+  width: 350px;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  height:50px;
+  margin:auto;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  font-weight:bold;
+  border-radius:10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion2:hover {
+  background-color: rgba(0,170,242,1.0);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel2 {
+  padding: 15px 18px;
+  background-color: #ffffff;
+  display: none;
+  overflow: hidden;
+  width:350px;
+  color:#000000;
+  border:2px solid black;
+  border-radius:10px;
+}
+
+.dropcont{
+	display:block;
+}
+
+.ajusteinfo3{
+	width:100%;
+	margin-top:30px;
+}
+
+.ajusteinfo4{
+	margin-left:20%;
+}
+
+.panel2 ul li{
+	color:#000000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding-left:15px;
+}
+
+/*Fin Contratacion*/
