@@ -869,7 +869,6 @@ label{
 	margin-left:20px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-size: 15px;
-
 }
 
 input[type=submit]{
@@ -1291,7 +1290,7 @@ input[type=submit]{
 }
 /*Fin Ofertas*/
 
-/*Registro Vacantes*/
+/*Inicio Registro Vacantes y Solicitud de Servicio*/
 .form2{
 	width:500px;
 	height:auto;
@@ -1339,8 +1338,8 @@ input[type=submit]{
 	margin-top:20px;
 }
 
-/*input[type=text], input[type=password], input[type=email],
-input[type=tel], input[type=number], select, textarea {
+/*Formularios Vacantes y Solicitud*/
+.input{
 	float:left;
     width: 80%;
 	height:30px;
@@ -1352,7 +1351,7 @@ input[type=tel], input[type=number], select, textarea {
 	resize:none;
 }	
 
-input[type=file], input[type=date]{
+.input2{
 	background-color:#fff;
 	float:left;
     width: 80%;
@@ -1374,11 +1373,7 @@ input[type=radio]{
     user-select: none;
 }
 
-input[type=checkbox]{
-	cursor:pointer;
-}
-
-label {
+.label {
 	text-align:left;
 	float:left;
 	width:250px;
@@ -1388,7 +1383,17 @@ label {
     display: inline-block;
 	color:#fff;
 }
-*/
+
+.mensaje2{
+	height:70px;
+	width:80%;
+	margin-left:20px;
+	margin-left:25px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:14px;
+}
 
 @media (max-width:550px){
 	.form2{
@@ -1400,3 +1405,6 @@ label {
 }
 }
 
+/*Fin Formularios Vacantes y Solicitud*/
+
+/*Fin Registro Vacantes y Solicitud de Servicio*/
