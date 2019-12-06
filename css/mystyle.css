@@ -571,6 +571,17 @@ footer{
 	line-height: 23px;
 }
 
+.imgicontec{
+	width:150px;
+	margin:auto;
+}
+
+.imgicontec2{
+	width:150px;
+	margin-bottom:10px;
+
+}
+
 /*Dropdown*/
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -579,7 +590,7 @@ footer{
   color: #ffffff;
   cursor: pointer;
   padding: 18px;
-  width: 260px;
+  width: 92%;
   text-align: center;
   border: none;
   outline: none;
@@ -601,7 +612,7 @@ footer{
   background-color: #ffffff;
   display: none;
   overflow: hidden;
-  width:260px;
+  width:92%;
   color:#000000;
   border:2px solid black;
   border-radius:10px;
@@ -931,9 +942,8 @@ input[type=submit]{
 }
 
 .onlinetxt2 img{
-	width:30%;
-	margin-left:23%;
-	width:200px;
+	width:32%;
+	margin-left:34%;
 	height:auto;
 }
 
@@ -984,7 +994,7 @@ input[type=submit]{
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 }
 
-.solicitarservonline{
+.solicitarservonline p{
 	width:400px;
 	margin-right:auto;
 	margin-left:auto;
@@ -995,7 +1005,7 @@ input[type=submit]{
 	padding-bottom:8px;
 	padding-top:4px;
 	font-weight:bold;
-	font-size:30px;
+	font-size:25px;
 	text-shadow:2px 2px 2px grey;
 	border-radius:10px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -1195,7 +1205,7 @@ input[type=submit]{
 	margin-left:auto;
 	margin-top:10px;
 	color:#ffffff;
-	background-color: rgba(0,170,242,0.5);
+	background-color: rgba(0,170,242,0.7);
 	text-align:center;
 	padding:7px;
 	font-size:18px;
