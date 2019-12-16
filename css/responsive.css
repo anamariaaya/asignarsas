@@ -8,6 +8,9 @@
     float: right;
     display: block;
 	font-size:24px;
+	right: 15px;
+    position: absolute;
+    top: 15px;
   }
   
   .menuitems{
@@ -221,6 +224,11 @@
 		background-size:cover;
 		background-position:center;
 	}
+
+	.banner2{
+		background-size:cover;
+		background-position:center;
+	}
 }
 
 /*Quiénes somos*/
@@ -254,9 +262,506 @@
 
 /*Servicios*/
 
-
 @media (max-width:900px){
-.tab button {
-	width:100%;
+	.tab button {
+		width:100%;
+	}
 }
+
+@media (max-width:660px){
+	.ajusteserv{
+		display:block;
+	}
+	
+	.ajusteserv img{
+		margin-left:29%;;
+	}
+	
+	.solicitarserv{
+		margin-bottom:30px;
+	}
+}
+
+@media (max-width:580px){
+	.ajusteserv img{
+	margin-left:27%;;
+	}
+}
+
+@media (max-width:530px){
+	.ajusteserv img{
+	margin-left:24%;;
+	}
+}
+
+@media (max-width:470px){
+	.ajusteserv img{
+	margin-left:21%;;
+	}
+}
+
+@media (max-width:430px){
+	.ajusteserv img{
+	margin-left:17%;;
+	}
+}
+
+@media (max-width:400px){
+	.ajusteserv img{
+	margin-left:13%;;
+	}
+}
+
+@media (max-width:370px){
+	.ajusteserv img{
+	margin-left:9%;;
+	}
+}
+
+@media (max-width:340px){
+	.ajusteserv img{
+	margin-left:6%;;
+	}
+}
+
+/*Contratacion*/
+
+@media (max-width:870px){
+	.princontra{
+		display:block;
+	}
+
+	.conttxt{
+		width:100%;
+	}
+	
+	.conttxt ul{
+		padding-left:25%;
+	}
+	
+	.conttxt h2{
+		padding-left:21%;
+	}
+	
+	.ajusteinfo4{
+		margin-left:31%;
+	}
+	
+	.contdoc{
+		width:90%;
+		margin-bottom:30px;	
+		margin-left:5%;	
+	}
+}
+
+@media (max-width:870px){
+	.conttxt ul{
+		padding-left:19%;
+	}
+	
+	.conttxt h2{
+		padding-left:16%;
+	}
+	
+	.ajusteinfo4{
+		margin-left:28%;
+	}
+	
+	.contdocs{
+	width:80%;
+	}
+}
+
+@media (max-width:700px){
+	.conttxt ul{
+		padding-left:17%;
+	}
+	
+	.conttxt h2{
+		padding-left:14%;
+	}
+	
+	.ajusteinfo4{
+		margin-left:25%;
+	}
+}
+
+@media (max-width:600px){
+	.conttxt ul{
+		padding-left:15%;
+	}
+	
+	.conttxt h2{
+		padding-left:12%;
+	}
+	
+	.ajusteinfo4{
+		margin-left:22%;
+	}
+}
+
+@media (max-width:500px){
+	.conttxt ul{
+		padding-left:12%;
+	}
+	
+	.conttxt h2{
+		padding-left:9%;
+	}
+	
+	.ajusteinfo4{
+		margin-left:15%;
+	}
+}
+
+@media (max-width:450px){
+	.ajusteinfo4{
+		margin-left:10%;
+	}
+	.contdocs{
+	width:100%;
+	}
+}
+
+@media (max-width:380px){
+	.ajusteinfo4{
+		margin-left:5%;
+	}
+}
+
+@media (max-width:360px){
+	.ajusteinfo4{
+		margin-left:2%;
+	}
+}
+
+/*Asignar Online*/
+
+@media (max-width:1040px){
+	.divseconline{
+		width:90%;
+	}
+	
+	.imgonline{
+		width:65%;
+	}
+	.tituloonline{
+		width:65%;
+	}
+}
+
+@media (max-width:940px){
+	.onlinetxt2{
+		width:40%;
+	}
+}
+
+@media (max-width:850px){
+	.prinonline{
+		display:block;
+	}
+	
+	.divseconline{
+		width:90%;
+		margin-bottom:40px;
+	}
+}
+
+@media (max-width:800px){
+	.onlinetxt2{
+		width:50%;
+	}
+}
+
+@media (max-width:720px){
+	
+	.imgonline{
+		width:65%;
+	}
+	.tituloonline{
+		width:65%;
+	}
+}
+
+@media (max-width:550px){
+	.onlinetxt2{
+		width:60%;
+	}
+}
+
+@media (max-width:530px){
+	
+	.imgonline{
+		width:75%;
+	}
+	.tituloonline{
+		width:75%;
+	}
+}
+
+@media (max-width:480px){
+	.solicitarservonline p{
+	width:300px;
+	font-size:23px;
+	}
+
+}
+
+@media (max-width:450px){
+	
+	.imgonline{
+		width:85%;
+	}
+	.tituloonline{
+		width:85%;
+	}
+}
+
+@media (max-width:380px){
+	
+	.imgonline{
+		width:95%;
+	}
+	.tituloonline{
+		width:95%;
+	}
+	
+	.solicitarservonline p{
+		width:200px;
+		font-size:21px;
+	}
+}
+
+@media (max-width:350px){
+	
+	.imgonline{
+		width:100%;
+	}
+	.tituloonline{
+		width:100%;
+	}
+	
+	.divseconline{
+		width:100%;
+	}
+}
+
+@media (max-width:430px){
+	.onlinetxt2{
+		width:70%;
+	}
+}
+
+@media (max-width:370px){
+	.onlinetxt2{
+		width:80%;
+	}
+}
+
+/*Responsabilidad Social Empresarial*/
+
+
+@media (max-width:830px){
+	.resptxt{
+		width:85%;
+	}
+}
+
+/*Contacto*/
+
+@media (max-width:930px){
+	.left{
+	  float:none;
+	}
+	
+	.formulario{
+		width:55%;
+		height:570px;
+
+	}
+
+	.form{
+		height:520px;
+	}
+	
+	.submit2{
+	margin-left:35%;
+	}
+}
+
+
+@media (max-width:830px){
+	label{
+		margin-left:20px;
+	}
+
+	.infogeneral{
+		width:280px;
+		margin-left:20px;
+	}
+	.mensaje{
+		width:280px;
+		margin-left:20px;
+		}
+}
+
+@media (max-width:815px){
+	.contactotxt{
+		width:700px;
+	}
+}
+
+@media (max-width:715px){
+	.contactotxt{
+		width:500px;
+	}
+}
+
+@media (max-width:700px){
+	label{
+		margin-left:10%;
+	}
+
+	.infogeneral{
+		width:300px;
+		margin-left:10%;
+	}
+	.mensaje{
+		width:300px;
+		margin-left:10%;
+	}
+	.formulario{
+		width:70%;
+	}
+}
+
+@media (max-width:600px){
+	label{
+		margin-left:8%;
+	}
+
+	.infogeneral{
+		width:280px;
+		margin-left:8%;
+	}
+	.mensaje{
+		width:280px;
+		margin-left:8%;
+	}
+	.formulario{
+		width:80%;
+	}
+}
+
+@media (max-width:600px){
+	label{
+		margin-left:6%;
+	}
+
+	.infogeneral{
+		width:310px;
+		margin-left:6%;
+	}
+	.mensaje{
+		width:310px;
+		margin-left:6%;
+	}
+	.formulario{
+		width:90%;
+	}
+}
+
+@media (max-width:530px){
+	.contactotxt{
+		width:300px;
+	}
+}
+
+@media (max-width:500px){
+	label{
+		margin-left:5%;
+	}
+
+	.infogeneral{
+		width:270px;
+		margin-left:5%;
+	}
+	.mensaje{
+		width:270px;
+		margin-left:5%;
+	}
+	.formulario{
+		width:90%;
+	}
+}
+
+@media (max-width:450px){
+	.mapa{
+	margin-left:7%;
+	width:85%;
+
+}
+}
+
+
+@media (max-width:400px){
+	label{
+		margin-left:4%;
+	}
+
+	.infogeneral{
+		width:240px;
+		margin-left:4%;
+	}
+	.mensaje{
+		width:240px;
+		margin-left:4%;
+	}
+	.formulario{
+		width:99%;
+	}
+}
+
+@media (max-width:340px){
+	label{
+		margin-left:0.5%;
+	}
+
+	.infogeneral{
+		width:240px;
+		margin-left:0.5%;
+	}
+	.mensaje{
+		width:240px;
+		margin-left:0.5%;
+	}
+}
+
+/*Ofertas Laborales*/
+
+@media (max-width:870px){
+
+	.column {
+    	float: none;
+    	width: 70%;
+		margin-bottom:30px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.ofertasprin{
+		display:block;
+	}
+	
+	.ofertasimg{
+		margin:auto;
+		width:90%;
+	}
+}
+
+@media (max-width:590px){
+
+	.column {
+    	width: 95%;
+		}
 }
