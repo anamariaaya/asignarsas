@@ -251,3 +251,12 @@
 		line-height:20px;	
 	}
 }
+
+/*Servicios*/
+
+
+@media (max-width:900px){
+.tab button {
+	width:100%;
+}
+}
