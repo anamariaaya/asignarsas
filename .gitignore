@@ -129,8 +129,8 @@ dist
 #Vendor
 /vendor
 
-# Maps
-.map
-
 #gulp
 gulpfile.js
+
+#src
+/src
