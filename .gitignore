@@ -131,3 +131,6 @@ dist
 
 # Maps
 .map
+
+#gulp
+gulpfile.js
