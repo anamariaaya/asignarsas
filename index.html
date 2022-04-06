@@ -9,9 +9,52 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="/build/css/app.css"/>
 
+    <script src="https://kit.fontawesome.com/39b0748f0d.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="/build/img/logo.png" alt="logotipo Asignar">
+                </a>
 
+                <div class="mobile-menu">
+                    <i class="fa fa-bars"></i>
+                </div>
+
+                <div class="derecha">
+                    <i class="fa fa-moon"></i>
+                    <nav class="navegacion">
+                        <a class="<?php echo isset($nosotros) ? 'active' : ''; ?>" href="/nosotros">Nosotros</a>
+
+                        <a class="<?php echo isset($anuncios) ? 'active' : ''; ?>" href="/anuncios">Anuncios</a>
+
+                        <a class="<?php echo isset($blog) ? 'active' : ''; ?>" href="/blog">Blog</a>
+
+                        <a class="<?php echo isset($contacto) ? 'active' : ''; ?>" href="/contacto">Contacto</a>
+                        <!-- <?php if($auth): ?>
+                            <div class="submenu"><?php echo $_SESSION['nombre']; if (!$_SESSION['nombre']){
+                                echo 'Usuario';
+                            }
+                            ;?>&ShortDownArrow;</a>
+                            <div class="dropdown">
+                                <a href="/admin/" class="admin">Admin</a>
+                                <a href="/logout">Cerrar Sesión</a>                                
+                            </div>
+                        <?php endif; ?> -->
+                        
+                        <!-- <?php if(!$auth):?>
+                            <a href="/login">Log in</a>
+                        <?php endif; ?> -->
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </header>
+      
 
   <script type="text/javascript" src="/build/js/app.js"></script>
 </body>
