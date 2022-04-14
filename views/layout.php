@@ -51,9 +51,10 @@
                 </div>
                 <i class="fa fa-moon dark-mode-boton"></i>
             </div>
-
         </div>
     </header>
+
+    <?php echo $contenido; ?>
     
     <footer class="footer">
         <div class="contenedor">
