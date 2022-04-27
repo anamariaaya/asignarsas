@@ -37,4 +37,12 @@ class PaginasController{
             'contacto' => $contacto
         ]);
     }
+
+    public static function ofertas(Router $router){        
+        $router->render('paginas/ofertas');
+    }
+
+    public static function soluciones(Router $router){        
+        $router->render('paginas/soluciones');
+    }
 }

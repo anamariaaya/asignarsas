@@ -31,7 +31,7 @@ function s($html) : string{
 
 //Validar tipo de contenido
 function validarTipoContenido($tipo){
-    $tipos = ['animal', 'brush', 'cartoon', 'dark', 'geometry', 'lettering', 'organic', 'oriental', 'portrait', 'sketch', 'collage', 'comic', 'fashion', 'flyer', 'illustration', 'painting', 'promo', 'branding', 'usuario'];
+    $tipos = ['oferta', 'ciudad', 'usuario'];
 
     return in_array($tipo, $tipos);
 }

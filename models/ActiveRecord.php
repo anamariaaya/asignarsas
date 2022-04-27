@@ -40,7 +40,7 @@ class ActiveRecord{
          $resultado = self::$db->query($query);
  
          if($resultado){
-            header('Location: /admin?resultado=1');
+            header('Location: /adminweb?resultado=1');
          }
      }
  
@@ -59,7 +59,7 @@ class ActiveRecord{
          
           $resultado = self::$db->query($query);
           if($resultado) {                
-             header('Location: /admin?resultado=2');
+             header('Location: /adminweb?resultado=2');
          }
      }
  
@@ -71,7 +71,7 @@ class ActiveRecord{
  
          if($resultado){
              $this->borrarImagen();
-             header('location: /admin?resultado=3');
+             header('location: /adminweb?resultado=3');
          }
      }
 
@@ -164,6 +164,14 @@ class ActiveRecord{
          return $resultado;
      }
 
+     public static function allOrderBy($orden){
+        $query = "SELECT * FROM " . static::$tabla. " ORDER BY $orden";
+        
+        $resultado = self::consultarSQL($query);
+
+        return $resultado;
+    }
+
      //Obtiene determinado número de registros
      public static function get($cantidad){
         $query = "SELECT * FROM " . static::$tabla. " LIMIT ". $cantidad;
@@ -182,8 +190,8 @@ class ActiveRecord{
      }
 
      //Busca un registro por su categoría
-     public static function search($catId){    
-        $query = "SELECT * FROM ". static::$tabla . " WHERE catId = ${catId}";
+     public static function search($idCiudad){    
+        $query = "SELECT * FROM ". static::$tabla . " WHERE idCiudad = ${idCiudad}";
 
         $resultado = self::consultarSQL($query);
         

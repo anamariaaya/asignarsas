@@ -2,8 +2,8 @@
     <div class="enlaces-main">
         <h1 class="no-click">Soluciones Empresariales</h1>
         <div class="enlaces">
-            <a href="/empresas">Registro</a>
-            <a href="">Ingresar</a>
+            <a href="/soluciones">Contactar</a>
+            <a href="https://www.asignar.com.co/_admin/">Ingresar</a>
         </div>
         <div class="blend-main">
             <picture>
@@ -63,7 +63,6 @@
             <p>Calidad</p>
         </div>
     </div>
-
 </section>
 
 <section class="contenedor valor-corporativo">
@@ -193,4 +192,4 @@
     </div>
 
     <a class="btn-contacto" href="/contacto">Contáctanos</a>
-<section>
+</section>
