@@ -20,7 +20,7 @@
                 <td>
                     <!--Eliminar la vacante-->
                     <form method="POST" class="w-100" action="/ciudades/eliminar">
-                        <input type="hidden" name="id" value="<?php echo $ciudad->id;?> ">
+                        <input type="hidden" name="id" value="<?php echo $ciudad->id;?>">
                         <input type="hidden" name="tipo" value="ciudad">
                         <input type="submit" class="btn-eliminar w-100" value="Eliminar">
                     </form>

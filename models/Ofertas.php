@@ -4,7 +4,7 @@ namespace Model;
 
 class Ofertas extends ActiveRecord{
     protected static $tabla = 'ofertas';
-    protected static $columnasDB = ['id', 'cargo', 'salario', 'horario', 'descripcion', 'correo', 'idCiudad', 'imagen', 'vencimiento'];
+    protected static $columnasDB = ['id', 'cargo', 'salario', 'horario', 'descripcion', 'correo', 'idCiudad', 'imagen', 'vencimiento', 'whatsapp'];
 
     public $id;
     public $cargo;
@@ -15,6 +15,7 @@ class Ofertas extends ActiveRecord{
     public $idCiudad;
     public $imagen;
     public $vencimiento;
+    public $whatsapp;
 
     public function __construct($args = []){
         $this->id = $args['id'] ?? null;
@@ -26,6 +27,7 @@ class Ofertas extends ActiveRecord{
         $this->idCiudad = $args['idCiudad'] ?? 1;
         $this->imagen = $args['imagen'] ?? '';
         $this->vencimiento = $args['vencimiento'] ?? '';
+        $this->whatsapp = $args['whatsapp'] ?? '';
     }
 
     public function validar(){

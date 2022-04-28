@@ -3,6 +3,7 @@ namespace Controllers;
 
 use MVC\Router;
 
+use Model\Ofertas;
 use Model\Ciudades;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -68,6 +69,8 @@ class CiudadesController{
                 $tipo = $_POST['tipo'];
 
                 if(validarTipoContenido($tipo)){
+                    // $ofertas = Ofertas::search($id);
+                    // debugging($ofertas);
                     //Compara lo que vamos a eliminar
                     $ciudad = Ciudades::find($id);
                     $ciudad->eliminar();

@@ -12,9 +12,10 @@ class OfertasController{
         $ciudades = Ciudades::allOrderBy('nombre');
         $errores = Ofertas::getErrores();
 
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){            
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){ 
             /*Crea una nueva Instancia*/
             $oferta = new Ofertas($_POST['oferta']);
+            
             
             /* SUBIDA DE ARCHIVOS */
             //Crear carpeta
@@ -41,8 +42,7 @@ class OfertasController{
                 $image->save(CARPETA_IMAGENES.$nombreImagen);
     
                 //Guarda en la base de datos
-                $oferta->guardar();
-    
+                $oferta->guardar();    
             }    
         }
 

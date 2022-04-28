@@ -10,7 +10,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class AdminController{
     public static function index(Router $router){
-        $ofertas = Ofertas::allOrderBy('vencimiento');
+        $ofertas = Ofertas::allOrderBy('idCiudad');
         $ciudades = Ciudades::allOrderBy('nombre');
         $usuarios = Usuarios::all();
 

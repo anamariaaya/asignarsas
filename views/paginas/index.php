@@ -120,7 +120,7 @@
             <h3>Hotelería y Club</h3>
             <img class="hotel" src="/build/img/estelar.webp" alt="Logo Hoteles Estelar">
             <img class="hotel" src="/build/img/exe.webp" alt="Logo Hoteles Exe Bacatá">
-            <img class="hotel" src="/build/img/hilton.webp" alt="Logo Hoteles Hilton">
+            <img class="hotel" src="/build/img/colsubsidio.webp" alt="Logo Hoteles y club colsubsidio">
             <img class="hotel" src="/build/img/nutibara.webp" alt="Logo Hotel Nutibara">
             <img class="hotel" src="/build/img/clickclack.webp" alt="Logo Click Clack Hotel">
             <img class="hotel" src="/build/img/courtyard.webp" alt="Logo Hotel Courtyard by Marriott">

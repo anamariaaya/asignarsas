@@ -64,9 +64,11 @@ class PaginasController{
     public static function vacante(Router $router){
         $id = redireccionar("/ofertas");
         $oferta = Ofertas::find($id);
+        $ciudades = Ciudades::all();
         
         $router->render('paginas/vacante',[
-            'oferta' => $oferta
+            'oferta' => $oferta,
+            'ciudades' => $ciudades
         ]);
     }
 

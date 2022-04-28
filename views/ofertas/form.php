@@ -5,8 +5,7 @@
     <label>Ciudad de la Vacante</label>
     <select name="oferta[idCiudad]" id="ciudad">
         <option value="">--Elije Ciudad</option>
-        <?php foreach($ciudades as $ciudad){?>
-            
+        <?php foreach($ciudades as $ciudad){?>            
             <option
                 <?php echo $oferta->idCiudad === $ciudad->id ? 'selected' : '';?>
                 value="<?php echo s($ciudad->id);?>"> <?php echo s($ciudad->nombre);?>
@@ -34,7 +33,7 @@
         accept="image/jpeg, image/png">
                 
     <?php if($oferta->imagen){ ?>
-        <img src="/images/<?php echo $oferta->imagen ?>" class="imagen-small">
+        <img src="/images/<?php echo $oferta->imagen;?>" class="imagen-small">
     <?php } ?>
 
     <!--Salario-->
@@ -67,6 +66,15 @@
         name="oferta[correo]"
         placeholder="Ejemplo: seleccion1@asignar.com.co"
         value="<?php echo s($oferta->correo);?>">
+
+    <!--WhatsApp-->
+    <label for="whatsapp">WhatsApp: <span>(Sólo números, sin indicativo)</span></label>
+    <input
+        type="number"
+        id="whatsapp"
+        name="oferta[whatsapp]"
+        placeholder="Ejemplo: 3224441100"
+        value="<?php echo s($oferta->whatsapp);?>">
 
     <!--Fecha de cierre de vacante-->
     <label for="vencimiento">Fecha de cierre de la vacante: <span>(Último día en que recibirán hojas de vida para este cargo)</span></label>
