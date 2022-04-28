@@ -16,6 +16,8 @@ $router->get('/servicios',[PaginasController::class, 'servicios']);
 $router->get('/nosotros',[PaginasController::class, 'nosotros']);
 $router->get('/contacto',[PaginasController::class, 'contacto']);
 $router->get('/ofertas',[PaginasController::class, 'ofertas']);
+$router->get('/vacantes',[PaginasController::class, 'vacantes']);
+$router->get('/vacante',[PaginasController::class, 'vacante']);
 $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 
 //Admin Web

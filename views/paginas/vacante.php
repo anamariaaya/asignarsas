@@ -1,0 +1,1 @@
+<h1> Esta es la oferta de <?php echo $oferta->cargo ?> </h1>

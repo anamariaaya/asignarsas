@@ -14,10 +14,13 @@ class AdminController{
         $ciudades = Ciudades::allOrderBy('nombre');
         $usuarios = Usuarios::all();
 
+        $resultado = $_GET['resultado'] ?? null;
+
         $router->render('/admin/adminweb', [
             'ofertas' => $ofertas,
             'ciudades' => $ciudades,
-            'usuarios' => $usuarios
+            'usuarios' => $usuarios,
+            'resultado'=> $resultado
         ]);
     }
 }

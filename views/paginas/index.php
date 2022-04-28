@@ -1,20 +1,5 @@
 <main class="main-content">
     <div class="enlaces-main">
-        <h1 class="no-click">Soluciones Empresariales</h1>
-        <div class="enlaces">
-            <a href="/soluciones">Contactar</a>
-            <a href="https://www.asignar.com.co/_admin/">Ingresar</a>
-        </div>
-        <div class="blend-main">
-            <picture>
-                <source srcset="build/img/soluciones.webp" type="image/webp">
-                <source srcset="build/img/soluciones.jpg" type="image/jpeg">
-                <img src="/build/img/soluciones.png" alt="Soluciones Empresariales">
-            </picture>   
-        </div>     
-    </div>
-
-    <div class="enlaces-main">
         <h1 class="no-click">Ofertas Laborales</h1>
         <div class="enlaces">
             <a href="/ofertas">Ver ofertas</a>
@@ -27,6 +12,21 @@
             </picture>   
         </div>     
     </div>
+
+    <div class="enlaces-main">
+        <h1 class="no-click">Soluciones Empresariales</h1>
+        <div class="enlaces">
+            <a href="/soluciones">Contactar</a>
+            <a href="https://www.asignar.com.co/_admin/">Ingresar</a>
+        </div>
+        <div class="blend-main">
+            <picture>
+                <source srcset="build/img/soluciones.webp" type="image/webp">
+                <source srcset="build/img/soluciones.jpg" type="image/jpeg">
+                <img src="/build/img/soluciones.png" alt="Soluciones Empresariales">
+            </picture>   
+        </div>     
+    </div>    
 
     <div class="enlaces-main">
         <h1 class="no-click">Empleados</h1>
@@ -117,25 +117,6 @@
         <h2>Confían en Nosotros</h2>
 
         <div class="slide fade">
-            <h3>Alimentos y Bebidas</h3>
-            <img class="ayb" src="/build/img/westernwings.webp" alt="Logo Western Wings">
-            <img class="ayb" src="/build/img/mimos.webp" alt="Logo Mimos">
-            <img class="ayb" src="/build/img/dante.webp" alt="Logo Dante">
-            <img class="ayb" src="/build/img/cantina.webp" alt="Logo Cantina La 15">
-            <img class="ayb" src="/build/img/storia.webp" alt="Logo Storia D'amore">
-            <img class="ayb" src="/build/img/creta.webp" alt="Logo creta">
-            <img class="ayb" src="/build/img/deriva.webp" alt="Logo Deriva">
-
-            <ul class="circles">
-                    <li class="aybfondo"></li>
-                    <li class="aybfondo"></li>
-                    <li class="aybfondo"></li>
-                    <li class="aybfondo"></li>
-                    <li class="aybfondo"></li>
-            </ul>
-        </div>
-
-        <div class="slide fade">
             <h3>Hotelería y Club</h3>
             <img class="hotel" src="/build/img/estelar.webp" alt="Logo Hoteles Estelar">
             <img class="hotel" src="/build/img/exe.webp" alt="Logo Hoteles Exe Bacatá">
@@ -160,6 +141,25 @@
         </div>
 
         <div class="slide fade">
+            <h3>Alimentos y Bebidas</h3>
+            <img class="ayb" src="/build/img/westernwings.webp" alt="Logo Western Wings">
+            <img class="ayb" src="/build/img/mimos.webp" alt="Logo Mimos">
+            <img class="ayb" src="/build/img/dante.webp" alt="Logo Dante">
+            <img class="ayb" src="/build/img/cantina.webp" alt="Logo Cantina La 15">
+            <img class="ayb" src="/build/img/storia.webp" alt="Logo Storia D'amore">
+            <img class="ayb" src="/build/img/creta.webp" alt="Logo creta">
+            <img class="ayb" src="/build/img/deriva.webp" alt="Logo Deriva">
+
+            <ul class="circles">
+                    <li class="aybfondo"></li>
+                    <li class="aybfondo"></li>
+                    <li class="aybfondo"></li>
+                    <li class="aybfondo"></li>
+                    <li class="aybfondo"></li>
+            </ul>
+        </div>
+
+        <div class="slide fade">
             <h3>Manufuctura, Call Center y Otros Sectores</h3>
             <img class="otros" src="/build/img/superpack.webp" alt="Logo Superpack">
             <img class="otros" src="/build/img/ppg.webp" alt="Logo PPG">
@@ -177,10 +177,10 @@
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">
-            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-beat-fade fa-angle-left"></i>
         </a>
         <a class="next" onclick="plusSlides(1)">
-            <i class="fa fa-angle-right"></i>
+            <i class="fa fa-beat-fade fa-angle-right"></i>
         </a>
 
     </div>
@@ -191,5 +191,5 @@
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
 
-    <a class="btn-contacto" href="/contacto">Contáctanos</a>
+    <a class="btn-contacto" href="/soluciones">Contáctanos</a>
 </section>

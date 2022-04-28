@@ -3,6 +3,8 @@
 namespace Controllers;
 
 use MVC\Router;
+use Model\Ofertas;
+use Model\Ciudades;
 
 
 class PaginasController{
@@ -38,8 +40,34 @@ class PaginasController{
         ]);
     }
 
-    public static function ofertas(Router $router){        
-        $router->render('paginas/ofertas');
+    public static function ofertas(Router $router){
+        $ofertas = true;
+        $ciudades = Ciudades::allOrderBy('nombre');    
+        
+        $router->render('paginas/ofertas', [
+            'ofertas' => $ofertas,
+            'ciudades' => $ciudades
+        ]);
+    }
+
+    public static function vacantes(Router $router){
+        $id = redireccionar("/ofertas");
+        $ofertas = Ofertas::search($id);
+        $ciudad = Ciudades::find($id);
+        
+        $router->render('paginas/vacantes',[
+            'ciudad' => $ciudad,
+            'ofertas' => $ofertas
+        ]);
+    }
+
+    public static function vacante(Router $router){
+        $id = redireccionar("/ofertas");
+        $oferta = Ofertas::find($id);
+        
+        $router->render('paginas/vacante',[
+            'oferta' => $oferta
+        ]);
     }
 
     public static function soluciones(Router $router){        

@@ -172,6 +172,14 @@ class ActiveRecord{
         return $resultado;
     }
 
+    public static function allByCol($col){
+        $query = "SELECT $col FROM " . static::$tabla;
+        
+        $resultado = self::consultarSQL($query);
+
+        return $resultado;
+    }
+
      //Obtiene determinado número de registros
      public static function get($cantidad){
         $query = "SELECT * FROM " . static::$tabla. " LIMIT ". $cantidad;
@@ -226,6 +234,7 @@ class ActiveRecord{
          }
          return $objeto;
      }
+     
      //Sincroniza el objeto en memoria con los cambios realizados por el usuario
      public function sincronizar($args = []){
          foreach($args as $key=>$value){

@@ -30,6 +30,8 @@
 
                         <a class="<?php echo isset($servicios) ? 'active' : ''; ?>" href="/servicios">Servicios</a>
 
+                        <a class="<?php echo isset($ofertas) ? 'active' : ''; ?>" href="/ofertas">Ofertas Laborales</a>
+
                         <a class="<?php echo isset($nosotros) ? 'active' : ''; ?>" href="/nosotros">Nosotros</a>
 
                         <a class="<?php echo isset($contacto) ? 'active' : ''; ?>" href="/contacto">Contáctenos</a>
