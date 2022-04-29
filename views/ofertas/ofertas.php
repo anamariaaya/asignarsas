@@ -28,7 +28,7 @@
                 <td> <?php echo $oferta->cargo; ?> </td>
                 <td> <?php echo $oferta->salario; ?> </td>
                 <td> <?php echo $oferta->vencimiento; ?> </td>
-                <td><img class="imagen-tabla" src="/images/<?php echo $oferta->imagen;?>"></td>    
+                <td><img class="imagen-tabla" src="/images/<?php echo $oferta->imagen;?>" loading="lazy"></td>    
 
                 <td>
                     <!--Eliminar la vacante-->

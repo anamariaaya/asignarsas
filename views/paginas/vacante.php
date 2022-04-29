@@ -5,7 +5,7 @@
 
     <div class="info-oferta" style="background-image: url('/images/<?php echo $oferta->imagen;?>');">
         <div class="info">
-            <img src="/images/<?php echo $oferta->imagen; ?>" alt="Vacante $oferta->cargo"/>        
+            <img src="/images/<?php echo $oferta->imagen; ?>" alt="Vacante $oferta->cargo" loading="lazy"/>        
             <h3>
                 <?php foreach($ciudades as $ciudad){?>
                 <?php echo $oferta->idCiudad === $ciudad->id ? '<span>Ubicación: '.$ciudad->nombre.'</span>': '';?>

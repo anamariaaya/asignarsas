@@ -17,7 +17,7 @@
         <?php
         foreach($ofertas as $oferta){?>
             <div class="vacante">
-                <img src="/images/<?php echo $oferta->imagen; ?>" alt="Vacante en <?php echo $ciudad->nombre; ?>"/>
+                <img src="/images/<?php echo $oferta->imagen; ?>" alt="Vacante en <?php echo $ciudad->nombre; ?>" loading="lazy"/>
                 <p><span><?php echo $oferta->cargo; ?></span></p>
                 <p>$<?php echo number_format($oferta->salario, 0, ',', '.'); ?></p>
                 <a class="btn-vacante" href="vacante?id=<?php echo $oferta->id;?>">Ver Oferta</a>

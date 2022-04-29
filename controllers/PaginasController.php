@@ -10,9 +10,13 @@ use Model\Ciudades;
 class PaginasController{
     public static function index(Router $router){
         $inicio = true;
+        $ofertas = Ofertas::get(4);
+        $ciudades = Ciudades::all();
         
         $router->render('paginas/index',[
-            'inicio' => $inicio
+            'inicio' => $inicio,
+            'ofertas' => $ofertas,
+            'ciudades' => $ciudades,
         ]);
     }
 
@@ -41,32 +45,36 @@ class PaginasController{
     }
 
     public static function ofertas(Router $router){
-        $ofertas = true;
+        $vacantes = true;
         $ciudades = Ciudades::allOrderBy('nombre');    
         
         $router->render('paginas/ofertas', [
-            'ofertas' => $ofertas,
+            'vacantes' => $vacantes,
             'ciudades' => $ciudades
         ]);
     }
 
     public static function vacantes(Router $router){
+        $vacantes = true;
         $id = redireccionar("/ofertas");
         $ofertas = Ofertas::search($id);
         $ciudad = Ciudades::find($id);
         
         $router->render('paginas/vacantes',[
+            'vacantes' => $vacantes,
             'ciudad' => $ciudad,
             'ofertas' => $ofertas
         ]);
     }
 
     public static function vacante(Router $router){
+        $vacantes = true;
         $id = redireccionar("/ofertas");
         $oferta = Ofertas::find($id);
         $ciudades = Ciudades::all();
         
         $router->render('paginas/vacante',[
+            'vacantes' => $vacantes,
             'oferta' => $oferta,
             'ciudades' => $ciudades
         ]);

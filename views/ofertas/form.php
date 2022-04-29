@@ -33,7 +33,7 @@
         accept="image/jpeg, image/png">
                 
     <?php if($oferta->imagen){ ?>
-        <img src="/images/<?php echo $oferta->imagen;?>" class="imagen-small">
+        <img src="/images/<?php echo $oferta->imagen;?>" class="imagen-small" loading="lazy">
     <?php } ?>
 
     <!--Salario-->

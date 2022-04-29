@@ -17,7 +17,7 @@
         <div class="contenido-header">
             <div class="barra contenedor">
                 <a href="/">
-                    <img src="/build/img/logo.svg" alt="logotipo Asignar">
+                    <img src="/build/img/logo.svg" loading="lazy" alt="logotipo Asignar">
                 </a>
 
                 <div class="mobile-menu">
@@ -30,7 +30,7 @@
 
                         <a class="<?php echo isset($servicios) ? 'active' : ''; ?>" href="/servicios">Servicios</a>
 
-                        <a class="<?php echo isset($ofertas) ? 'active' : ''; ?>" href="/ofertas">Ofertas Laborales</a>
+                        <a class="<?php echo isset($vacantes) ? 'active' : ''; ?>" href="/ofertas">Ofertas Laborales</a>
 
                         <a class="<?php echo isset($nosotros) ? 'active' : ''; ?>" href="/nosotros">Nosotros</a>
 
@@ -86,7 +86,7 @@
                 <div class="info">
                     <div class="politicas">
                         <a href="">
-                            <img src="/build/img/logo-conexion.svg" alt="Logo Conexión Outsourcing">
+                            <img src="/build/img/logo-conexion.svg" alt="Logo Conexión Outsourcing" loading="lazy">
                             <p>Conozca nuestra empresa filial aquí</p>
                         </a>
                         <a href="">
