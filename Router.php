@@ -24,7 +24,7 @@ class Router{
         $rutasProtegidas = $this->rutasProtegidas;
 
 
-        $urlActual = $_SERVER['REQUEST_URI'] ?? '/';
+        $urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
         $metodo = $_SERVER['REQUEST_METHOD'];
         
         if($metodo === 'GET'){
