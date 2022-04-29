@@ -152,7 +152,7 @@
             <img class="hotel" src="/build/img/diez.webp" alt="Logo Hotel Diez" loading="lazy">
             <img class="hotel" src="/build/img/country.webp" alt="Logo Country Club" loading="lazy">
             <img class="hotel" src="/build/img/dann.webp" alt="Logo Hoteles Dann" loading="lazy">
-            <img class="hotel" src="/build/img/atton.png" alt="Logo Hoteles Atton" loading="lazy">
+            <img class="hotel" src="/build/img/atton.png" alt="Logo Hoteles Atton">
             <img class="hotel" src="/build/img/nh.webp" alt="Logo Hoteles Nh" loading="lazy">
             <img class="hotel" src="/build/img/union.webp" alt="Logo Club Unión Medellín" loading="lazy">
             <img class="hotel" src="/build/img/jw.webp" alt="Logo Hotel JW Marriott" loading="lazy">
