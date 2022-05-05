@@ -5,6 +5,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Ofertas;
 use Model\Ciudades;
+use PHPMailer\PHPMailer\PHPMailer;
 
 
 class PaginasController{
@@ -80,7 +81,58 @@ class PaginasController{
         ]);
     }
 
-    public static function soluciones(Router $router){        
-        $router->render('paginas/soluciones');
+    public static function soluciones(Router $router){ 
+        $mensaje = null;
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $respuestas = $_POST['contacto'];
+
+            $mail = new PHPMailer();
+
+            //Configurar SMTP (Protocolo para el envío de Emails)
+            $mail->isSMTP();
+            $mail->Host = 'smtp.mailtrap.io';
+            $mail->SMTPAuth = true; //Usa autenticación de usuario para envío
+            $mail->Username = '15b8d69fe2f467';
+            $mail->Password = '8831548112f491';
+            $mail->SMTPSecure = 'tls'; //Transport layer security (reemplazó el SSL-Secure Socket Layer)
+            $mail->Port = 2525;
+
+            //Configurar el contenido del Email
+            $mail->setFrom('gerenciaop@asignar.com.co');//La persona que nos envía el email.
+            $mail->addAddress('gerenciaop@asignar.com.co', 'Contacto Comercial'); //La dirección donde se recibirá el email y opcional el nombre.
+            $mail->Subject = 'Nuevo Contacto empresarial';
+
+            //Habilitar HTML
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+
+            //Definir el cuerpo del mensaje
+            $contenido = "<html>";
+            $contenido .= "<p><b>- NUEVO CONTACTO -</b></p>";
+            $contenido .= "<p><b>Empresa: </b>".$respuestas['empresa']."</p>";
+            $contenido .= "<p><b>Telefono: </b>".$respuestas['telefono']."</p>";
+            $contenido .= "<p><b>NIT: </b>".$respuestas['nit']."</p>";
+            $contenido .= "<p><b>Correo: </b>".$respuestas['email']."</p>";
+            $contenido .= "<p><b>Nombre Contacto: </b>".$respuestas['nombre']."</p>";
+            $contenido .= "<p><b>Cargo: </b>".$respuestas['cargo']."</p>";
+            $contenido .= "<p><b>Dirección: </b>".$respuestas['direccion']."</p>";
+            $contenido .= "<p><b>Ciudad: </b>".$respuestas['ciudad']."</p>";
+            $contenido .= "<p><b>Mensaje: </b>".$respuestas['mensaje']."</p>";
+
+            $mail->Body = $contenido;
+                $mail->AltBody = 'Texto alternativo sin HTML';
+
+            //Enviar el Email
+            if($mail->send()){
+                $mensaje = 'Mensaje enviado correctamente';
+            } else{
+                $mensaje = "El mensaje no se pudo enviar";
+            }
+        }
+
+        $router->render('paginas/soluciones', [
+            'mensaje' => $mensaje
+        ]);
     }
 }
