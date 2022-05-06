@@ -5,6 +5,7 @@ namespace Controllers;
 use MVC\Router;
 use Model\Ofertas;
 use Model\Ciudades;
+use Model\Contactos;
 use PHPMailer\PHPMailer\PHPMailer;
 
 
@@ -38,10 +39,27 @@ class PaginasController{
     }
 
     public static function contacto(Router $router){
-        $contacto = true;
+        $mensaje = null;
+
+        $contacto = new Contactos;
+        $errores = Contactos::getErrores();
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $contacto = new Contactos($_POST['contacto']);
+            $contacto->fecha = date("Y-m-d H:i:s");
+            
+            $errores = $contacto->validar();
+
+            if(empty($errores)){                
+                $contacto->enviarMensaje();
+                $mensaje = 'Mensaje enviado';
+            }
+        }
         
         $router->render('paginas/contacto',[
-            'contacto' => $contacto
+            'errores' => $errores,
+            'contacto' => $contacto,
+            'mensaje' => $mensaje
         ]);
     }
 

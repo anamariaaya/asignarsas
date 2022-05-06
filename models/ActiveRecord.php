@@ -243,4 +243,41 @@ class ActiveRecord{
              }
          }
      }
+
+    public function enviarMensaje(){
+        $atributos = $this->sanitizarAtributos();
+
+        // $string = join(', ',array_values($atributos));
+        // debugging($string);
+
+        $query = "INSERT INTO ".  static::$tabla. "(";
+        $query.= join(', ',array_keys($atributos));
+        $query.= ") VALUES('";
+        $query.= join("', '", array_values($atributos));
+        $query.= "')";
+
+        $resultado = self::$db->query($query);
+
+        // if($resultado){
+        //    header('Location: /contacto');
+        // }
+    }
+
+    public function eliminarMensaje(){        
+        $query = "DELETE FROM ". static::$tabla ." WHERE id =".self::$db->escape_string($this->id)." LIMIT 1" ;
+
+        $resultado = self::$db->query($query);
+
+        if($resultado){
+            header('location: /inbox?resultado=4');
+        }
+    }
+
+    public static function allOrderDesc($orden){
+        $query = "SELECT * FROM " . static::$tabla. " ORDER BY $orden DESC";
+        
+        $resultado = self::consultarSQL($query);
+
+        return $resultado;
+    }
 }

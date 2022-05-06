@@ -31,7 +31,7 @@ function s($html) : string{
 
 //Validar tipo de contenido
 function validarTipoContenido($tipo){
-    $tipos = ['oferta', 'ciudad', 'usuario'];
+    $tipos = ['oferta', 'ciudad', 'usuario', 'contacto'];
 
     return in_array($tipo, $tipos);
 }
@@ -49,6 +49,9 @@ function mostrarNotificacion($codigo){
             break;
         case 3:
             $mensaje = 'Eliminada Correctamente';
+            break;
+        case 4:
+            $mensaje = 'Mensaje Eliminado';
             break;
         default:
         $mensaje = false;
