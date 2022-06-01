@@ -22,28 +22,52 @@
         <img src="/build/img/faq.png" alt="Preguntas frecuentes de los empleados" loading="lazy">
         <div class="preguntas-contenedor">
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
             <div class="pregunta">
-                <h3>¿Qué es el sistema de gestión de calidad?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                <div class="tarjeta frontal">
+                    <h3>¿Qué es el sistema de gestión de calidad?</h3>
+                </div>
+                <div class="tarjeta atras">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ea?</p>
+                </div>
             </div>
     </div>
 </section>

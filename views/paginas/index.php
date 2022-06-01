@@ -32,7 +32,6 @@
         <h1 class="no-click">Empleados</h1>
         <div class="enlaces">
             <a href="https://www.asignar.com.co/_admin/usuario.php">Ingreso Empleados</a>
-            <a href="/faq">Preguntas frecuentes</a>
         </div>
         <div class="blend-main">
             <picture>
@@ -131,8 +130,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea! </p>
         </div>
         <div class="areas">
-            <h2>Empleados Administrativos</h2>
-            <img src="/build/img/administrativos.webp" alt="Empleados Administrativos" loading="lazy"/>
+            <h2>Propuestas de Valor</h2>
+            <img src="/build/img/administrativos.webp" alt="Propuestas de Valor" loading="lazy"/>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p>
         </div>
     </div>

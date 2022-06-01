@@ -39,7 +39,14 @@
     </div>
     <div class="info-servicio right">
         <h1>Selección</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in aliquam repudiandae sit id magnam tempora expedita. Ipsam est magnam veniam aliquam voluptates doloremque, nisi exercitationem autem iure? Autem, enim.</p>
+        <p>Contamos con profesionales en selección de personal, quienes se encargan de atender las necesidades en Gestión Humana de nuestros clientes, para dar respuesta y acompañamiento oportuno encontrando a las personas idóneas, que reúnan el talento, las capacidades, competencias y las funciones a realizar dentro de la empresa.</p>
+        <p><span>Beneficios para la empresa cliente:</span></p>
+        <ul>
+            <li>Mejoramiento de la productividad.</li>
+            <li>Aumento de la competitividad.</li>
+            <li>Reducción de costos en el área de Recursos Humanos, a través de los procesos de selección.</li>
+            <li>Personal idóneo para el perfil solicitado por el cliente.</li>
+        </ul>
         <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
     </div>
 </section>

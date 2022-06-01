@@ -89,7 +89,7 @@
                             <img src="/build/img/logo-conexion.svg" alt="Logo Conexión Outsourcing" loading="lazy">
                             <p>Conozca nuestra empresa filial aquí</p>
                         </a>
-                        <a href="">
+                        <a href="/politicas">
                             <p>Consulte nuestros términos, condiciones y políticas de privacidad</p>
                         </a>
                     </div>

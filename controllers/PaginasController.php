@@ -157,4 +157,8 @@ class PaginasController{
     public static function faq(Router $router){ 
         $router->render('paginas/faq');
     }
+
+    public static function politicas(Router $router){ 
+        $router->render('paginas/politicas');
+    }
 }
