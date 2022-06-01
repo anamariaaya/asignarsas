@@ -153,4 +153,8 @@ class PaginasController{
             'mensaje' => $mensaje
         ]);
     }
+
+    public static function faq(Router $router){ 
+        $router->render('paginas/faq');
+    }
 }

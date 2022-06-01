@@ -23,6 +23,7 @@ $router->get('/vacantes',[PaginasController::class, 'vacantes']);
 $router->get('/vacante',[PaginasController::class, 'vacante']);
 $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 $router->post('/soluciones',[PaginasController::class, 'soluciones']);
+$router->get('/faq',[PaginasController::class, 'faq']);
 
 //Admin Web
 $router->get('/adminweb',[AdminController::class, 'index']);

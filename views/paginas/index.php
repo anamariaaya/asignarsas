@@ -17,7 +17,7 @@
         <h1 class="no-click">Soluciones Empresariales</h1>
         <div class="enlaces">
             <a href="/soluciones">Contactar</a>
-            <a href="https://www.asignar.com.co/_admin/">Ingresar</a>
+            <a href="https://www.asignar.com.co/_admin/">Ingreso Empresas</a>
         </div>
         <div class="blend-main">
             <picture>
@@ -31,7 +31,8 @@
     <div class="enlaces-main">
         <h1 class="no-click">Empleados</h1>
         <div class="enlaces">
-            <a href="">Ingreso sólo para empleados</a>
+            <a href="https://www.asignar.com.co/_admin/usuario.php">Ingreso Empleados</a>
+            <a href="/faq">Preguntas frecuentes</a>
         </div>
         <div class="blend-main">
             <picture>
