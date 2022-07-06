@@ -19,7 +19,7 @@
             <p><span>Descripción:</span> <?php echo $oferta->descripcion;?></p>
             <p><span>Horario:</span> <?php echo $oferta->horario;?></p>
             <p><span>Envía tu hoja de vida a:</span> <?php echo $oferta->correo;?></p>
-            <p><span>O escríbenos por WhatsApp:</span> <?php echo $oferta->whatsapp;?></p>
+            <p><a href="<?php echo 'https://wa.me/+57'.$oferta->whatsapp;?>" target=_blank><span class="whats">O escríbenos por WhatsApp dando click aquí</span> </a></p>
             <p><span>Esta vacante está disponible hasta el:</span> <?php echo $oferta->vencimiento;?></p>
         </div>     
         
