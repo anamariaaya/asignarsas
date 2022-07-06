@@ -6,10 +6,7 @@
     <h2>Nuestra Compañía</h2>
     <div class="grid-compania">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum natus officiis animi tempora esse placeat voluptate molestiae possimus nihil officia, quibusdam, ex eos sequi similique beatae est, assumenda pariatur voluptas?
-            Temporibus fuga, fugit incidunt dolore quaerat tempore omnis eum repellat, expedita inventore vel atque eaque, voluptates tenetur. Suscipit totam voluptatibus perferendis dolorum harum ducimus illo ipsum recusandae sit cum! Aliquam.
-            Amet quasi accusantium excepturi facilis, cum consequatur inventore tempora illo ab, eveniet eligendi sequi, impedit animi neque non eaque! Deserunt earum fugit dolorem id hic vero at sequi similique recusandae.
-            Ex debitis saepe quod adipisci dolores eum ut veritatis, perferendis quisquam culpa nesciunt necessitatibus nobis amet voluptate velit ducimus expedita ea a ipsam quae. Totam, reprehenderit eveniet? Hic, blanditiis repellat!
+        Asignar S.A.S es una temporal con  más de 20 años de experiencia, haciendo acompañamiento continuo a nuestros clientes. Estamos amparados por la Legislación Laboral Colombiana, Ley 50 de 1990, artículos 71 y siguientes. Contamos con Licencia de funcionamiento y póliza de disposiciones Legales aprobada por el Ministerio de Trabajo
         </p>
         <picture>
             <source srcset="/build/img/compania.avif" type="image/avif">
