@@ -71,7 +71,13 @@
         <?php
         foreach($ofertas as $oferta){?>
             <div class="vacante vacante-index">
-                <img src="/images/<?php echo $oferta->imagen; ?>" alt="Vacante en <?php echo $ciudad->nombre; ?>" loading="lazy"/>
+                <img
+                src="/images/<?php echo $oferta->imagen; ?>"
+                alt="Vacante en <?php foreach($ciudades as $ciudad){?>
+                    <?php echo $oferta->idCiudad === $ciudad->id ? '<span>oferta en '.$ciudad->nombre.'</span>': '';?>
+                    <?php
+                        }
+                    ?>" loading="lazy"/>
                 <p><span><?php echo $oferta->cargo; ?></span></p>
                 <p>$<?php echo number_format($oferta->salario, 0, ',', '.'); ?></p>
                 <p>
@@ -117,22 +123,22 @@
 
 </section>
 
-<section>
+<section class="bottom">
     <div class="segmentos">
         <div class="areas">
             <h2>Empleados Misionales</h2>
             <img src="/build/img/misionales.webp" alt="Empleados Misionales" loading="lazy"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p> -->
         </div>
         <div class="areas">
             <h2>Responsabilidad Social Empresarial</h2>
             <img src="/build/img/responsabilidadsocial.webp" alt="Responsabilidad Social Empresarial" loading="lazy"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea! </p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea! </p> -->
         </div>
         <div class="areas">
             <h2>Propuestas de Valor</h2>
             <img src="/build/img/administrativos.webp" alt="Propuestas de Valor" loading="lazy"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p> -->
         </div>
     </div>
 </section>
