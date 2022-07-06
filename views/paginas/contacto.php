@@ -7,6 +7,7 @@ use Model\Contactos;
 
 <section class="contenedor bottom">
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis facere ipsam ea placeat? Dignissimos sint dolore placeat eum ut laborum veniam vero atque, repellat reprehenderit qui expedita beatae ad perferendis?</p>
+    <a class="btn-contacto" href="/soluciones">Si eres empresa da click aquí</a>
 </section>
 
 <section class="contenedor">
