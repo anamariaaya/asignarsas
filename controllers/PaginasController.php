@@ -7,18 +7,15 @@ use Model\Ofertas;
 use Model\Ciudades;
 use Model\Contactos;
 use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\PHPMailer;
 
 
 class PaginasController{
     public static function index(Router $router){
         $inicio = true;
-        $ofertas = Ofertas::get(4);
-        $ciudades = Ciudades::all();
         
         $router->render('paginas/index',[
             'inicio' => $inicio,
-            'ofertas' => $ofertas,
-            'ciudades' => $ciudades,
         ]);
     }
 
@@ -26,7 +23,7 @@ class PaginasController{
         $servicios = true;
         
         $router->render('paginas/servicios',[
-            'servicios' => $servicios
+            'servicios' => $servicios            
         ]);
     }
 
@@ -34,87 +31,49 @@ class PaginasController{
         $nosotros = true;
         
         $router->render('paginas/nosotros',[
+            'titulo' => '¿Quiénes Somos?',
             'nosotros' => $nosotros
         ]);
     }
 
     public static function contacto(Router $router){
-        $mensaje = null;
-
-        $contacto = new Contactos;
-        $errores = Contactos::getErrores();
-
-        if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            $contacto = new Contactos($_POST['contacto']);
-            $contacto->fecha = date("Y-m-d H:i:s");
-            
-            $errores = $contacto->validar();
-
-            if(empty($errores)){                
-                $contacto->enviarMensaje();
-                $mensaje = 'Mensaje enviado';
-            }
-        }
         
         $router->render('paginas/contacto',[
-            'errores' => $errores,
-            'contacto' => $contacto,
-            'mensaje' => $mensaje
+            'titulo' => 'Contáctenos'
         ]);
     }
 
-    public static function ofertas(Router $router){
-        $vacantes = true;
-        $ciudades = Ciudades::allOrderBy('nombre');    
-        
+    public static function ofertas(Router $router){   
         $router->render('paginas/ofertas', [
-            'vacantes' => $vacantes,
-            'ciudades' => $ciudades
+            'titulo' => 'Ofertas Laborales',
         ]);
     }
 
-    public static function vacantes(Router $router){
-        $vacantes = true;
-        $id = redireccionar("/ofertas");
-        $ofertas = Ofertas::search($id);
-        $ciudad = Ciudades::find($id);
-        
+    public static function vacantes(Router $router){        
         $router->render('paginas/vacantes',[
-            'vacantes' => $vacantes,
-            'ciudad' => $ciudad,
-            'ofertas' => $ofertas
+            'titulo' => 'Ofertas Laborales en ',
         ]);
     }
 
-    public static function vacante(Router $router){
-        $vacantes = true;
-        $id = redireccionar("/ofertas");
-        $oferta = Ofertas::find($id);
-        $ciudades = Ciudades::all();
-        
-        $router->render('paginas/vacante',[
-            'vacantes' => $vacantes,
-            'oferta' => $oferta,
-            'ciudades' => $ciudades
-        ]);
+    public static function vacante(Router $router){        
+        $router->render('paginas/vacante');
     }
 
     public static function soluciones(Router $router){ 
         $mensaje = null;
+        
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $respuestas = $_POST['contacto'];
 
             $mail = new PHPMailer();
-
-            //Configurar SMTP (Protocolo para el envío de Emails)
             $mail->isSMTP();
-            $mail->Host = 'smtp.mailtrap.io';
-            $mail->SMTPAuth = true; //Usa autenticación de usuario para envío
-            $mail->Username = '15b8d69fe2f467';
-            $mail->Password = '8831548112f491';
+            $mail->Host = $_ENV['EMAIL_HOST'];
+            $mail->SMTPAuth = true;
+            $mail->Port = $_ENV['EMAIL_PORT'];
+            $mail->Username = $_ENV['EMAIL_USER'];
+            $mail->Password = $_ENV['EMAIL_PASS'];
             $mail->SMTPSecure = 'tls'; //Transport layer security (reemplazó el SSL-Secure Socket Layer)
-            $mail->Port = 2525;
 
             //Configurar el contenido del Email
             $mail->setFrom('gerenciaop@asignar.com.co');//La persona que nos envía el email.
@@ -126,22 +85,67 @@ class PaginasController{
             $mail->CharSet = 'UTF-8';
 
             //Definir el cuerpo del mensaje
-            $contenido = "<html>";
-            $contenido .= "<p><b>- NUEVO CONTACTO -</b></p>";
-            $contenido .= "<p><b>Empresa: </b>".$respuestas['empresa']."</p>";
-            $contenido .= "<p><b>Telefono: </b>".$respuestas['telefono']."</p>";
-            $contenido .= "<p><b>NIT: </b>".$respuestas['nit']."</p>";
-            $contenido .= "<p><b>Correo: </b>".$respuestas['email']."</p>";
-            $contenido .= "<p><b>Nombre Contacto: </b>".$respuestas['nombre']."</p>";
-            $contenido .= "<p><b>Cargo: </b>".$respuestas['cargo']."</p>";
-            $contenido .= "<p><b>Dirección: </b>".$respuestas['direccion']."</p>";
-            $contenido .= "<p><b>Ciudad: </b>".$respuestas['ciudad']."</p>";
-            $contenido .= "<p><b>Mensaje: </b>".$respuestas['mensaje']."</p>";
+            $contenido = "
+            <html>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+                    h1 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 25px;
+                    color: #070056;
+                    }
+
+                    body {
+                        font-family: 'Poppins', sans-serif;
+                        background-color: #ffffff;
+                        max-width: 400px;
+                        padding: 50px;
+                    }
+                
+                    p {
+                        line-height: 18px;
+                    }
+                    p span {
+                        font-size: 12px;
+                        color: #333333;
+                    }
+                    .line::after {
+                        content: '';
+                        position: absolute;
+                        top: 12%;
+                        left: 3%;
+                        width: 50%;
+                        height: 1px;
+                        background: #0da6f3;
+                        z-index: -1;
+                    }
+                </style>
+                <body>
+                    <h1 class='line'>¡Nueva solicitud comercial!</h1>
+                    
+                    <p>Estos son los datos enviados por el cliente:</p>
+
+                    <p><strong>Empresa: </strong>".$respuestas['empresa']."</p>
+                    <p><strong>Teléfono: </strong>".$respuestas['telefono']."</p>
+                    <p><strong>NIT: </strong>".$respuestas['nit']."</p>
+                    <p><strong>Email de contacto: </strong>".$respuestas['email']."</p>
+                    <p><strong>Nombre del contacto: </strong>".$respuestas['nombre']."</p>
+                    <p><strong>Cargo: </strong>".$respuestas['cargo']."</p>
+                    <p><strong>Dirección: </strong>".$respuestas['direccion']."</p>
+                    <p><strong>Ciudad: </strong>".$respuestas['ciudad']."</p>
+
+                    <p>Este es el mensaje de solicitud:</p>
+                    <p><strong>Mensaje: </strong>".$respuestas['mensaje']."</p>
+                    
+                    <p><span>Este correo electrónico fue enviado desde una dirección solamente de notificaciones que no puede aceptar correos electrónicos entrantes. Por favor no respondas a este mensaje.</span></p>
+                </body>
+            </html>";
 
             $mail->Body = $contenido;
                 $mail->AltBody = 'Texto alternativo sin HTML';
 
-            //Enviar el Email
+        //Enviar el Email
             if($mail->send()){
                 $mensaje = 'Mensaje enviado correctamente';
             } else{
@@ -154,8 +158,10 @@ class PaginasController{
         ]);
     }
 
-    public static function faq(Router $router){ 
-        $router->render('paginas/faq');
+    public static function pqr(Router $router){ 
+        $router->render('paginas/pqr', [
+            'titulo' => 'PQRs',
+        ]);
     }
 
     public static function politicas(Router $router){ 

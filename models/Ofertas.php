@@ -32,37 +32,37 @@ class Ofertas extends ActiveRecord{
 
     public function validar(){
         if(!$this->cargo){
-            self::$errores[] = 'Añade un Cargo';
+            self::$alertas[] = 'Añade un Cargo';
         }
 
         if(!$this->salario){
-            self::$errores[] = 'Añade el salario del cargo';
+            self::$alertas[] = 'Añade el salario del cargo';
         }
 
         if(!$this->horario){
-            self::$errores[] = 'Añade el horario del cargo';
+            self::$alertas[] = 'Añade el horario del cargo';
         }
 
         if(strlen($this->descripcion) < 25 && strlen($this->descripcion) > 300){
-            self::$errores[] = 'Añade una descripción entre 40 y 300 caracteres';
+            self::$alertas[] = 'Añade una descripción entre 40 y 300 caracteres';
         }
 
         if(!$this->correo){
-            self::$errores[] = 'Añade un correo donde se reciben las hojas de vida';
+            self::$alertas[] = 'Añade un correo donde se reciben las hojas de vida';
         }
 
         if(!$this->idCiudad){
-            self::$errores[] = 'Elige una ciudad';
+            self::$alertas[] = 'Elige una ciudad';
         }
 
         if(!$this->imagen){
-            self::$errores[] = 'La imagen es obligatoria';
+            self::$alertas[] = 'La imagen es obligatoria';
         }
 
         if(!$this->vencimiento){
-            self::$errores[] = 'Añade la fecha de vencimiento de la oferta';
+            self::$alertas[] = 'Añade la fecha de vencimiento de la oferta';
         }
 
-        return self::$errores;
+        return self::$alertas;
     }
 }

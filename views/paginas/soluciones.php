@@ -9,9 +9,10 @@
             </div>
             <div class="div-info">
                 <h1>Soluciones Empresariales</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia illo tempore amet, id eos minus dolore voluptate aperiam veniam unde cum recusandae temporibus dolorum, non sit sint rerum? Architecto, ea?
-                Quaerat ad suscipit, ratione dolorum dolores quae ullam molestiae voluptas perspiciatis saepe architecto consequatur! Voluptates beatae tenetur libero iusto iure odit quibusdam, expedita quisquam magnam obcaecati nam cum voluptatibus molestiae!</p>
-            </div>
+                <p>Somos la solución que necesita su empresa frente a las necesidades de gestión humana y servicios temporales. </p>
+                <a href="/servicios" class="btn-enviar">Conozca nuestros Servicios</a>
+                <a href="/brochure" class="btn-ver">Conozca nuestro Brochure</a>
+            </div>       
         </div>
     </div>
 </main>
@@ -28,16 +29,16 @@
             </p>
         <?php }?>
 
-    <form class="formulario" method="POST" action="/soluciones">  
-        <fieldset class="no-border">
+    <form id="form-cliente" class="formulario" method="POST" action="/soluciones">  
+        <fieldset class="no-border" id="fieldset-empresa">
             <div class="form-campos">
-                <label for="company">Nombre de la empresa
-                    <input type="text" placeholder="Nombre de la empresa" id="company" name="contacto[empresa]" required>
+                <label for="empresa">Nombre de la empresa
+                    <input type="text" placeholder="Nombre de la empresa" id="empresa" name="contacto[empresa]" required>
                 </label>
             
 
-                <label for="tel">Teléfono PBX o celular
-                    <input type="tel" placeholder="Teléfono PBX o celular" id="tel" name="contacto[telefono]" required>
+                <label for="tel-empresa">Teléfono PBX o celular
+                    <input type="tel" placeholder="Teléfono PBX o celular" id="tel-empresa" name="contacto[telefono]" required>
                 </label>
             </div>
 
@@ -47,14 +48,14 @@
                 </label>
             
 
-                <label for="email">Correo
-                    <input type="email" placeholder="Correo electrónico" id="email" name="contacto[email]" required>
+                <label for="email-empresa">Correo
+                    <input type="email" placeholder="Correo electrónico" id="email-empresa" name="contacto[email]" required>
                 </label>
             </div>
 
             <div class="form-campos">
-                <label for="name">Nombre de Contacto
-                    <input type="text" placeholder="Nombre de Contacto" id="name" name="contacto[nombre]" required>
+                <label for="nombre-contacto">Nombre de Contacto
+                    <input type="text" placeholder="Nombre de Contacto" id="nombre-contacto" name="contacto[nombre]" required>
                 </label>
                 <label for="cargo">Cargo
                     <input type="text" placeholder="Cargo" id="cargo" name="contacto[cargo]" required>
@@ -71,10 +72,16 @@
                 </label>
             </div>
 
-            <label for="message">Descríbanos aquí su solicitud</label>
-            <textarea id="message" name="contacto[mensaje]" placeholder ="Descríbanos aquí su solicitud" required></textarea>         
+            <label for="mensaje-empresa">Descríbanos aquí su solicitud</label>
+            <textarea id="mensaje-empresa" name="contacto[mensaje]" placeholder ="Descríbanos aquí su solicitud" required></textarea>         
         </fieldset>
 
-        <input type="submit" value="Enviar" class="btn-enviar">
+        <input id="enviar-empresa" type="submit" value="Enviar" class="btn-enviar">
     </form>
 </section>
+
+<?php
+    $script = "
+    <script src='/build/js/validarFormCliente.js'></script>
+    ";
+?>

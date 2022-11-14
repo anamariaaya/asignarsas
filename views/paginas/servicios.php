@@ -9,7 +9,7 @@
         <a href="#contratacion">
             <div class="servicio">
                 <img src="/build/img/contratacion.svg" alt="Contratación" loading="lazy">
-                <p>Contratación</p>
+                <p>Suministro de personal</p>
             </div>
         </a>
         <a href="#sst">
@@ -39,23 +39,33 @@
     </div>
     <div class="info-servicio right">
         <h1>Selección</h1>
-        <p>Contamos con profesionales en selección de personal, quienes se encargan de atender las necesidades en Gestión Humana de nuestros clientes, para dar respuesta y acompañamiento oportuno encontrando a las personas idóneas, que reúnan el talento, las capacidades, competencias y las funciones a realizar dentro de la empresa.</p>
+        <p>Contamos con profesionales en selección de personal, quienes se encargan de atender las necesidades de nuestros clientes, para dar respuesta y acompañamiento oportuno, encontrando a las personas idóneas, que reúnan el talento, las capacidades, competencias y las funciones a realizar dentro de su empresa, acorde al perfil solicitado.</p>
         <p><span>Beneficios para la empresa cliente:</span></p>
         <ul>
             <li>Mejoramiento de la productividad.</li>
             <li>Aumento de la competitividad.</li>
             <li>Reducción de costos en el área de Recursos Humanos, a través de los procesos de selección.</li>
-            <li>Personal idóneo para el perfil solicitado por el cliente.</li>
         </ul>
-        <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
+        <!-- <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a> -->
     </div>
 </section>
 
 <section class="contenedor tipo-servicio" id="contratacion">
     <div class="info-servicio left">
-        <h1>Contratación</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in aliquam repudiandae sit id magnam tempora expedita. Ipsam est magnam veniam aliquam voluptates doloremque, nisi exercitationem autem iure? Autem, enim.</p>
-        <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
+        <h1>Suministro de Personal</h1>
+
+        <p>Este servicio de ofrece a los clientes que presentan  requerimientos en Gestión humana, con respuesta oportuna  en casos como:</p>
+        <ul>
+            <li>Labores ocasionales, accidentales y/o transitorias</li>
+            <li>Incapacidades</li>
+            <li>Aumentos en la producción</li>
+            <li>Reemplazos por vacaciones</li>
+            <li>Licencias</li>
+            <li>Temporadas especiales</li>
+        </ul>
+
+        <p>El servicio cuenta con Administración de personal en misión, que consta de: reclutamiento de personal según perfil de cargo, entrevista y aplicación de pruebas psicotécnicas, verificación de referencias laborales y judiciales e informe final a cargo del profesional especializado.</p>
+        <!-- <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a> -->
     </div>
     <div class="imagen-servicio right">
         <img src="/build/img/contratacionfondo.png" alt="Contratación" loading="lazy">
@@ -68,16 +78,20 @@
     </div>
     <div class="info-servicio right">
         <h1>SG-SST</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in aliquam repudiandae sit id magnam tempora expedita. Ipsam est magnam veniam aliquam voluptates doloremque, nisi exercitationem autem iure? Autem, enim.</p>
-        <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
+        <p>• Asesoramiento al plan de desarrollo integral para prevención y control de riesgos profesionales</p>
+        <p>• Formación integral en salud ocupacional</p>
+        <p>• Actividades de Seguridad y Salud en el Trabajo</p>
+        <p>• El porcentaje de ARL se establecerá conforme a la tabla de riesgos de la actividad</p>
+        <p>• El cliente suministrará a Asignar S.A.S. la matriz, la identificación de los peligros y la valoración de los riesgos, según Decreto 1072 de 2015</p>
+        <!-- <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a> -->
     </div>
 </section>
 
 <section class="contenedor tipo-servicio" id="nomina">
     <div class="info-servicio left">
         <h1>Nómina</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in aliquam repudiandae sit id magnam tempora expedita. Ipsam est magnam veniam aliquam voluptates doloremque, nisi exercitationem autem iure? Autem, enim.</p>
-        <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
+        <p>Administramos la nómina del personal misional de su empresa, con pagos oportunos, acorde a la legislación colombiana, incluyendo pago de prestaciones sociales, seguridad social y la nómina laborada del colaborador.</p>
+        <!-- <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a> -->
     </div>
 
     <div class="imagen-servicio right">
@@ -91,14 +105,16 @@
     </div>
     <div class="info-servicio right">
         <h1>Administración de Personal</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum in aliquam repudiandae sit id magnam tempora expedita. Ipsam est magnam veniam aliquam voluptates doloremque, nisi exercitationem autem iure? Autem, enim.</p>
-        <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a>
+        <p>En los procesos de contratación aseguramos al empleado las afiliaciones a la EPS en donde se encuentre afiliado, a la ARL SURA y al fondo de pensiones de donde viene cotizando.</p>
+
+        <p>Asignar S.A.S se caracteriza por ser una empresa con excelente cumplimiento de los derechos laborales del empleado.</p>
+        <!-- <a class="btn-contacto-servicios" href="/contacto">Solicite aquí este servicio</a> -->
     </div>
 </section>
 
 <section class="responsabilidad contenedor">
     <h2>Responsabilidad Social Empresarial</h2>
-    <p>Nos esforzamos como empresa en el cumplimiento para mejorar la calidad de vida</p>
+    <p>Nos esforzamos como empresa aportando empleabilidad para construir un mejor país.</p>
 </section>
 
 <ul class="burbujas">

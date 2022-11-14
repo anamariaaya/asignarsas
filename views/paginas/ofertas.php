@@ -1,24 +1,14 @@
 <main class="contenedor ofertas">
-    <h1>Ofertas Laborales</h1>
+    <h1><?php echo $titulo; ?></h1>
 
-    <div class="ofertas-nav">
-        <nav>
-        <?php
-        foreach($ciudades as $ciudad){ ;?>      
+    <div id='ciudades' class="ofertas-nav">
         
-            <a href="/vacantes?id=<?php echo $ciudad->id?>">
-                <div class="iconos ofertas-icon">
-                    <i class="fa fa-solid fa-briefcase no-click"></i>
-                    <p class="no-click">
-                        <?php echo $ciudad->nombre; ?>
-                    </p>
-                </div>
-            </a>
-
-        <?php
-        }
-        ?>
-        </nav>
     </div>
 
 </main>
+
+<?php
+    $script = "
+    <script src='/build/js/apiOfertas.js'></script>
+    ";
+?>

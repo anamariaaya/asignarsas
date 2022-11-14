@@ -6,7 +6,7 @@ class Router{
 
     public $rutasGET=[];
     public $rutasPOST=[];
-    public $rutasProtegidas = ['/admin'];
+
 
     public function get($url, $fn){
         $this->rutasGET[$url] = $fn;
@@ -19,11 +19,6 @@ class Router{
     public function comprobarRutas(){
         session_start();
 
-        $auth = $_SESSION['login'] ?? null;
-        //Arreglo de rutas protegidas
-        $rutasProtegidas = $this->rutasProtegidas;
-
-
         $urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
         $metodo = $_SERVER['REQUEST_METHOD'];
         
@@ -35,23 +30,19 @@ class Router{
             $urlActual = explode('?',$urlActual)[0];
             $fn = $this->rutasPOST[$urlActual] ?? null;
         }
-
-        //Proteger las rutas
-        if(in_array($urlActual, $rutasProtegidas) && !$auth){
-            header('Location: /');
-        }
-
+       
         if($fn){
             //la URL existe
             call_user_func($fn, $this);
         } else{
             echo 'No existe esta página';
         }
+
     }
 
     //Muestra una vista
     public function render($view, $datos = []){
-        $rutasProtegidas = $this->rutasProtegidas;
+
 
         foreach($datos as $key=>$value){
             $$key = $value;
@@ -61,12 +52,15 @@ class Router{
 
         include __DIR__."/views/$view.php";
         $contenido = ob_get_clean(); //Limpia el buffer
+
+        $url_actual = $_SERVER['PATH_INFO'] ?? '/';
         
-        
-        if(in_array('/'.$view, $rutasProtegidas)){
-            include __DIR__."/views/adminlayout.php";
-        } else{
-            include __DIR__."/views/layout.php";
+        if(str_contains($url_actual, '/admin')) {
+            include_once __DIR__ . "/views/layouts/admin-layout.php";
+        } elseif(str_contains($url_actual, '/portal/')) {
+            include_once __DIR__ . "/views/layouts/usuario-layout.php";
+        } else {
+            include_once __DIR__ . "/views/layouts/main-layout.php";
         }
     }
 }

@@ -1,5 +1,5 @@
 <main class="contenedor nosotros">
-    <h1>¿Quiénes Somos?</h1>
+    <h1><?php echo $titulo; ?></h1>
 </main>
 
 <section class="contenedor compania">
@@ -19,14 +19,14 @@
 <section class="contenedor corporacion">
     <h2>Misión</h2>
     <div class="mision">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga assumenda nesciunt quas nulla in provident impedit saepe adipisci odio corrupti dolores ducimus, ex harum voluptatibus unde enim deleniti? Nam, maxime.</p>
+        <p>En Asignar somos una empresa de servicios temporales que proporciona a sus clientes y empleados misionales, altos estándares de calidad, oportunidad y disposición de servicio; a través de un acompañamiento continuo, para satisfacer las necesidades de nuestro público objetivo.</p>
     </div>
 </section>
 
 <section class="contenedor corporacion">
     <h2>Visión</h2>
     <div class="vision">
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga assumenda nesciunt quas nulla in provident impedit saepe adipisci odio corrupti dolores ducimus, ex harum voluptatibus unde enim deleniti? Nam, maxime.</p>
+       <p>Asignar en el 2025 será la primera opción en servicios de selección y contratación de personal en misión, en los sectors de manufactura, comercio y servicios, como en la hotelería, restaurantes, call-center bilingües, ventas al por mayor y menor y demás servicios solicitados por nuestros clientes objetivo y entes interesados.</p>
     </div>
 
 </section>

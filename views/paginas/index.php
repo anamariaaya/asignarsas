@@ -6,8 +6,8 @@
         </div>
         <div class="blend-main">
             <picture>
-                <source srcset="build/img/ofertas.webp" type="image/webp">
-                <source srcset="build/img/ofertas.jpg" type="image/jpeg">
+                <source srcset="/build/img/ofertas.webp" type="image/webp">
+                <source srcset="/build/img/ofertas.jpg" type="image/jpeg">
                 <img src="/build/img/ofertas.png" alt="Ofertas Laborales" loading="lazy">
             </picture>   
         </div>     
@@ -16,6 +16,7 @@
     <div class="enlaces-main">
         <h1 class="no-click">Soluciones Empresariales</h1>
         <div class="enlaces">
+            <a href="/brochure">Ver brochure</a>
             <a href="/soluciones">Contactar</a>
             <a href="https://www.asignar.com.co/_admin/">Ingreso Empresas</a>
         </div>
@@ -67,32 +68,10 @@
 
 <section class="contenedor vacantes-index">
     <h2>Ofertas Laborales</h2>
-    <div class="grid-index-v"> 
-        <?php
-        foreach($ofertas as $oferta){?>
-            <div class="vacante vacante-index">
-                <img
-                src="/images/<?php echo $oferta->imagen; ?>"
-                alt="Vacante en <?php foreach($ciudades as $ciudad){?>
-                    <?php echo $oferta->idCiudad === $ciudad->id ? '<span>oferta en '.$ciudad->nombre.'</span>': '';?>
-                    <?php
-                        }
-                    ?>" loading="lazy"/>
-                <p><span><?php echo $oferta->cargo; ?></span></p>
-                <p>$<?php echo number_format($oferta->salario, 0, ',', '.'); ?></p>
-                <p>
-                    <?php foreach($ciudades as $ciudad){?>
-                    <?php echo $oferta->idCiudad === $ciudad->id ? '<span>Ubicación: '.$ciudad->nombre.'</span>': '';?>
-                    <?php
-                        }
-                    ?>
-                </p>  
-                <a class="btn-vacante" href="vacante?id=<?php echo $oferta->id;?>">Ver Oferta</a>
-            </div>
-        <?php           
-        }
-        ?>
+    
+    <div class="grid-index-v">
     </div>
+
     <a href="/ofertas" class="btn-ver-mas">Ver todas las ofertas</a>
 </section>
 
@@ -136,7 +115,7 @@
             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea! </p> -->
         </div>
         <div class="areas">
-            <h2>Propuestas de Valor</h2>
+            <h2>¿Conoces Asignar?</h2>
             <img src="/build/img/administrativos.webp" alt="Propuestas de Valor" loading="lazy"/>
             <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus modi enim velit sed expedita ad qui repudiandae voluptate fuga ea. Unde, repellendus quaerat consequatur hic facilis praesentium recusandae temporibus ea!</p> -->
         </div>
@@ -202,7 +181,7 @@
             <img class="otros" src="/build/img/medicox.webp" alt="Logo Medicox" loading="lazy">
             <img class="otros" src="/build/img/hrmd.webp" alt="Logo HRMD" loading="lazy">
             <img class="otros" src="/build/img/frutafresca.webp" alt="Logo Fruta Fresca" loading="lazy">
-            <img class="otros" src="/build/img/jsmd.webp" alt="Logo JSMD Management" loading="lazy">
+            
 
 
             <ul class="circles">
@@ -231,3 +210,10 @@
 
     <a class="btn-contacto" href="/soluciones">Contáctanos</a>
 </section>
+
+<?php
+    $script = "
+    <script src='/build/js/apiOfertas.js'></script>
+    <script src='/build/js/carrusel.js'></script>
+    ";
+?>

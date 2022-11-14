@@ -1,20 +1,9 @@
 <?php
 
-define('TEMPLATES_URL', __DIR__. '/templates');
-define('FUNCIONES_URL', __DIR__. 'funciones.php');
 define('CARPETA_IMAGENES', $_SERVER['DOCUMENT_ROOT'].'/images/');
 define('CARPETA_DOCS', $_SERVER['DOCUMENT_ROOT'].'/docs/');
 
 
-
-function estaAutenticado(): bool {
-    session_start();
-
-    if(!$_SESSION['login']){
-        header('Location: /');
-    }
-    return true;
-}
 
 function debugging($variable){
     echo "<pre>";
@@ -29,36 +18,6 @@ function s($html) : string{
     return $s;
 }
 
-//Validar tipo de contenido
-function validarTipoContenido($tipo){
-    $tipos = ['oferta', 'ciudad', 'usuario', 'contacto'];
-
-    return in_array($tipo, $tipos);
-}
-
-//Muestra los mensaje
-function mostrarNotificacion($codigo){
-    $mensaje = '';
-
-    switch($codigo){
-        case 1:
-            $mensaje = 'Guardada Correctamente';
-            break;
-        case 2:
-            $mensaje = 'Actualizada Correctamente';
-            break;
-        case 3:
-            $mensaje = 'Eliminada Correctamente';
-            break;
-        case 4:
-            $mensaje = 'Mensaje Eliminado';
-            break;
-        default:
-        $mensaje = false;
-        break;
-    }
-    return $mensaje;
-}
 
 function redireccionar(string $url){
     $id = $_GET['id'];
@@ -78,4 +37,32 @@ function truncate($text, $chars = 50) {
     $text = substr($text,0,strrpos($text,' '));
     $text = $text."..."; // Si no se desea tener tres puntos suspensivos se comenta esta línea.
     return $text;
+}
+
+function pagina_actual($path){
+    if(str_contains($_SERVER['REQUEST_URI'], $path) === true){
+        echo 'active';
+    } else{
+        return;
+    }
+}
+
+function isAuth() : void {
+    if(!isset($_SESSION['login'])) {
+        header('Location: /');
+    }
+}
+
+function isAdmin() : void {
+    if(!isset($_SESSION['admin'])){
+        header('Location: /');
+    }
+}
+
+function sesionActiva($var){
+    if(!isset($_SESSION['admin'])){
+        echo '/portal/candidatos';
+    } else{
+        echo '/admin/dashboard';
+    }
 }
