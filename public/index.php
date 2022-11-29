@@ -22,8 +22,6 @@ $router->get('/',[PaginasController::class, 'index']);
 $router->get('/servicios',[PaginasController::class, 'servicios']);
 $router->get('/nosotros',[PaginasController::class, 'nosotros']);
 $router->get('/contacto',[PaginasController::class, 'contacto']);
-// $router->post('/contacto',[PaginasController::class, 'contacto']);
-
 $router->get('/ofertas',[PaginasController::class, 'ofertas']);
 $router->get('/vacantes',[PaginasController::class, 'vacantes']);
 $router->get('/vacante',[PaginasController::class, 'vacante']);
@@ -31,6 +29,8 @@ $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 $router->post('/soluciones',[PaginasController::class, 'soluciones']);
 $router->get('/pqr',[PaginasController::class, 'pqr']);
 $router->get('/politicas',[PaginasController::class, 'politicas']);
+$router->get('/SQR-empresa',[PaginasController::class, 'SQREmpresa']);
+$router->get('/SQR-empleado',[PaginasController::class, 'SQREmpleado']);
 
 //Postulaciones
 $router->get('/postulacion', [AplicantesController::class, 'index']);

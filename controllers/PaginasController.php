@@ -158,9 +158,15 @@ class PaginasController{
         ]);
     }
 
-    public static function pqr(Router $router){ 
-        $router->render('paginas/pqr', [
-            'titulo' => 'PQRs',
+    public static function SQREmpresa(Router $router){ 
+        $router->render('paginas/SQR-Empresa', [
+            'titulo' => 'SQRs empresa',
+        ]);
+    }
+
+    public static function SQREmpleado(Router $router){ 
+        $router->render('paginas/SQR-Empleado', [
+            'titulo' => 'SQRs empleado',
         ]);
     }
 

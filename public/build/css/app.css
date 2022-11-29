@@ -3953,10 +3953,12 @@ p {
 }
 .ofertas__buscar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
   margin: 0 auto rem auto;
+  gap: 2rem;
 }
 @media (min-width: 768px) {
   .ofertas__buscar {
