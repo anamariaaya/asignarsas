@@ -61,7 +61,7 @@ function isAdmin() : void {
 
 function sesionActiva($var){
     if(!isset($_SESSION['admin'])){
-        echo '/portal/candidatos';
+        echo '/';
     } else{
         echo '/admin/dashboard';
     }

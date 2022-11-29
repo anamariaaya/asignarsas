@@ -40,13 +40,13 @@
             <a href="tel:6043220310">Línea IP Nacional: (57) 604 322 03 10</a>
             <div class="redes">
                 <a href="">
-                    <i class="fa fa-instagram"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-facebook"></i>
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa-brands fa-twitter"></i>
                 </a>
             </div>
         </div>

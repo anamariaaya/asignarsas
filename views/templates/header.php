@@ -26,21 +26,12 @@
                         </div>
                     </div>
 
-                    <div id="pqr" class="<?php pagina_actual('PQR'); ?> submenu-btn" >PQRs
+                    <div id="pqr" class="<?php pagina_actual('SQR'); ?> submenu-btn" >SQRs
                         <div class="submenu" id="menu-pqr">
-                            <a href="/PQR-empresa">&raquo; PQR Empresas</a>
-                            <a href="/PQR-empleado">&raquo; PQR Empleados</a>
+                            <a href="/SQR-empresa">&raquo; SQR Empresas</a>
+                            <a href="/SQR-empleado">&raquo; SQR Empleados</a>
                         </div>
-                    </div>
-
-                    <?php if (isset($_SESSION['id'])) : ?>
-                        <a href="<?php
-                        sesionActiva($_SESSION['admin']);
-                        ?>">Volver al admin</a>
-                    <?php else : ?>
-                        <a class="<?php pagina_actual('login'); ?>" href="/login">Login</a>
-                    <?php endif; ?>
-                    
+                    </div>                    
                 </nav>
             </div>
             <i class="fa fa-moon dark-mode-boton"></i>

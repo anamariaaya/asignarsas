@@ -18,12 +18,12 @@
             </span>
         </a>
 
-        <a href="/admin/candidatos" class="dashboard__enlace <?php pagina_actual('candidatos');?>">
+        <!-- <a href="/admin/candidatos" class="dashboard__enlace <?php pagina_actual('candidatos');?>">
             <i class="fa-solid fa-user-tie dashboard__icono"></i>
             <span class="dashboard__menu-texto">
                 Candidatos
             </span>
-        </a>
+        </a> -->
 
         <a href="/admin/inbox" class="dashboard__enlace <?php pagina_actual('registrados');?>">
             <i class="fa-solid fa-comments dashboard__icono"></i>

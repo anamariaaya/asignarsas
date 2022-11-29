@@ -32,6 +32,10 @@ $router->post('/soluciones',[PaginasController::class, 'soluciones']);
 $router->get('/pqr',[PaginasController::class, 'pqr']);
 $router->get('/politicas',[PaginasController::class, 'politicas']);
 
+//Postulaciones
+$router->get('/postulacion', [AplicantesController::class, 'index']);
+$router->post('/api/candidatos', [AplicantesController::class, 'postular']);
+
 //API de ofertas
 $router->get('/api/ciudades', [APIController::class, 'ciudades']);
 $router->get('/api/vacantes', [APIController::class, 'vacantes']);
@@ -73,9 +77,5 @@ $router->post('/admin/inbox', [ContactosController::class, 'eliminar']);
 
 //Admin aplicantes
 $router->get('/admin/candidatos', [CandidatosController::class, 'index']);
-
-//portal aplicantes
-$router->get('/portal/candidatos', [AplicantesController::class, 'index']);
-
 
 $router->comprobarRutas();

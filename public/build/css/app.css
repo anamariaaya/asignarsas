@@ -671,6 +671,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
 }
 .dark-mode .btn-vacante:hover {
   cursor: pointer;
@@ -684,6 +685,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
 }
 .dark-mode .btn-ver-mas:hover {
   cursor: pointer;
@@ -752,6 +754,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
 }
 .btn-contacto:hover {
   cursor: pointer;
@@ -775,6 +778,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   margin: 2rem auto;
   padding: 1rem 5rem;
   font-size: 1.4rem;
@@ -814,6 +818,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   border-radius: 2rem;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
@@ -831,6 +836,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   margin: 2rem auto;
   border-radius: 2rem;
   -webkit-margin-start: auto;
@@ -849,6 +855,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   border-radius: 2rem;
   margin: auto;
 }
@@ -865,6 +872,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   margin: 0 auto;
 }
 .btn-postularse:hover {
@@ -883,6 +891,7 @@ p {
   text-align: center;
   display: flex;
   border: none;
+  border-radius: 0.5rem;
   margin: 2rem auto;
   width: auto;
   justify-content: center;
@@ -908,6 +917,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   font-size: 1.4rem;
   padding: 1rem;
   margin-top: 2rem;
@@ -934,6 +944,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   margin: 2rem 0;
   border-radius: 0.5rem;
   width: -webkit-fit-content;
@@ -1026,7 +1037,7 @@ p {
 
 .btn-buscar {
   border-radius: 0 1rem 1rem 0;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   border: 1.5px solid #5388B1;
 }
 .btn-buscar:hover {
@@ -3940,6 +3951,37 @@ p {
 .ofertas h1 {
   margin: 5rem 0;
 }
+.ofertas__buscar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto rem auto;
+}
+@media (min-width: 768px) {
+  .ofertas__buscar {
+    width: 65%;
+    margin: 0 auto 7rem auto;
+  }
+}
+.ofertas__input {
+  width: 100%;
+  border: 1px solid #ACACAC;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
+}
+@media (min-width: 768px) {
+  .ofertas__input {
+    width: 80%;
+  }
+}
+.ofertas__input:focus {
+  outline: none;
+  box-shadow: rgb(157, 167, 176) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.321) -3px -3px 6px 1px inset;
+  caret-color: #00AACC;
+}
 
 .btn-volver {
   background-color: #00AACC;
@@ -3950,6 +3992,7 @@ p {
   text-align: center;
   display: inline-block;
   border: none;
+  border-radius: 0.5rem;
 }
 .btn-volver:hover {
   cursor: pointer;
@@ -3964,6 +4007,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -3986,6 +4030,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
 }
 .btn-vacante:hover {
   cursor: pointer;
@@ -4905,7 +4950,6 @@ p {
   border-radius: 1rem;
   cursor: pointer;
   background-color: #497ba1;
-  border: 3px solid #497ba1;
   margin: auto;
   display: none;
 }
@@ -5164,7 +5208,7 @@ p {
   width: auto;
   margin: 2rem auto;
   background-color: #f3f3f7;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   padding: 5rem 2rem;
 }
 @media (min-width: 1024px) {
@@ -5196,7 +5240,7 @@ p {
   width: 100%;
   background-color: #FFFFFF;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   border-radius: 1rem;
   margin-bottom: 2rem;
   caret-color: #070056;
@@ -5216,7 +5260,7 @@ p {
   margin-bottom: 2rem;
   caret-color: #070056;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
 }
 .form-admin img, .form-auth img {
   width: 11%;
@@ -5232,6 +5276,7 @@ p {
   text-align: center;
   display: block;
   border: none;
+  border-radius: 0.5rem;
 }
 .form-admin .btn-form:hover, .form-auth .btn-form:hover {
   cursor: pointer;
@@ -5308,7 +5353,7 @@ p {
   width: 100%;
   background-color: #FFFFFF;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   border-radius: 1rem;
   margin: 2rem auto;
   caret-color: #070056;
@@ -5441,6 +5486,7 @@ p {
   text-align: center;
   display: flex;
   border: none;
+  border-radius: 0.5rem;
   margin-right: 5rem;
 }
 .dashboard__submit--logout:hover {
@@ -5461,7 +5507,7 @@ p {
 }
 .mensajes__acciones {
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   border-radius: 0.5rem;
   padding: 1rem 3rem;
   border-bottom: 0.7rem solid #5388B1;
@@ -5602,7 +5648,7 @@ p {
 .oferta__card {
   border-radius: 0.5rem;
   background-color: #f3f3f7;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   padding: 2rem;
   border-bottom: 3px solid #5388B1;
   display: flex;
@@ -5662,7 +5708,7 @@ p {
 .ciudades__card {
   border-radius: 0.5rem;
   background-color: #f3f3f7;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
   padding: 1.5rem;
   border-bottom: 3px solid #5388B1;
   display: flex;

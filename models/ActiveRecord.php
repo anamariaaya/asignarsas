@@ -230,7 +230,7 @@ class ActiveRecord{
         }
         //Asignar el nombre del documento al atributo
         if($documento){
-            $this->documento = $documento;
+            $this->hdv = $documento;
         }
     }
  

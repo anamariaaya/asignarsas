@@ -43,7 +43,7 @@ class PaginasController{
         ]);
     }
 
-    public static function ofertas(Router $router){   
+    public static function ofertas(Router $router){
         $router->render('paginas/ofertas', [
             'titulo' => 'Ofertas Laborales',
         ]);
