@@ -173,4 +173,11 @@ class PaginasController{
     public static function politicas(Router $router){ 
         $router->render('paginas/politicas');
     }
+
+    public static function prueba(Router $router){
+        $ciudades = Ciudades::all();
+        $router->render('paginas/prueba',[
+            'ciudades' => $ciudades
+        ]);
+    }
 }

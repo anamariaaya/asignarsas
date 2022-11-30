@@ -57,8 +57,6 @@ class Router{
         
         if(str_contains($url_actual, '/admin')) {
             include_once __DIR__ . "/views/layouts/admin-layout.php";
-        } elseif(str_contains($url_actual, '/portal/')) {
-            include_once __DIR__ . "/views/layouts/usuario-layout.php";
         } else {
             include_once __DIR__ . "/views/layouts/main-layout.php";
         }

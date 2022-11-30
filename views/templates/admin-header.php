@@ -13,6 +13,5 @@
                 <input class="dashboard__submit--logout" type="submit" value="Cerrar Sesión"/>
             </form>
         </nav>
-        <i class="fa fa-moon dark-mode-boton"></i>
     </div>
 </header>

@@ -557,8 +557,14 @@ p {
 .dark-mode .barra img {
   filter: invert(100%) brightness(1.5);
 }
-.dark-mode .navegacion a {
+.dark-mode .navegacion a, .dark-mode .navegacion .submenu-btn {
   color: #FFFFFF;
+}
+.dark-mode .navegacion .submenu {
+  background-color: #333333;
+}
+.dark-mode .navegacion .submenu a {
+  background-color: #1a1a1a;
 }
 .dark-mode .mobile-menu .btnMenu {
   color: #FFFFFF;
@@ -632,6 +638,29 @@ p {
 .dark-mode .corporacion p {
   color: #FFFFFF;
 }
+.dark-mode .ofertas__input {
+  background-color: #262626;
+}
+.dark-mode .ofertas__input::-moz-placeholder {
+  color: #FFFFFF;
+}
+.dark-mode .ofertas__input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.dark-mode .ofertas__input::placeholder {
+  color: #FFFFFF;
+}
+.dark-mode .ofertas__input:focus {
+  box-shadow: inset 3px 3px 6px #1a1a1a, inset -3px -3px 6px #1a1a1a;
+  border: 1px solid #5388B1;
+  color: #FFFFFF;
+}
+.dark-mode .ofertas__buscar {
+  background-color: #404040;
+}
+.dark-mode .ofertas__salario {
+  background-color: #262626;
+}
 .dark-mode .ofertas-nav nav .iconos {
   box-shadow: 3px 3px 5px #000000;
   background-color: #5388B1;
@@ -672,9 +701,27 @@ p {
   display: block;
   border: none;
   border-radius: 0.5rem;
+  border-radius: 0;
 }
 .dark-mode .btn-vacante:hover {
   cursor: pointer;
+}
+.dark-mode .btn-postularse {
+  background-color: #5388B1;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+}
+.dark-mode .btn-postularse:hover {
+  cursor: pointer;
+}
+.dark-mode .alerta__error {
+  background-color: #a30606;
 }
 .dark-mode .btn-ver-mas {
   background-color: #5388B1;
@@ -700,46 +747,8 @@ p {
   background-color: #5388B1;
   box-shadow: 3px 3px 5px #000000;
 }
-.dark-mode table.admin thead {
-  background-color: #5388B1;
-}
-.dark-mode table.admin tr {
-  box-shadow: 0 2px #5388B1;
-}
-.dark-mode table.admin td {
-  color: #FFFFFF;
-}
-.dark-mode .form-admin {
-  border: 0.2rem solid #5388B1;
-  background-color: #1c1c1c;
-}
-.dark-mode .form-admin legend {
-  color: #5388B1;
-}
-.dark-mode .form-admin label {
-  color: #5388B1;
-}
-.dark-mode .form-admin label span {
-  color: #FFFFFF;
-}
-.dark-mode .mensajes .grid-inbox {
-  border: 0.1rem solid #5388B1;
-  background-color: #c3c3c3;
-}
-.dark-mode .mensajes .leido {
-  background-color: #1c1c1c !important;
-  color: #FFFFFF;
-  font-weight: 300 !important;
-}
-.dark-mode .body-mensaje {
-  background-color: #1c1c1c;
-  border: 0.1rem solid #5388B1;
-}
-.dark-mode .body-mensaje p {
-  color: #5388B1;
-}
-.dark-mode .body-mensaje p span {
-  color: #FFFFFF;
+.dark-mode .vacantes .sin-ofertas {
+  background-color: #333333;
 }
 .dark-mode .politicas li::marker {
   color: #00AACC;
@@ -2966,7 +2975,6 @@ p {
     display: block;
     margin: 0;
     padding: 0;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -3952,13 +3960,16 @@ p {
   margin: 5rem 0;
 }
 .ofertas__buscar {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 0 auto rem auto;
+  margin: 0 auto 1rem auto;
   gap: 2rem;
+  background-color: #f3f3f7;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
 }
 @media (min-width: 768px) {
   .ofertas__buscar {
@@ -3970,7 +3981,7 @@ p {
   width: 100%;
   border: 1px solid #ACACAC;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 1.6rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
 }
@@ -3983,6 +3994,31 @@ p {
   outline: none;
   box-shadow: rgb(157, 167, 176) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.321) -3px -3px 6px 1px inset;
   caret-color: #00AACC;
+}
+.ofertas__value {
+  font-size: 1.4rem;
+  color: #4d4d4d;
+}
+.ofertas__salario {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 4px, rgba(0, 0, 0, 0.2) 0px 2px 4px;
+}
+@media (min-width: 768px) {
+  .ofertas__salario {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+.ofertas__range {
+  accent-color: #00AACC;
+  margin-bottom: 0.5rem;
 }
 
 .btn-volver {
@@ -4033,6 +4069,7 @@ p {
   display: block;
   border: none;
   border-radius: 0.5rem;
+  border-radius: 0;
 }
 .btn-vacante:hover {
   cursor: pointer;
@@ -4949,7 +4986,6 @@ p {
   display: block;
   text-align: center;
   margin-left: 2.5rem;
-  border-radius: 1rem;
   cursor: pointer;
   background-color: #497ba1;
   margin: auto;
@@ -4964,7 +5000,7 @@ p {
 @media (min-width: 768px) {
   .navegacion .submenu {
     position: absolute;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #abc5d9;
   }
   .navegacion .submenu a {

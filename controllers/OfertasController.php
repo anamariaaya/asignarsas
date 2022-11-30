@@ -40,9 +40,7 @@ class OfertasController{
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){ 
             /*Crea una nueva Instancia*/
-            $oferta = new Ofertas($_POST['oferta']);
-            
-            
+            $oferta = new Ofertas($_POST['oferta']);        
             /* SUBIDA DE ARCHIVOS */
             //Crear carpeta
             $carpetaImagenes = '../../images/';
