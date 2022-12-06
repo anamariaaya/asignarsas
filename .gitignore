@@ -130,7 +130,7 @@ dist
 /vendor
 
 #gulp
-gulpfile.js
+# gulpfile.js
 
-#src
-/src
+# #src
+# /src

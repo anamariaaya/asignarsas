@@ -1,0 +1,55 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contactenos{
+    background-color: v.$azulFondo;
+    background-image: url('/build/img/banner-nosotros.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    align-items: center;
+    row-gap: math.div(v.$separacion, 2);
+    padding: math.div(v.$separacion, 2);
+    text-shadow: 2px 2px 9px v.$grisOscuro;
+    
+    h1{
+        color: v.$blanco;
+        font-size: 3.2rem;
+        line-height: 1.2;
+        position: relative;
+    }
+    @include m.telefono{
+        padding: v.$separacion;
+        h1{
+            font-size: 4.6rem;
+            line-height: 1.4;
+        }
+    }
+
+    @include m.tablet{
+        padding: v.$separacion * 2;
+        row-gap: v.$separacion;
+        h1{
+            font-size: 6rem;
+            line-height: 1.6;
+        }
+    }
+    @include m.bigScreen{
+        padding: v.$separacion * 3;
+        h1{
+            font-size: 7rem;
+        }
+    }
+    @include m.giant{
+        padding: v.$separacion * 5;
+        h1{
+            font-size: 9rem;
+        }
+    } 
+}

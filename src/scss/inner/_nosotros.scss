@@ -1,0 +1,404 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros{
+    background-image: url('/build/img/banner-nosotros.webp');
+    background-color: v.$azulFondo;
+    filter: contrast(1.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-blend-mode: overlay;
+    padding: v.$separacion 0;
+    margin-bottom: 4rem;
+    h1{
+        color: v.$blanco;
+        font-size: 3.6rem;
+        text-shadow: 2px 2px 6px v.$grisOscuro;
+    }
+    @include m.telefono{
+        padding: v.$separacion;
+    }
+    @include m.tablet{
+        padding: v.$separacion * 2;
+        h1{
+            font-size: 4rem;
+        }
+    }
+    @include m.desktop{
+        padding: v.$separacion * 3;
+        h1{
+            font-size: 5rem;
+        }
+    }
+    @include m.bigScreen{
+        padding: v.$separacion * 4;
+        h1{
+            font-size: 7rem;
+        }
+    }
+}
+
+.compania{
+    margin-bottom: 4rem;
+    h2{
+        text-align: left;
+        border-bottom: 2px solid v.$asignar;
+        width: 100%;
+    }
+    .grid-compania{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: math.div(v.$separacion, 2);
+        place-items: center;
+        p{
+            text-align: justify;
+        }
+        img{
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: auto;
+            
+        }
+        picture{
+            grid-row: 1/2;
+            position: relative;
+            &::before, &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            &::before{
+                background-color: #D3D4E0;
+                width: 3rem;
+                height: 3rem;
+                top: 12%;
+                left: 27%;
+                animation: circgris 5s linear infinite 1s;
+                @include m.telefono{
+                    left: 28%;
+                    top:20%;
+                }
+                @include m.tablet{
+                    top: 30%;
+                    left: 26%;
+                }
+                @include m.desktop{
+                    width: 5rem;
+                    height: 5rem;
+                    top: 12%;
+                    left: 15%;
+                }
+                @include m.bigScreen{
+                    width: 7rem;
+                    height: 7rem;
+                }
+            }
+            &::after{
+                background-color: #C1E5DC;
+                width: 5rem;
+                height: 5rem;
+                bottom: 0%;
+                right: 20%;
+                animation: circverde 3.5s linear infinite 1s;
+                @include m.telefono{
+                    right: 23%;
+                }
+                @include m.tablet{
+                    bottom: 2%;
+                    right: 30%;
+                }
+                @include m.desktop{
+                    width: 7rem;
+                    height: 7rem;
+                    bottom: 2%;
+                    right: 5%;
+                }
+                @include m.bigScreen{
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            @keyframes circgris{
+                0%{
+                    transform: translateX(0%) translateY(450%);
+                }
+                10%{
+                    transform: translateX(-40%) translateY(360%);
+                }
+                20%{
+                    transform: translateX(-80%) translateY(270%);
+                }
+                30%{
+                    transform: translateX(-60%) translateY(180%);
+                }
+                40%{
+                    transform: translateX(-40%) translateY(90%);
+                }
+                50%{
+                    transform: translateX(20%) translateY(0%);
+                }
+                60%{
+                    transform: translateX(-40%) translateY(90%);
+                }
+                70%{
+                    transform: translateX(-60%) translateY(180%);
+                }
+                80%{
+                    transform: translateX(-80%) translateY(270%);
+                }
+                90%{
+                    transform: translateX(-40%) translateY(360%);
+                }
+                100%{
+                    transform: translateX(0%) translateY(450%);
+                }
+            }
+            @keyframes circverde{
+                0%{
+                    transform: translateX(10%) translateY(-35%);
+                }
+                10%{
+                    transform: translateX(-36%) translateY(9%);
+                }
+                20%{
+                    transform: translateX(-72%) translateY(18%);
+                }
+                30%{
+                    transform: translateX(-108%) translateY(27%);
+                }
+                40%{
+                    transform: translateX(-144%) translateY(36%);
+                }
+                50%{
+                    transform: translateX(-180%) translateY(45%);
+                }
+                60%{
+                    transform: translateX(-140%) translateY(29%);
+                }
+                70%{
+                    transform: translateX(-100%) translateY(13%);
+                }
+                80%{
+                    transform: translateX(-60%) translateY(-3%);
+                }
+                90%{
+                    transform: translateX(-20%) translateY(-19%);
+                }
+                100%{
+                    transform: translateX(10%) translateY(-35%);
+                }
+            }
+        }
+        @include m.desktop{
+            gap: v.$separacion;
+            grid-template-columns: auto auto;
+            img{
+                width: 80%;
+                height: 80%;
+            }
+            picture{
+                grid-column: 2/3;
+            }
+        }
+    }
+}
+
+.corporacion{
+    background-color: v.$azulFondo;
+    padding: 0 2.5rem 5rem 2.5rem;
+    position: relative;
+    margin-bottom: math.div(v.$separacion, 2);
+    h2{
+        background-color: v.$azulClaro;
+        font-weight: v.$black;
+        font-size: 2.8rem;
+        width: 100%;
+        margin: auto;
+        border-bottom: 2px solid v.$asignar;
+
+        @include m.tablet{
+            background-color: transparent;
+            font-size: 4rem;
+            border-bottom: none;
+        } 
+        @include m.giant{
+            font-size: 5rem;
+        } 
+    }
+    @include m.tablet{
+        padding: v.$separacion math.div(v.$separacion, 2);
+        background-color: transparent;
+        margin-bottom:v.$separacion, 2;
+        &:nth-child(even){
+            &::before{
+                content: "";
+                width: 75vw;
+                height: 45rem;
+                background-color: v.$azulFondo;
+                display: block;
+                position: absolute;
+                right: 5%;
+                top: 3%;
+                z-index: -1;
+
+                @include m.desktop{
+                    width: 75vw;
+                    height: 36rem;
+                }
+                @include m.bigScreen{
+                    height: 35rem;
+                }
+                @include m.giant{
+                    padding: v.$separacion;
+                        height: 42rem;
+                }
+            }
+            &::after{
+                content: "";
+                width: 70vw;
+                height: 0.3rem;
+                background-color: v.$asignar;
+                display: block;
+                position: absolute;
+                top: 10.5%;
+                left: 12%;
+                @include m.telefono{
+                    top: 8%;
+                }
+                @include m.tablet{
+                    width: 75vw;
+                    top: 25%;
+                }
+                @include m.desktop{
+                    top: 32%;
+                }
+                @include m.giant{
+                    width: 80vw;
+                    top: 28%;
+                    left: 7%;
+                }
+            }
+            h2{
+                text-align: left;
+                padding-left: v.$separacion;
+                @include m.giant{
+                    padding-left: v.$separacion *2;
+                }
+            }
+        }
+    
+        &:nth-child(odd){
+            &::before{
+                content: "";
+                width: 75vw;
+                height: 45rem;
+                background-color: v.$azulFondo;
+                display: block;
+                position: absolute;
+                top: 3%;
+                left: 5%;
+                z-index: -1;
+
+                @include m.desktop{
+                    width: 75vw;
+                    height: 36rem;
+                }
+                @include m.bigScreen{
+                    height: 35rem;
+                }
+                @include m.giant{
+                    padding: v.$separacion;
+                    height: 42rem;
+                } 
+            }
+        
+            &::after{
+                content: "";
+                width: 70vw;
+                height: 0.3rem;
+                background-color: v.$asignar;
+                display: block;
+                position: absolute;
+                top: 10.5%;
+                left: 12%;
+                @include m.telefono{
+                    top: 8%;
+                }
+                @include m.tablet{
+                    width: 75vw;
+                    top: 25%;
+                }
+                @include m.desktop{
+                    top: 32%;
+                }
+                @include m.giant{
+                    width: 80vw;
+                    top: 28%;
+                    left: 7%;
+                }
+            }
+            h2{
+                text-align: right;
+                padding-right: v.$separacion;
+                @include m.giant{
+                    padding-right: v.$separacion * 3;
+                }
+            }
+        }
+    }
+    @include m.desktop{
+        padding: v.$separacion;
+    }
+
+
+    p{
+        font-weight: v.$medium;
+        text-align: justify;
+        color: v.$negro;
+    }
+
+    .mision, .vision{
+        width: auto;
+        padding: 0 1rem;
+        @include m.tablet{
+            padding: v.$separacion;
+        }
+    }
+   
+    .mision{
+        margin: auto;
+
+        @include m.tablet{
+            margin-left: 26%;
+            width: 60vw;
+        }
+        @include m.desktop{
+            margin-left: 7%;
+            width: 75vw;
+        }
+        @include m.giant{
+            margin-left: 10%;
+        } 
+    }
+
+    .vision{
+        margin: auto;
+        @include m.tablet{
+            margin-right: 26%;
+            width: 60vw;
+        }
+        @include m.desktop{
+            margin-right: 7%;
+            width: 70vw;
+        }
+        @include m.giant{
+            margin-right: 10%;
+        }
+    }
+}

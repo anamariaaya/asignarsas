@@ -1,0 +1,278 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    z-index: 11;
+}
+
+.contenido-header{
+    @include m.tablet{
+        margin: 0 auto;
+    }
+    @include m.bigScreen{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 109%;
+    flex: 1;
+
+    @include m.tablet{
+        align-items: flex-end;
+        position: relative;
+        width: auto;
+    }
+}
+.dark-mode-boton{
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    border-radius: 50%;
+    top: 0.7rem;
+    right:0;
+    position: absolute;
+    cursor: pointer;
+
+    &.fa-moon{
+        color: v.$blanco;
+        background-color: v.$asignar;
+        font-size: 1.8rem !important;
+        @include m.tablet{
+            font-size: 1.6rem !important;
+            top: 0.5rem;
+        }
+        @include m.desktop{
+            font-size: 2rem !important;
+        }
+    }
+
+    &.fa-sun{
+        color: v.$grisOscuro;
+        background-color: v.$blanco;
+        font-size: 2rem !important;
+    }
+
+    &::after{
+        width: 0.2rem;
+        height: 0.2rem;
+        border-radius: 50%;
+        background-color: v.$blanco;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        
+    }
+
+    @include m.tablet{
+        font-size: 1.6rem;
+        top: 1.5rem;
+        right:0;
+    }
+
+    @include m.giant{
+        font-size: 2.6rem;
+
+        &::after{
+            width: 0.5rem;
+            height: 0.5rem;
+            top: 6px;
+            right: 6px;
+        }
+    }
+}
+
+.light{
+    filter: invert(65%);
+}
+
+.barra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    align-items: center;
+    position: relative;
+    margin: 1rem auto;
+    padding-bottom: 1rem;    
+    border-bottom: 0.1rem solid v.$asignar;
+    z-index: 11;
+
+    img{
+        width: 10rem;
+        @include m.tablet{
+            width: 8rem;
+        }
+        @include m.desktop{
+            width: 10rem;
+        }
+    }
+
+    @include m.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: none;
+    }
+    @include m.desktop{
+        img{
+            width: 12rem;
+        }
+    }
+
+    @include m.giant{
+        margin: 5rem 0;
+        img{
+            width: 20rem;
+        }
+    }
+}
+
+.navegacion{
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0.3s ease-in-out, opacity 0.3s linear, height 0.2s linear;
+   height: 0;
+   width: 100%;
+
+    @include m.tablet{
+        display: flex;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    a{
+        &.log-in{
+            margin-right: 0;
+        }
+    }
+
+    a, .submenu-btn{
+        color: v.$asignar;
+        text-decoration: none;
+        font-size: 1.6rem;
+        display: block;
+        text-align: center;
+        background-color: v.$azulFondo;
+        padding: 0.8rem 0;
+        margin: 0.8rem;
+        font-weight: v.$medium;
+
+        &:hover{
+            background-color: v.$amarillo;
+        }
+
+        @include m.tablet{
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            margin-right: 1.5rem;
+            font-size: 1.4rem;
+
+            &:hover{
+                color: v.$azulClaro;
+                background-color: transparent;
+            }
+        }
+        @include m.desktop{
+            margin-right: 3rem;
+            font-size: 1.6rem;
+        }
+        @include m.bigScreen{
+            font-size: 1.8rem;
+            margin-right: 4.2rem;
+        }
+        @include m.giant{
+            font-size: 3.2rem;
+            margin-right: 8.5rem;
+        }
+    }
+
+    .submenu-btn{
+        position: relative;
+        cursor: default;
+    }
+
+    .submenu{
+        color: v.$blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        text-align: center;
+        margin-left: 2.5rem;
+
+        cursor: pointer;
+        background-color: darken(v.$azulClaro, 5%);
+        margin: auto;
+        display: none;
+        a{
+            background-color: v.$blanco;
+            &:hover{
+                background-color: darken(v.$amarillo, 10%) !important;
+            }
+        }
+        @include m.tablet{
+          position: absolute;
+          padding: .5rem;
+          background-color: lighten(v.$azulClaro, 25%);
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: fit-content;
+            user-select: contain;
+            padding: 1rem;
+            width: 100%;
+          }
+        }
+    }
+}
+
+.ver-menu{
+    display: block !important;
+}
+
+.mobile-menu{
+    @include m.tablet{
+        display: none;
+    }
+
+    .btnMenu{
+        color: v.$asignar;
+        margin: 4rem 0 1rem 0;
+        font-size: 3rem !important;
+        cursor: pointer;
+
+        &:hover{
+            color: v.$azulClaro;
+        }
+    }
+}
+
+.no-borde{
+    border-bottom: none;
+}
+
+.mostrar{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    padding: 1rem;
+    border-bottom: 0.1rem solid v.$asignar;
+    z-index: 11;
+    background-color: v.$blanco;
+}
+
+.active{
+    color: v.$azulClaro !important;
+}

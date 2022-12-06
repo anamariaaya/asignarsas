@@ -1,0 +1,254 @@
+@use "sass:math";
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.dark-mode{
+    background-color: darken(v.$grisOscuro, 10);
+    h1, h2, h3{
+        color: lighten(v.$azulClaro,8);
+    }
+    img, picture{
+        filter: brightness(0.9);
+    }
+
+    p, li{
+        color: v.$blanco;
+    }
+
+    .dark-mode-boton{
+        &::after{
+            height: 0.3rem;
+            width: 0.3rem;
+            top: 34%;
+            right: 34%;
+            @include m.giant{
+                height: 0.6rem;
+                width: 0.6rem;
+            }
+        }
+    }
+
+    .barra{
+        border-bottom: 0.1rem solid v.$blanco;
+        @include m.tablet{
+            border-bottom: none;
+        }
+        img{
+            filter: invert(100%) brightness(1.5);
+        }
+    }
+
+    .navegacion{
+        a, .submenu-btn{
+            color: v.$blanco;
+        }
+        .submenu{
+            background-color: v.$grisOscuro;
+            a{
+                background-color: darken(v.$grisOscuro, 10);
+            }
+        }
+    }
+
+    .mobile-menu{
+        .btnMenu{
+            color: v.$blanco;    
+            &:hover{
+                color: v.$azulClaro;
+            }
+        }
+    }
+    .no-borde{
+        border-bottom: none;
+    }
+    .border-bottom{
+        border-bottom: 2px solid v.$azulClaro;
+    }
+    .mostrar{
+        border-bottom: 0.1rem solid v.$blanco;
+        background-color: darken(v.$grisOscuro, 9);
+        a:hover{
+            color: v.$grisOscuro;
+        }
+    }
+
+    .footer{
+        background-color: darken(v.$asignar, 9);
+    }
+
+    .valor, .valor-corporativo{
+        &::after{
+            background-color: v.$azulClaro;
+        }
+       .valores-section, .corporativos-section{
+            p{
+                color: lighten(v.$azulClaro,8);
+            }
+        }
+    }
+    .segmentos{
+        .areas{
+            h2{
+                border-right: .2rem solid v.$azulClaro;
+            }
+        }
+    }
+
+    .carrusel{
+        h2{
+            &::after{
+                background-color: v.$azulClaro;
+            }
+        }
+    }
+
+    .prev, .next {
+        color: v.$azul;
+    }
+
+    .btn-contacto, .btn-contacto-servicios{
+        background-color: v.$azul;
+    }
+
+    .servicio{
+        border: 0.4rem solid darken(v.$grisOscuro, 10) !important;
+        @include m.tablet{
+            border: 1rem solid darken(v.$grisOscuro, 10) !important;
+        }
+        @include m.desktop{
+            border: 0.6rem solid darken(v.$grisOscuro, 10) !important;
+        }
+        @include m.bigScreen{
+            border: 1.5rem solid darken(v.$grisOscuro, 10) !important;
+        }
+    }
+
+    .tipo-servicio{
+        .info-servicio{
+            background-color: v.$grisOscuro;
+        }
+    }
+
+    .compania{
+        h2{
+            border-bottom: 2px solid v.$azulClaro;
+        }
+    }
+
+    .corporacion{
+        @include m.tablet{
+            &:nth-child(even), &:nth-child(odd){
+                &::after{
+                    background-color: v.$azulClaro;
+                }
+            }
+        }
+        p{
+            color: v.$blanco;
+        }
+    }
+
+    .ofertas{
+        &__input{
+            background-color: darken(v.$grisOscuro, 5);
+            &::placeholder{
+                color: v.$blanco;
+            }&:focus{
+                box-shadow: v.$sombraInterior-dark;
+                border: 1px solid v.$azulClaro;
+                color: v.$blanco;
+            }
+        }
+        &__buscar{
+            background-color: lighten(v.$grisOscuro, 5);
+        }
+        &__salario{
+            background-color: darken(v.$grisOscuro, 5);
+        }
+    }
+
+    .ofertas-nav{
+        nav{
+            .iconos {
+                box-shadow: 3px 3px 5px v.$negro;
+                background-color: v.$azulClaro;
+            }
+        }
+    }
+
+    .info-oferta{
+        background-color: rgba(0, 0, 0, 0.9);
+        background-blend-mode: overlay;
+        img{
+            box-shadow: 5px 5px 5px v.$negro;
+        }
+        span{
+            color: v.$azulClaro;
+        }
+    }
+
+    .vacantes-index{
+        h2{
+            &::after{
+                background-color: v.$azulClaro;
+            }
+        }
+    }
+    .vacante-index{
+        background-color: darken(v.$grisOscuro, 9);
+    }
+
+    .vacante{
+        border: 4px solid v.$azulClaro;
+        background-color: darken(v.$grisOscuro, 9);
+        &:hover{
+            border: 4px solid v.$verde;
+        }
+        &:hover>.btn-vacante{
+            background-color: v.$verde;
+        }
+    }
+
+    .btn-vacante{
+        @include m.boton(v.$azulClaro, block);
+        border-radius: 0;
+    }
+
+    .btn-postularse{
+        @include m.boton(v.$azulClaro, block);
+    }
+
+    .alerta{
+        &__error{
+            background-color: v.$rojo;
+        }
+    }
+
+    .btn-ver-mas{
+        @include m.boton(v.$azulClaro, block);
+        &:hover{
+            background-color: v.$verde;
+        }
+    }
+    .formulario.form-empleados{
+        p{
+            color: v.$azul;
+        }
+    }
+
+    .admin-nav nav .iconos{
+        background-color: v.$azulClaro;
+        box-shadow: 3px 3px 5px #000000;
+    }
+
+    .vacantes{
+        .sin-ofertas{
+            background-color: v.$grisOscuro;
+        }
+    }
+    .politicas{
+        li::marker{
+            color: v.$azul;
+        }
+    }
+}

@@ -1,0 +1,513 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main-content{
+    @include m.tablet{
+        @include m.grid(3, 0);
+    }
+
+    .enlaces-main{
+        position: relative;
+        .enlaces{
+            display: none;
+            width: 100%;
+            padding: 1rem 0;
+            bottom: 12%;
+            padding: 2rem;
+            a{
+                color: v.$blanco;
+                border-radius: 2rem;
+                padding: 0.5rem 1.5rem;
+                border: 0.25rem solid v.$blanco;
+                font-weight: v.$regular;
+                font-size: 1.4rem;
+                display: grid;
+                place-self: normal;
+                place-items: center;
+                @include m.telefono{
+                    padding: 1rem 2rem;
+                    font-size: 1.6rem;
+                    border: 0.3rem solid v.$blanco;
+                }
+                @include m.desktop{
+                    padding: 1rem 0.5rem;
+                    font-size: 1.6rem;
+                    border: 0.3rem solid v.$blanco;
+                }
+                @include m.bigScreen{
+                    padding: 1rem 2rem;
+                }
+                @include m.giant{
+                    padding: 2rem 5rem;
+                    font-size: 2.4rem;
+                    border: 0.5rem solid v.$blanco;
+                }
+            }
+        }
+
+        .blend-main{
+            background-color: v.$azulClaro;
+            height: 40rem;
+
+            @include m.desktop{
+                height: 70rem;
+            }
+
+            @include m.giant{
+                height: 100rem;
+            }
+
+            img, picture{
+                object-fit: cover;
+                height: 100%;
+                filter: contrast(1.065);
+            }
+        }
+
+        h1, .enlaces{
+            position: absolute;
+            text-align: center;
+            padding: 0 2rem;
+            width: 100%;
+            z-index: 1;
+        }
+
+        h1{
+            color: v.$asignar;
+            padding: 0.5rem 2rem;
+            text-shadow: 2px 1px 3px v.$blanco;
+            font-family: v.$fuenteIndex;
+            @include m.tablet{
+                font-size: 2.6rem;
+            }
+            @include m.desktop{
+                font-size: 3.6rem;
+            }
+            @include m.bigScreen{
+                font-size: 4.2rem;
+            }
+            @include m.giant{
+                padding: 4rem 3rem;
+                font-size: 5.6rem;
+            }
+        }
+        
+        &:hover .enlaces{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            @include m.desktop{
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 0;
+            }
+        }
+
+        &:hover picture{
+            mix-blend-mode: multiply;
+        }
+
+        &:hover img{
+            mix-blend-mode: multiply;
+        }
+    }    
+}
+
+.valor{
+    padding: 0 math.div(v.$separacion, 2) v.$separacion math.div(v.$separacion, 2);
+    position: relative;
+    @include m.tablet{
+        padding: v.$separacion math.div(v.$separacion, 2);
+    }
+    @include m.desktop{
+        padding: v.$separacion;
+    }
+
+    &::before{
+        content: "";
+        width: 75vw;
+        height: 65rem;
+        background-color: v.$azulFondo;
+        display: block;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        @include m.telefono{
+            width: 70vw;
+            height: 65rem;
+        }
+        @include m.tablet{
+            height: 50rem;
+        }
+        @include m.desktop{
+            width: 75vw;
+            height: 36rem;
+        }
+        @include m.bigScreen{
+            height: 40rem;
+        }
+        @include m.giant{
+            padding: v.$separacion;
+                height: 52rem;
+        } 
+    }
+
+    &::after{
+        content: "";
+        width: 70vw;
+        height: 0.3rem;
+        background-color: v.$asignar;
+        display: block;
+        position: absolute;
+        top: 12.5%;
+        left: 12%;
+        @include m.telefono{
+            top: 8%;
+        }
+        @include m.tablet{
+            width: 75vw;
+            top: 25%;
+        }
+        @include m.desktop{
+            top: 32%;
+        }
+        @include m.giant{
+            width: 80vw;
+            top: 28%;
+            left: 7%;
+        }
+    }
+
+    h2{
+        text-align: left;
+        font-weight: v.$black;
+        font-size: 2.8rem;
+        width: 80%;
+        @include m.telefono{
+            width: 100%;
+        }
+        @include m.tablet{
+            font-size: 4rem;
+        } 
+        @include m.giant{
+            font-size: 5rem;
+        } 
+    }
+   
+    .valores-section{
+        width: 75vw;
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: flex-end;
+        padding: 0;
+        margin-left: 7%;
+        justify-items: center;
+        row-gap: 1rem;
+        @include m.telefono{
+            margin-left: 15%;
+        }
+        @include m.tablet{
+            margin-left: 26%;
+            width: 60vw;
+            grid-template-columns: repeat(2,1fr);
+            padding: math.div(v.$separacion, 2) 0rem;
+        }
+        @include m.desktop{
+            margin-left: 13%;
+            width: 75vw;
+            grid-template-columns: repeat(4,1fr);
+        }
+        @include m.giant{
+            margin-left: 17%;
+        } 
+        p{
+            font-weight: v.$medium;
+            text-align: center;
+            color: v.$asignar;
+        } 
+    }
+    .valores{
+        display: grid;
+        place-items: center;
+        &:last-of-type{
+            margin-right: 0;
+        }
+        & p{
+            padding-top: 2rem;
+            font-size: 1.8rem;
+            width: 95%;
+            margin: auto;
+        }
+        .icono{
+            width: 5rem;
+            height: 5.5rem;
+        }
+        @include m.telefono{
+            margin-right:0;
+            .icono{
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+        @include m.desktop{
+            margin-right: 2rem;
+        }
+
+        @include m.bigScreen{
+            margin-right: 2.5rem;
+            .icono{
+                width: 9rem;
+                height: 9rem;
+            }
+            & p{
+                font-size: 2rem;
+                line-height: 1.6;
+            }
+        }
+        @include m.giant{
+            margin-right: 10rem;
+            .icono{
+                width: 18rem;
+                height: 18rem;
+            }
+            & p{
+                font-size: 3rem;
+            }
+        }        
+    }
+}
+
+.valor-corporativo{
+    padding: 0 math.div(v.$separacion, 2) v.$separacion math.div(v.$separacion, 2);
+    position: relative;
+    @include m.tablet{
+        padding: v.$separacion math.div(v.$separacion, 2);
+    }
+    @include m.desktop{
+        padding: v.$separacion;
+    }
+
+    &::before{
+        content: "";
+        width: 75vw;
+        height: 72rem;
+        background-color: v.$azulFondo;
+        display: block;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        @include m.telefono{
+            width: 70vw;
+        }
+        @include m.tablet{
+            height: 57rem;
+        }
+        @include m.desktop{
+            width: 75vw;
+            height: 36rem;
+        }
+        @include m.bigScreen{
+            height: 36rem;
+        }
+        @include m.giant{
+            padding: v.$separacion;
+            height: 47rem;
+        } 
+    }
+
+    &::after{
+        content: "";
+        width: 70vw;
+        height: 0.3rem;
+        background-color: v.$asignar;
+        display: block;
+        position: absolute;
+        top: 12.5%;
+        left: 12%;
+        @include m.telefono{
+            top: 8%;
+        }
+        @include m.tablet{
+            width: 75vw;
+            top: 25%;
+        }
+        @include m.desktop{
+            top: 35%;
+        }
+        @include m.giant{
+            width: 80vw;
+            top: 28%;
+            left: 7%;
+        }
+    }
+
+    h2{
+        text-align: right;
+        font-weight: v.$black;
+        font-size: 2.8rem;
+        width: 80%;
+        @include m.telefono{
+            width: 100%;
+        }
+        @include m.tablet{
+            font-size: 4rem;
+        } 
+        @include m.giant{
+            font-size: 5rem;
+        } 
+    }
+    
+    .corporativos-section{
+        width: 55vw;
+        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: flex-start;
+        padding: 0;
+        margin-right: 7%;
+        justify-items: center;
+        row-gap: 1rem;
+        @include m.telefono{
+            margin-right: 15%;
+        }
+        @include m.tablet{
+            margin-right: 26%;
+            width: 60vw;
+            grid-template-columns: repeat(2,1fr);
+            padding: math.div(v.$separacion, 2) 0rem;
+        }
+        @include m.desktop{
+            margin-right: 13%;
+            width: 70vw;
+            grid-template-columns: repeat(5,1fr);
+        }
+        @include m.giant{
+            margin-right: 17%;
+        }
+        p{
+            font-weight: v.$medium;
+            text-align: center;
+            color: v.$asignar;
+        }
+    }
+    .corporativos{
+        display: grid;
+        place-items: center;
+        & p{
+            padding-top: 2rem;
+            font-size: 1.8rem;
+            width: 95%;
+            margin: auto;
+        }
+        .icono{
+            width: 5rem;
+            height: 5.5rem;
+        }
+        @include m.telefono{
+            .icono{
+                width: 7rem;
+                height: 7rem;
+            }
+            & p{
+                font-size: 1.8rem;
+                line-height: 1.4;
+            }
+        }
+        @include m.tablet{
+            & p{
+                font-size: 1.8rem;
+            }
+        }
+
+        @include m.bigScreen{
+            .icono{
+                width: 9rem;
+                height: 9rem;
+            }
+            & p{
+                font-size: 2rem;
+                line-height: 1.6;
+            }
+        }
+        @include m.giant{
+            .icono{
+                width: 18rem;
+                height: 18rem;
+            }
+            & p{
+                font-size: 3rem;
+            }
+        }        
+    }
+}
+
+.segmentos{
+    width: 80%;
+    display:block;
+    margin: auto;
+    @include m.tablet{
+        @include m.grid(1, 1rem);
+        img{
+            width: 50%;
+            display:block;
+            margin: auto;
+        }
+
+        @include m.desktop{
+            @include m.grid(3, 1rem);
+            img{
+                width: 100%;
+            }
+        }
+        @include m.giant{
+            gap: 5rem;
+        }
+    }
+    .areas{
+        padding: 0.5rem;
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        min-height: 12rem;
+        p{
+            text-align: center;
+        }
+        @include m.tablet{
+            padding: 2rem;
+            h2{
+                border-right: .2rem solid v.$asignar;
+                padding: 0.5rem 1rem;
+                line-height: 1.4;
+                font-size: 1.8rem;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+        }
+        @include m.desktop{
+            h2{
+                font-size:2.2rem;
+            }
+        }
+        @include m.bigScreen{
+            h2{
+                font-size:3rem;
+            }
+            p{
+                font-size: 1.8rem;
+            }
+        }
+
+        @include m.giant{
+            h2{
+                font-size:4rem;
+            }
+
+            p{
+                font-size: 3rem;
+            }
+        }
+    }
+}

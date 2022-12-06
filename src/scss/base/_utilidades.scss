@@ -1,0 +1,56 @@
+@use "sass:math";
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.seccion {
+    margin-top: math.div(v.$separacion, 2);
+    margin-bottom: math.div(v.$separacion, 2);
+}
+
+.seccion:last-of-type{
+    margin-bottom: 0;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+.alinear-derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.no-click{
+    pointer-events: none;
+}
+
+.bg-verde{
+    background-color: v.$verde !important;
+}
+
+.bottom{
+    margin-bottom: v.$separacion;
+}
+
+.top{
+    margin-top: v.$separacion;
+}
+
+.no-border{
+    border:none;
+}
+
+.border-bottom{
+    border-bottom: 2px solid v.$asignar;
+}
+
+.whats{
+    color: #128c7e !important;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    cursor: pointer;
+}

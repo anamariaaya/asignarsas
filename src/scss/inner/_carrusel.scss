@@ -1,0 +1,766 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.carrusel{
+  width: 95%;
+  position: relative;
+  margin: auto;
+  h2{
+      width: 60%;
+      margin: auto;
+      @include m.telefono{
+        width: 100%;
+      }
+      &::after{
+        content: "";
+        width: 70vw;
+        height: 0.3rem;
+        background-color: v.$asignar;
+        display: block;
+        position: absolute;
+        top: 11%;
+        left: 12%;
+        @include m.telefono{
+            top: 7%;
+        }
+        @include m.giant{
+            top: 10%;
+        }
+      }
+  }
+  h3{
+      color: v.$verde;
+      font-weight: v.$bold;
+  }
+  .slide{
+        display: none;
+        height: 70rem;
+        position: relative;
+        @include m.tablet{
+            height: 50rem;
+        }
+
+        @include m.desktop{
+            height: 60rem;
+        }        
+        &:nth-of-type(2){
+            height: 75rem;
+            @include m.tablet{
+                height: 60rem;
+            }
+        }      
+    }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0 1.5rem;
+  color: v.$asignar;
+  font-weight: bold;
+  transition: 0.6s ease;
+  user-select: none;
+  i{
+    font-size: 3.5rem;
+    @include m.tablet{
+        font-size: 6rem;
+    }
+  }
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.dot {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+    margin: 0 2px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+//Logos Clientes
+
+.ayb{
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    @include m.telefono{
+        width: 11rem;
+        height: 11rem;
+    }
+    @include m.tablet{
+        width: 12rem;
+        height: 12rem;
+    }
+    @include m.desktop{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    &:nth-of-type(1){
+            top:10%;
+            left:22%;
+        @include m.telefono{
+            top:10%;
+            left:22%;
+        }
+        @include m.desktop{
+            top:10%;
+            left:12%;
+        }
+    }
+    &:nth-of-type(2){
+            top:20%;
+            left:58%;
+        @include m.telefono{
+            top:10%;
+            left:60%;
+        }
+        @include m.desktop{
+            top:20%;
+            left:33%;
+        }
+    }
+    &:nth-of-type(3){
+            top:32%;
+            left:15%;
+        @include m.telefono{
+            top:30%;
+            left:41%;
+        }
+        @include m.desktop{
+            top:20%;
+            left:53%;
+        }
+    }
+    &:nth-of-type(4){
+            top:41%;
+            left:50%;
+        @include m.telefono{
+            top:40%;
+            left:18%;
+        }
+        @include m.desktop{
+            top:10%;
+            left:74.5%;
+        }
+    }
+    &:nth-of-type(5){
+            top:53%;
+            left:15%;
+        @include m.telefono{
+            top:40%;
+            left:64%;
+        }
+        @include m.desktop{
+            top:50%;
+            left:22.5%;
+        }
+    }
+    &:nth-of-type(6){
+            top:62%;
+            left:58%;
+        @include m.telefono{
+            top:70%;
+            left:22%;
+        }
+        @include m.desktop{
+            top:62%;
+            left:43%;
+        }
+    }
+    &:nth-of-type(7){
+            top:75%;
+            left:22%;
+        @include m.telefono{
+            top:70%;
+            left:60%;
+        }
+        @include m.desktop{
+            top:50%;
+            left:65%;
+        }
+    }
+}
+
+.hotel{
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    @include m.telefono{
+        width: 9rem;
+        height: 9rem;
+    }
+    &:nth-of-type(1){
+        top:7%;
+        left:20%;
+
+        @include m.tablet{
+            top:12%;
+            left:8%;
+            width: 10rem; 
+            height: 10rem;
+        }
+        @include m.bigScreen{
+            top:15%;
+            width: 13rem;
+            height: 13rem;
+        }
+    }
+    &:nth-of-type(2){
+        top:9%;
+        left:60%;
+        @include m.tablet{
+            top:30%;
+            left:15%;
+            width: 9rem; 
+            height: 9rem;
+        }
+        @include m.bigScreen{
+            width: 11rem; 
+            height: 11rem;
+            top:37%;
+            left:20%;
+        }
+    }
+    &:nth-of-type(3){
+        top:18%;
+        left:20%;
+        @include m.tablet{
+            top:20%;
+            left:48%;
+            width: 13rem;
+            height: 13rem;
+        }
+        @include m.bigScreen{
+            width: 17rem;
+            height: 17rem;
+        }
+    }
+    &:nth-of-type(4){
+        top:21%;
+        left:60%;
+        @include m.tablet{
+            top:44%;
+            left:60%;
+            width: 9rem; 
+            height: 9rem;
+        }
+        @include m.bigScreen{
+            width: 11rem; 
+            height: 11rem;
+            top:40%;
+        }
+    }
+    &:nth-of-type(5){
+        top:29%;
+        left:20%;
+        @include m.tablet{
+            top:10%;
+            left:63%;
+            width: 11rem; 
+            height: 11rem;
+        }
+        @include m.bigScreen{
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+    &:nth-of-type(6){
+        top:33%;
+        left:60%;
+        @include m.tablet{
+            top:14%;
+            left:76%;
+            width: 14rem; 
+            height: 14rem;
+        }
+        @include m.bigScreen{
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+    &:nth-of-type(7){
+        top:41%;
+        left:20%;
+        @include m.tablet{
+            top:50%;
+            left:8%;
+            width: 10rem; 
+            height: 10rem;
+        }
+        @include m.bigScreen{
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(8){
+        top:45%;
+        left:60%;
+        @include m.tablet{
+            top:60%;
+            left:17%;
+            width: 14rem; 
+            height: 14rem;
+        }
+        @include m.bigScreen{
+            width: 18rem;
+            height: 18rem;
+            left:20%;
+        }
+    }
+    &:nth-of-type(9){
+        top:52%;
+        left:20%;
+        @include m.tablet{
+            top:46%;
+            left:43%;
+            width: 10rem; 
+            height: 10rem;
+        }
+        @include m.bigScreen{
+            top:55%;
+            left:47%;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(10){
+        top:57%;
+        left:60%;
+        @include m.tablet{
+            top:62%;
+            left:62%;
+            width: 12rem; 
+            height: 12rem;
+        }
+        @include m.bigScreen{
+            top:67%;
+            left:60%;
+            width: 17rem;
+            height: 17rem;
+        }
+    }
+    &:nth-of-type(11){
+        top:64%;
+        left:20%;
+        @include m.tablet{
+            top:43%;
+            left:74%;
+            width: 10rem; 
+            height: 10rem;
+        }
+        @include m.bigScreen{
+            left:70%;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(12){
+        top:69%;
+        left:60%;
+        @include m.tablet{
+            top:65%;
+            left:78%;
+            width: 10rem; 
+            height: 10rem;
+        }
+        @include m.bigScreen{
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(13){
+        top: 76%;
+        left: 21%;
+        @include m.tablet{
+            top: 7%;
+            left: 21%;
+            left: 23%;
+        }
+        @include m.bigScreen{
+            left: 21%;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(14){
+        top: 80%;
+        left: 60%;
+        @include m.tablet{
+            top: 36%;
+            left: 32%;
+            left:28%;
+        }
+        @include m.bigScreen{
+            left: 32%;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    &:nth-of-type(15){
+        top: 88%;
+        left: 21%;
+        @include m.tablet{
+            top: 15%;
+            left: 35%;
+        }
+        @include m.bigScreen{
+            top: 12%;
+            left: 37%;
+            width: 13rem;
+            height: 13rem;
+        }
+    }
+
+    &:nth-of-type(16){
+        top: 91%;
+        left: 60%;
+        @include m.tablet{
+            top: 63%;
+            left: 35%;
+        }
+        @include m.bigScreen{
+            width: 13rem;
+            height: 13rem;
+        }
+    }
+}
+
+.otros{
+    width: 9rem;
+    height: 9rem;
+    position: absolute;
+    @include m.telefono{
+        width: 12rem;
+        height: 12rem;
+    }
+    @include m.tablet{
+        width: 15rem;
+        height: 15rem;
+    }
+    @include m.bigScreen{
+        width: 20rem;
+        height: 20rem;
+    }
+    &:nth-of-type(1){
+        top:26%;
+        left:16%;
+        @include m.telefono{
+            top:10%;
+            left:15%;
+        }
+    }
+    &:nth-of-type(2){
+        top:59%;
+        left:14%;
+        width: 9rem;
+        height: 9rem;
+        @include m.telefono{
+            top:51%;
+            left:17%;
+            width: 12rem;
+            height: 12rem;
+        }
+        @include m.tablet{
+            width: 22rem;
+            height: 22rem;
+            left:15%;
+        }
+        @include m.bigScreen{
+            width: 27rem;
+            height: 27rem;
+        }
+    }
+    &:nth-of-type(3){
+        top:43%;
+        left:42%;
+        @include m.telefono{
+            top:26%;
+            left:40%;
+        }
+        @include m.tablet{
+            top:20%;
+            left:45%;
+        }
+        @include m.bigScreen{
+            left:45%;
+        }
+    }
+    &:nth-of-type(4){
+        top:22%;
+        left:55%;
+        @include m.telefono{
+            top:17%;
+            left:67%;
+        }
+        @include m.bigScreen{
+            top:15%;
+            left:62%;
+        }        
+    }
+    &:nth-of-type(5){
+        top:77%;
+        left:58%;
+        width: 9rem;
+        height: 9rem;
+        @include m.telefono{
+            top:45%;
+            left:65%;
+            width: 12rem;
+            height: 12rem;
+        }
+        @include m.tablet{
+            top:52%;
+            left:67%;
+            width: 24rem;
+            height: 24rem;
+        }
+        @include m.bigScreen{
+            left:70%;
+            width: 27rem;
+            height: 27rem;
+        }
+    }
+    &:nth-of-type(6){
+        top:60%;
+        left:47%;
+        width: 9rem;
+        height: 9rem;
+        @include m.tablet{
+            width: 13rem;
+            height: 13rem;
+        }
+        @include m.bigScreen{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+}
+
+//Animación del fondo
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    li{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background: rgba(255, 255, 255, 0.2);
+        animation: bubbles 2.5s linear;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    @keyframes bubbles{
+        0%{
+            transform: translateX(1000%) rotate(0deg) translateY(20px);
+        }
+
+        25%{
+            transform: translateX(750%) translateY(40px);
+        } 
+
+        50%{
+            transform: translateX(500%) translateY(-50px);
+        } 
+
+        75%{
+            transform: translateX(250%) translateY(45px);
+        } 
+    
+        100%{
+            transform: translateX(0) rotate(360deg) translateY(0);
+        }    
+    }
+
+    .aybfondo{
+        &:nth-of-type(1){
+            top:32%;
+            left:10%;
+            background-color: v.$amarillo;
+            width: 12rem;
+            height: 12rem;
+            animation-delay: 0.5s;
+        }
+        &:nth-of-type(2){
+            top:12%;
+            left:16%;
+            background-color: v.$azulFondo;
+            width: 5rem;
+            height: 5rem;
+            animation-delay: 0.3s;
+            @include m.tablet{
+                left:10%;
+            }
+        }
+        &:nth-of-type(3){
+            top:67%;
+            left:45%;
+            background-color: lighten(v.$verde, 9);
+            width: 5rem;
+            height: 5rem;
+            @include m.tablet{
+                top:62%;
+                left:58%;
+            }
+        }
+        &:nth-of-type(4){
+            top:12%;
+            left:68%;
+            background-color: v.$gris;
+            width: 10rem;
+            height: 10rem;
+            animation-delay: 0.5s;
+        }
+        &:nth-of-type(5){
+            top:52%;
+            left:78%;
+            background-color: lighten(v.$azulFondo, 9);
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+
+    .hotelfondo{
+        &:nth-of-type(1){
+            top:42%;
+            left:7%;
+            background-color: lighten(v.$gris, 9);
+            width: 12rem;
+            height: 12rem;
+        }
+        &:nth-of-type(2){
+            top:47%;
+            left:30%;
+            background-color: lighten(v.$azulFondo, 9);
+            width: 5rem;
+            height: 5rem;
+            animation-delay: 0.5s;
+        }
+        &:nth-of-type(3){
+            top:12%;
+            left:45%;
+            background-color: lighten(v.$amarillo, 9);
+            width: 10rem;
+            height: 10rem;
+            animation-delay: 0.5s;
+        }
+        &:nth-of-type(4){
+            top:72%;
+            left:51%;
+            background-color: v.$gris;
+            width: 7rem;
+            height: 7rem;
+        }
+        &:nth-of-type(5){
+            top:52%;
+            left:78%;
+            background-color: lighten(v.$amarillo, 9);
+            width: 7rem;
+            height: 7rem;
+            animation-delay: 0.2s;
+        }
+    }
+
+    .otrosfondo{
+        &:nth-of-type(1){
+            top:46%;
+            left:4%;
+            background-color: v.$amarillo;
+            width: 12rem;
+            height: 12rem;
+            animation-delay: 0.2s;
+            @include m.telefono{
+                top:55%;
+                left:12%;
+            }
+            @include m.tablet{
+                top:55%;
+                left:12%;
+            }
+        }
+        &:nth-of-type(2){
+            top:17%;
+            left:33%;
+            background-color: lighten(v.$gris, 9);
+            width: 5rem;
+            height: 5rem;
+            @include m.telefono{
+                top:10%;
+                left:39%;
+            }
+            @include m.tablet{
+                top:17%;
+                left:33%;
+            }
+        }
+        &:nth-of-type(3){
+            top:70%;
+            left:45%;
+            background-color: lighten(v.$amarillo, 9);
+            width: 10rem;
+            height: 10rem;
+            animation-delay: 0.2s;
+            @include m.telefono{
+                top:62%;
+                left:60%;
+            }
+            @include m.tablet{
+                left: 63%;
+                top: 72%;
+            }
+        }
+        &:nth-of-type(4){
+            top:40%;
+            left:65%;
+            background-color: lighten(v.$gris, 9);
+            width: 7rem;
+            height: 7rem;
+            animation-delay: 0.5s;
+            @include m.telefono{
+                left:50%;
+            }
+            @include m.tablet{
+                left: 53%;
+                top: 45%;
+            }
+        }
+        &:nth-of-type(5){
+            top:22%;
+            left:78%;
+            background-color: lighten(v.$azulFondo, 9);
+            width: 7rem;
+            height: 7rem;
+            @include m.telefono{
+                top:7%;
+            }
+            @include m.tablet{
+                top:22%;
+            }
+        }
+    }
+}
+
+

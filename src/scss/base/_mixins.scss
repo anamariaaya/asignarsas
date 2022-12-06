@@ -1,0 +1,81 @@
+@use "sass:math";
+@use 'variables' as v;
+
+/** Media Queries **/
+
+@mixin mini {
+    @media (min-width: #{v.$mini}) {
+        @content;
+    }
+}
+
+@mixin telefono {
+    @media (min-width: #{v.$telefono}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{v.$tablet}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: #{v.$desktop}) {
+        @content;
+    }
+}
+
+@mixin bigScreen {
+    @media (min-width: #{v.$bigScreen}) {
+        @content;
+    }
+}
+
+@mixin ultraWide {
+    @media (min-width: #{v.$ultraWide}) {
+        @content;
+    }
+}
+
+@mixin giant {
+    @media (min-width: #{v.$giant}) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin boton($bgColor, $display){
+    background-color: $bgColor;
+    color: v.$blanco;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    //margin: math.div(v.$separacion, 2) auto;
+    display: $display;
+    border: none;
+    border-radius: 0.5rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@mixin mensajes {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #F3F3F7;
+    border-left: 1.5rem solid v.$asignar;
+    &.leido{
+        background-color: lighten(v.$grisOscuro, 55%) !important;
+        border-left: 1.5rem solid v.$grisOscuro !important;
+        & p{
+            color: v.$negro !important;
+        }
+    } 
+}

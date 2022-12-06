@@ -1,0 +1,72 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.grid__ciudades{
+    margin-top: 3rem;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: v.$separacion;
+}
+
+.ciudades{
+    &__card{
+        border-radius: 0.5rem;
+        background-color: v.$blancoFondo;
+        box-shadow: v.$sombraBloque;
+        padding: 1.5rem;
+        border-bottom: 3px solid v.$azulClaro;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        &__info{
+            font-size: 1.6rem;
+            line-height: 1.2;
+            margin: 1rem 0;
+            @include m.desktop{
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__acciones{
+        input{
+            display: block;
+            opacity: 0;
+        }
+        label{
+            position: relative;
+            width: 48px;
+            height: 25px;
+            display: inline-block;
+            background: #666666;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+        }
+            
+        label:after{
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 18px;
+            height: 18px;	
+            background: #FFF;
+            border-radius: 50%;
+            box-shadow: 1px 3px 6px #666666;
+        }
+
+        input:checked + label{
+            background: #009900;
+        }
+
+        input:checked + label:after{
+            left: auto;
+            right: 2px;
+        }
+    }
+}

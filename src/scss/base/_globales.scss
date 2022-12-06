@@ -1,0 +1,100 @@
+@use "sass:math";
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: v.$fuente;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    position: relative;
+}
+p {
+    color: v.$negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 11;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: v.$fuente;
+    margin: 3.5rem 0;
+    text-align: center;
+    color: v.$asignar;
+}
+
+h1 {
+    font-weight: v.$black;
+    font-size: 2.6rem;
+    @include m.tablet{
+        font-size: 3.4rem;
+    }
+    @include m.bigScreen{
+        font-size: 3.8rem;
+    }
+    @include m.giant{
+        font-size: 5.6rem;
+    }
+}
+h2 {
+    font-weight: v.$bold;
+    font-size: 2.4rem;
+    @include m.tablet{
+        font-size: 3rem;
+    }
+    @include m.giant{
+        font-size: 4.6rem;
+    }
+}
+h3 {
+    font-weight: v.$regular;
+    font-size: 2rem;
+    @include m.tablet{
+        font-size: 2.8rem;
+    }
+    @include m.giant{
+        font-size: 3.8rem;
+    }
+}
+h4 {
+    font-size: 1.8rem;
+    @include m.tablet{
+        font-size: 2.2rem;
+    }
+    @include m.giant{
+        font-size: 3.2rem;
+    }
+}
+
+p{
+    font-size: 1.6rem;
+    @include m.tablet{
+        font-size: 1.8rem;
+    }
+    @include m.bigScreen{
+        font-size: 2rem;
+    }
+    @include m.giant{
+        font-size: 3.2rem;
+    }
+}

@@ -1,0 +1,410 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.ofertas{
+    margin-bottom: v.$separacion;
+    //min-height: 45vh;
+    h1{
+        margin: 5rem 0;
+    }
+    &__buscar{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto 1rem auto;
+        gap: 2rem;
+        background-color: v.$blancoFondo;
+        box-shadow: v.$sombraBloque;
+        @include m.tablet{
+            width: 65%;
+            margin: 0 auto 7rem auto;
+        }
+    }
+    &__input{
+        width: 100%;
+        border: 1px solid v.$gris;
+        border-radius: 5px;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        box-shadow: v.$sombraBloque;
+        @include m.tablet{
+            width: 80%;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: v.$sombraInterior;
+            caret-color: v.$azul;
+        }
+    }
+    &__value{
+        font-size: 1.4rem;
+        color: lighten(v.$grisOscuro, 10);
+    }
+    &__salario{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 1.5rem;
+        width: 90%;
+        margin: 0 auto;
+        gap: .5rem;
+        background-color: v.$blanco;
+        border-radius: .5rem;
+        box-shadow: v.$sombraBloque;
+        @include m.tablet{
+            width: 80%;
+            margin: 1rem auto;
+        }
+    }
+    &__range{
+        accent-color: v.$azul;
+        margin-bottom: .5rem;
+    }
+}
+
+.btn-volver{
+    @include m.boton(v.$azul, inline-block);
+}
+
+.btn-ver-mas{
+    @include m.boton(v.$asignar, block);
+    width: fit-content;
+    margin: v.$separacion auto;
+    &:hover{
+        background-color: v.$azulClaro;
+        transform: scale(1.1)
+    }
+}
+
+.btn-vacante{
+    @include m.boton(v.$asignar, block);
+    border-radius: 0;
+}
+
+.vacantes-index{
+    padding: math.div(v.$separacion, 2) 0;
+    margin: math.div(v.$separacion, 2) auto;
+    position: relative;
+    // background-color: lighten(v.$azulFondo, 9);
+    &::before {
+        background-color: v.$azulFondo;
+        content: "";
+        display: block;
+        height: 65%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    h2{
+        font-size: 2.8rem;
+        position: relative;
+        font-weight: v.$black;
+        text-align: left;
+        padding-left: 5rem;
+        width: 80%;
+        &::after {
+            background-color: v.$asignar;
+            content: "";
+            display: block;
+            height: 0.3rem;
+            left: 12%;
+            position: absolute;
+            bottom: 0;
+            width: 70vw;
+        }
+        @include m.telefono{
+            width: 100%;
+        }
+        @include m.tablet{
+            font-size: 4rem;
+        } 
+        @include m.giant{
+            font-size: 5rem;
+        } 
+    }
+
+    span{
+        text-transform: capitalize;
+    }
+}
+
+.ofertas-nav{
+    margin-bottom: v.$separacion;
+    nav{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: flex-start;
+        justify-items: center;
+        gap: 2rem;
+        @include m.tablet{
+            grid-template-columns: repeat(3, 1fr);
+            gap: math.div(v.$separacion, 2);
+        }
+        @include m.desktop{
+            gap: v.$separacion;
+        }
+
+        a{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .iconos{
+            width: 75%;
+            background: v.$asignar;
+            text-align: center;
+            padding: 1.2rem 0;
+            box-shadow: 3px 3px 5px #707070;
+            border-radius: 1rem;
+            height: 100%;
+            & p{
+                font-size: 1.8rem;
+                margin: 0;
+                color: v.$blanco;
+                text-transform: capitalize;
+            }
+
+            .fa{
+                color: v.$blanco !important;
+                
+                font-size: 2rem !important;
+            }
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.02);
+                background-color: v.$verde;
+            }
+            @include m.desktop{
+                padding: 3rem 0;
+                & p{
+                    font-size: 2.2rem;
+                }
+            }
+            @include m.bigScreen{
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                & p{
+                    padding: 0 1rem;
+                    font-size: 2.8rem;
+                }
+                .fa{
+                    font-size: 2.2rem !important;
+                }
+            }
+        }
+    }
+}
+
+.vacantes{
+    margin: v.$separacion auto;
+    span{
+        text-transform: capitalize;
+    }
+    .sin-ofertas{
+        background-color: v.$gris;
+        gap: v.$separacion;
+        width: 70%;
+        margin: auto;
+        margin-top: v.$separacion;
+        padding: 1.5rem 3rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        i, p{
+            color: v.$blanco;
+            font-weight: v.$bold;
+            text-align: center;
+        }
+        i{
+            font-size: 8rem;
+        }
+        p{
+            font-size: 4rem;
+        }
+    }
+}
+
+.grid-vacantes{
+    @include m.grid(1, 2rem);
+    justify-items: center;
+
+    @include m.tablet{
+        @include m.grid(2, 2rem);
+    }
+    @include m.desktop{
+        @include m.grid(3, 1.5rem);    
+    }
+    @include m.ultraWide{
+        @include m.grid(4, 3rem);    
+    }
+    @include m.giant{
+        @include m.grid(5, 3.2rem);
+    }
+
+    .vacante{
+        width: 30rem;
+        @include m.desktop{
+            width: 25rem;
+        }
+        @include m.ultraWide{
+            width: 30rem;
+        }
+        @include m.giant{
+            width: 35rem;
+        }
+    }
+}
+
+.grid-index-v{
+    @include m.grid(1, 0);
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+    @include m.telefono{
+        width: 80%;
+    }
+    @include m.tablet{
+        @include m.grid(2, 1rem);
+    }
+    @include m.desktop{
+        @include m.grid(3, 2rem);
+        width: 100%;
+    }
+    @include m.ultraWide{
+        @include m.grid(4, 2.2rem);
+    }
+}
+.vacante-index{
+    background-color: v.$blanco;
+}
+
+.vacante{
+    background-color: #eaeaea;
+    font-size: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-bottom: 0;
+    @include m.telefono{
+        width:30rem;
+    }
+    @include m.tablet{
+        width: auto;
+    }
+    @include m.desktop{
+        width: 25rem;
+    }
+    @include m.bigScreen{
+        width: 30rem;
+    }
+
+    &:nth-of-type(2){
+        display: none;
+    }
+    &:nth-of-type(3){
+        display: none;
+    }
+    &:nth-of-type(4){
+        display: none;
+    }
+   
+    @include m.tablet{
+        &:nth-of-type(2){
+            display: flex;
+        }
+    }
+    @include m.desktop{
+        &:nth-of-type(3){
+            display: flex;
+        }
+    }
+    @include m.ultraWide{
+        &:nth-of-type(4){
+            display: flex;
+        }
+    }
+    @include m.giant{
+        width: 40rem;
+    }
+    img{
+        object-fit: cover;
+        height: 20rem;
+        @include m.telefono{
+            height:25rem;
+        }
+    }
+    p{
+        padding: 1rem;
+        margin: auto;
+        span{
+            font-weight: v.$medium;
+            font-size: 1.8rem;
+            @include m.bigScreen{
+                font-size: 2.2rem;
+            }
+        }
+    }
+    a{
+        font-size: 1.8rem;
+    }
+    &:hover>.btn-vacante{
+        background-color: v.$azulClaro;
+    }
+}
+
+.top{
+    h1{
+        text-transform: capitalize;
+    }
+}
+
+.info-oferta{
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.85);
+    background-blend-mode: lighten;
+    margin-bottom: v.$separacion;
+    @include m.bigScreen{
+        padding: v.$separacion;
+        @include m.grid(2, 2rem);
+        place-items: center;
+    }   
+
+    img{
+        margin: auto;
+        max-width: 50rem;
+        box-shadow: 5px 5px 5px v.$gris;
+    }
+    p{
+        font-size: 1.4rem;
+        font-weight: v.$medium;
+        text-transform: capitalize;
+        overflow-wrap: break-word;
+        @include m.tablet{
+            font-size: 1.6rem;
+        }
+        @include m.desktop{
+            font-size: 2.2rem;
+        }
+    }
+    span{
+        font-weight: v.$bold;
+        color: v.$asignar;
+        text-transform: capitalize;
+    }
+}

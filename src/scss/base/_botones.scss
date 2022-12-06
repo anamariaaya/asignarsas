@@ -1,0 +1,193 @@
+@use "sass:math";
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.btn-contacto{
+    @include m.boton(v.$asignar, block);
+
+    @include m.tablet{
+        margin: 0 auto math.div(v.$separacion, 2) auto;      
+        width: 25%;        
+    }
+    &:hover{
+        background-color: v.$verde;
+    }
+}
+
+.btn-contacto-servicios{
+    @include m.boton(v.$asignar, block);
+    margin: 2rem auto;
+    padding: 1rem v.$separacion;
+    font-size: 1.4rem;
+    @include m.tablet{
+        margin: 2rem v.$separacion 2rem 0;
+        padding: 1rem 0.7rem;
+    }
+    @include m.desktop{
+        margin: 2rem v.$separacion;
+        padding: 1rem 3rem;
+        font-size: 1.6rem;
+    }
+    @include m.giant{
+        margin: v.$separacion v.$separacion *3;
+        font-size: 2.8rem;
+    }
+    &:hover{
+        background-color: v.$verde;
+    }
+}
+
+.btn-enviar{
+    @include m.boton(v.$verde, block);
+    border-radius: 2rem;
+    margin-inline-start: auto;
+}
+
+.btn-ver{
+    @include m.boton(v.$azulClaro, block);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    margin-inline-start: auto;
+}
+
+.btn-enviar-empleado{
+    @include m.boton(v.$azulClaro, block);
+    border-radius: 2rem;
+    margin: auto;
+}
+
+.btn-postularse{
+    @include m.boton(v.$asignar, block);
+    margin: 0 auto;
+    &:hover{
+        background-color: v.$verde;
+    }
+}
+
+.btn-auth, .btn-admin{
+    @include m.boton(darken(v.$azul, 15), flex);
+    margin: 2rem  auto;
+    width: auto;
+    justify-content: center;
+    &:hover{
+        background-color: v.$verde;
+    }
+    @include m.desktop{
+        width: 50%;
+    }
+}
+
+.btn-alert{
+    @include m.boton(darken(v.$rojo, 8), block);
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-weight: v.$regular;
+    &:hover{
+        background-color: lighten(v.$rojo, 2);
+    }
+}
+
+.btn-disabled{
+    background-color: v.$gris;
+    cursor: not-allowed !important;
+}
+
+.btn-volver, .btn-crear{
+    @include m.boton(v.$azulClaro, block);
+    margin: 2rem 0;
+    border-radius: .5rem;
+    width: fit-content;
+    &:hover{
+        background-color: v.$verde;
+    }
+    & i{
+        margin-right: .5rem;
+    }
+}
+
+.btn-eliminar{
+    background-color: #722323;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    display: block;
+    border: none;
+    margin-bottom: 1.2rem;
+    border-radius: 0 1rem 1rem 0;
+    transition: transform .2s ease;
+    
+    &:hover{
+        transform: scale(1.03);
+        cursor: pointer;
+        background-color: rgb(234, 38, 38);
+    }
+    &--usuario{
+        @extend .btn-eliminar;
+        margin-bottom: 2rem;
+        &:hover{
+            transform: none;
+        }    
+    }
+    &--interno{
+        @extend .btn-eliminar;
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        & i{
+            font-size: 2rem;
+        }
+    }
+    &--externo{
+        @extend .btn-eliminar;
+        border-radius: 0.5rem;
+        height: 100%;
+        width: 100%;
+        margin-top: 1.5rem;
+        @include m.desktop{
+            width: auto;
+            padding: 1rem 3rem;
+            margin: 0;
+        }
+        & i{
+            @include m.desktop{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.btn-actualizar{
+    @extend .btn-eliminar;
+    background-color: #3a8c0a;
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 100%;
+    @include m.desktop{
+        width: auto;
+        padding: 1rem 3rem;
+        margin: 0;
+    }
+    &:hover{
+        background-color: #56d204;
+    }
+    & i{
+        @include m.desktop{
+            font-size: 2rem;
+        }
+    }
+}
+
+.btn-buscar{
+    @extend .btn-ver;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: v.$sombraBloque;
+    border: 1.5px solid v.$azulClaro;
+    &:hover{
+        background-color: v.$verde;
+        border: 1.5px solid v.$verde;
+    }
+}

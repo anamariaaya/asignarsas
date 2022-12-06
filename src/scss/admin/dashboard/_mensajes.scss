@@ -1,0 +1,126 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.mensajes{    
+    margin: v.$separacion 0;
+
+    &__abrir{
+        text-decoration: none;
+        margin: 0;
+        color: v.$negro;
+        width: 100%;
+    }
+
+    &__flex{
+        display: flex;        
+    }
+
+    &__acciones{
+        @extend .mensajes__flex;
+        justify-content: space-between;
+        box-shadow: v.$sombraBloque;
+        border-radius: .5rem;
+        padding: 1rem 3rem;
+        border-bottom: .7rem solid v.$azulClaro;
+    }
+
+
+    .grid-inbox{
+        @include m.mensajes;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1fr 3fr 2fr 1fr;
+        padding:2rem 3rem;
+        border-radius: .5rem;
+        font-weight: v.$black;
+        align-items: center;
+        margin-bottom: 1.2rem;  
+        transition: transform .2s ease;
+        &:hover{
+            transform: scaleY(1.1);
+            cursor: pointer;
+        }      
+    }
+   
+    &__filtros{
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        @include m.tablet{
+            flex-direction: row;
+            text-align: left;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+        select{
+            all: unset;
+            background-color: v.$azulClaro;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            color: v.$blanco;
+            font-weight: v.$bold;
+            font-size: 1.4rem;
+            & option:disabled{
+                all: unset;
+                color: v.$grisOscuro;
+                background-color: v.$gris;
+            }
+        }
+    }
+    &__leidos, &__busqueda{
+        display: flex;
+    }
+
+    &__boton-filtro{
+        background-color: v.$asignar;
+        color: v.$blanco;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        border:none;
+        font-weight: v.$regular;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    
+    .leido{
+        background-color: lighten(v.$grisOscuro, 20%) !important;
+        font-weight: v.$medium !important;
+        border-left: 1.5rem solid v.$grisOscuro !important;
+    }
+}
+
+.nav-mensaje{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+    @include m.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.body-mensaje{
+    @include m.mensajes;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    margin: 7rem 0;
+    position: relative;
+    p{
+        font-weight: v.$bold;
+        color: v.$asignar;
+        overflow-wrap: break-word;
+        span{
+            font-weight: v.$medium;
+            color: v.$negro;
+            padding-left: 1rem;
+        }
+    }
+}

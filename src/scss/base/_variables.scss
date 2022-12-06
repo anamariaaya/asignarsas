@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+
+// Fuentes
+$fuente: 'Spartan', sans-serif;
+$fuenteIndex: 'Rubik', sans-serif;
+
+// Tamaño de Media Queries
+$mini: 280px;
+$telefono: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$bigScreen: 1250px;
+$ultraWide: 1440px;
+$giant: 2200px;
+
+// Colores
+$negro: #000000;
+$blanco: #FFFFFF;
+$blancoFondo: #f3f3f7;
+$grisOscuro: #333333;
+$gris: #ACACAC;
+$grisClaro: #C4C6B9;
+$azul: #00AACC;
+$asignar: #070056;
+$azulOscuro: #2A2D67;
+$azulClaro: #5388B1;
+$azulFondo:rgba(83, 136, 177, 0.5);
+$verde: #33A78B;
+$amarillo: #F2DB8F;
+
+//Sombra Neomorphic
+$sombraBloque: rgb(0 0 0 / 19%) 0px 0px 4px, rgb(0 0 0 / 20%) 0px 2px 4px;
+$sombraInterior:rgb(157, 167, 176) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.321) -3px -3px 6px 1px inset;
+$sombraInterior-dark: inset 3px 3px 6px darken(#333333, 10), inset -3px -3px 6px darken(#333333, 10);
+
+//alertas
+$verde-alerta: #09b328;
+$rojo: #a30606;
+
+$separacion: 5rem;
+
+// Fuentes
+
+$delgada: 300;
+$regular : 400;
+$medium: 500;
+$bold: 700;
+$black: 900

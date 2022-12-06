@@ -1,0 +1,81 @@
+@use "sass:math";
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    width: 100%;
+    margin: 4rem auto;
+    @include m.tablet{
+        width: 70%;
+    }
+    .form-campos{
+        @include m.desktop{
+            @include m.grid(2, 3rem);     
+        }   
+    }
+
+    label{
+        color: transparent;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+        @include m.desktop{
+            font-size: 1.6rem;
+        }
+    }
+    input:not([type=submit]), textarea{
+        border: 2px solid v.$azulClaro;
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+    textarea{
+        width: 100%;
+        min-height: 12rem;        
+    }
+
+    input, textarea{
+        caret-color: v.$azulClaro;
+        &::placeholder{
+            color: v.$asignar;
+            font-weight: v.$medium;
+        }
+        &::-webkit-input-placeholder{
+            color: v.$asignar;
+            font-weight: v.$medium;
+        }
+        &::-moz-placeholder{
+            color: v.$asignar;
+            font-weight: v.$medium;
+        }
+        &:-ms-input-placeholder{
+            color: v.$asignar;
+            font-weight: v.$medium;
+        }
+        &:focus{
+            outline: none !important;
+            border: 2px solid v.$asignar;
+            color: v.$asignar;
+            font-weight: v.$bold;
+        }
+    }
+
+    &.form-empleados{
+        width: 100%;
+        @include m.desktop{
+            width: 50%;
+        }
+        fieldset{
+            border-radius: 2rem;
+            padding: 1rem;
+            border: 2px solid v.$azulClaro;
+            @include m.desktop{
+                padding: 2rem;
+            }
+            p{
+                text-align: center;
+                font-weight: v.$bold;
+                color: v.$asignar;
+            }
+        }
+    }
+}

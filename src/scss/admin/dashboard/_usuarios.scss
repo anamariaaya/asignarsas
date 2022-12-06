@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.usuarios{
+    margin: v.$separacion 0;
+
+    &__flex{
+        display: flex;
+    }
+
+    &__grid{
+        @include m.mensajes;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 2rem 3rem;
+        border-radius: .5rem;
+    }
+    &__info{
+        font-weight: v.$medium;
+    }
+}
+
