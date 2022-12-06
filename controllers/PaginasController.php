@@ -160,24 +160,17 @@ class PaginasController{
 
     public static function SQREmpresa(Router $router){ 
         $router->render('paginas/SQR-Empresa', [
-            'titulo' => 'SQRs empresa',
+            'titulo' => 'SQRs Empresas',
         ]);
     }
 
     public static function SQREmpleado(Router $router){ 
         $router->render('paginas/SQR-Empleado', [
-            'titulo' => 'SQRs empleado',
+            'titulo' => 'SQRs Empleados',
         ]);
     }
 
     public static function politicas(Router $router){ 
         $router->render('paginas/politicas');
-    }
-
-    public static function prueba(Router $router){
-        $ciudades = Ciudades::all();
-        $router->render('paginas/prueba',[
-            'ciudades' => $ciudades
-        ]);
     }
 }

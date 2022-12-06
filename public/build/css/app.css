@@ -5262,6 +5262,12 @@ p {
   color: #070056;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .form-admin legend, .form-auth legend {
+    margin-top: 5rem;
+  }
 }
 .form-admin label, .form-auth label {
   font-weight: 700;
