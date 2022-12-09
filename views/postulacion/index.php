@@ -63,6 +63,19 @@
             placeholder="ciudad"
             >
 
+        <label for="estudios">Último nivel de estudios:</label>
+        <select id="estudios-candidato" name="estudios">
+            <option selected disabled>Seleccione</option>
+            <option value="primaria">Primaria</option>
+            <option value="secundaria">Secundaria</option>
+            <option value="tecnico">Técnico</option>
+            <option value="tecnologo">Tecnólogo</option>
+            <option value="profesional">Profesional</option>
+            <option value="especialziacion">Especialización</option>
+            <option value="maestria">Maestría</option>
+            <option value="doctorado">Doctorado</option>
+        </select>
+
         <label for="hdv">Hoja de vida:</label>
         <input
             type="file"

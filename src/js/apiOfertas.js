@@ -29,6 +29,7 @@ const edadCandidato = document.querySelector('#edad-candidato');
 const telefonoCandidato = document.querySelector('#telefono-candidato');
 const emailCandidato = document.querySelector('#email-candidato');
 const ciudadCandidato = document.querySelector('#ciudad-candidato');
+const estudiosCandidato = document.querySelector('#estudios-candidato');
 const hdvCandidato = document.querySelector('#hdv');
 const btnPostular = document.querySelector('#btn-postular');
 const candidato = {
@@ -40,6 +41,7 @@ const candidato = {
     telefono: '',
     email: '',
     ciudad: '',
+    estudios: '',
     hdv: '',
     idOferta: idURL,
     fechaRec: null
@@ -421,6 +423,7 @@ function leerPostulacion(){
         telefonoCandidato.addEventListener('blur', validarCandidato);
         emailCandidato.addEventListener('blur', validarCandidato);
         ciudadCandidato.addEventListener('blur', validarCandidato);
+        estudiosCandidato.addEventListener('change', validarCandidato);
         hdvCandidato.addEventListener('change', validarCandidato, false);
     }
 }
@@ -483,6 +486,7 @@ function llenarCandidato(){
         candidato.telefono = telefonoCandidato.value;
         candidato.email = emailCandidato.value;
         candidato.ciudad = ciudadCandidato.value;
+        candidato.estudios = estudiosCandidato.value;
         candidato.hdv = hdvCandidato.files[0];
     
     btnPostular.onclick= function(e){
@@ -493,7 +497,7 @@ function llenarCandidato(){
 }
 
 async function enviarCandidato(){
-    const {identificacion, nombre, apellido, edad, telefono, email, ciudad, hdv, idOferta} = candidato;
+    const {identificacion, nombre, apellido, edad, telefono, email, ciudad, estudios, hdv, idOferta} = candidato;
 
     const datos = new FormData();
     datos.append('identificacion', identificacion);
@@ -503,6 +507,7 @@ async function enviarCandidato(){
     datos.append('telefono', telefono);
     datos.append('email', email);
     datos.append('ciudad', ciudad);
+    datos.append('estudios', estudios);
     datos.append('hdv', hdv);
     datos.append('idOferta', idOferta);
 
@@ -514,10 +519,12 @@ async function enviarCandidato(){
             body: datos
         });
 
-        const resultado = await response.text();
+        let resultado = await response.text();
+        resultado = JSON.parse(resultado);        
+
         if(resultado.resultado){
             Swal.fire({
-                title: 'Postulación Enviado',
+                title: 'Postulación Enviada',
                 text: 'Pronto te contactaremos',
                 icon: 'success'
             }).then( () => {

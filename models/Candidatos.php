@@ -5,7 +5,7 @@ namespace Model;
 class Candidatos extends ActiveRecord{
     //Base de datos
     protected static $tabla = 'candidatos';
-    protected static $columnasDB = ['id', 'identificacion', 'nombre', 'apellido', 'edad', 'telefono', 'email', 'ciudad', 'hdv', 'idOferta', 'fechaRec'];
+    protected static $columnasDB = ['id', 'identificacion', 'nombre', 'apellido', 'edad', 'telefono', 'email', 'ciudad', 'estudios', 'hdv', 'idOferta', 'fechaRec'];
 
     public $id;
     public $identificacion;
@@ -15,6 +15,7 @@ class Candidatos extends ActiveRecord{
     public $telefono;
     public $email;
     public $ciudad;
+    public $estudios;
     public $hdv;
     public $idOferta;
     public $fechaRec;
@@ -29,6 +30,7 @@ class Candidatos extends ActiveRecord{
         $this->telefono = $args['telefono'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->ciudad = $args['ciudad'] ?? '';
+        $this->estudios = $args['estudios'] ?? '';
         $this->hdv = $args['hdv'] ?? '';
         $this->idOferta = $args['idOferta'] ?? '';
         $this->fechaRec = date('Y-m-d H:i:s');
@@ -59,6 +61,9 @@ class Candidatos extends ActiveRecord{
         }
         if(!$this->ciudad) {
             self::$alertas['error'][] = 'La ciudad es obligatoria';
+        }
+        if(!$this->estudios) {
+            self::$alertas['error'][] = 'Los estudios son obligatorios';
         }
         if(!$this->hdv) {
             self::$alertas['error'][] = 'Debes adjuntar la hoja de vida';

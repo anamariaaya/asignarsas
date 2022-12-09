@@ -2,6 +2,7 @@
 
 namespace Controllers;
 
+use Model\SQR;
 use MVC\Router;
 use Model\Ofertas;
 use Model\Ciudades;
@@ -158,9 +159,11 @@ class PaginasController{
         ]);
     }
 
-    public static function SQREmpresa(Router $router){ 
+    public static function SQREmpresa(Router $router){
+        $sqr = new SQR();
         $router->render('paginas/SQR-Empresa', [
             'titulo' => 'SQRs Empresas',
+            'sqr' => $sqr
         ]);
     }
 

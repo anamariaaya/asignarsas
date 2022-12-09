@@ -5,6 +5,7 @@ require_once __DIR__ . '/../includes/app.php';
 use MVC\Router;
 
 use Controllers\APIController;
+use Controllers\SQRController;
 use Controllers\AuthController;
 use Controllers\OfertasController;
 use Controllers\PaginasController;
@@ -28,13 +29,16 @@ $router->get('/vacante',[PaginasController::class, 'vacante']);
 $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 $router->post('/soluciones',[PaginasController::class, 'soluciones']);
 $router->get('/politicas',[PaginasController::class, 'politicas']);
-$router->get('/SQR-empresa',[PaginasController::class, 'SQREmpresa']);
 $router->get('/SQR-empleado',[PaginasController::class, 'SQREmpleado']);
 $router->get('/prueba', [PaginasController::class, 'prueba']);
 
 //Postulaciones
 $router->get('/postulacion', [AplicantesController::class, 'index']);
 $router->post('/api/candidatos', [AplicantesController::class, 'postular']);
+
+//SQR
+$router->get('/SQR-empresa', [SQRController::class, 'sqrEmpresa']);
+$router->post('/SQR-empresa', [SQRController::class, 'sqrEmpresa']);
 
 //API de ofertas
 $router->get('/api/ciudades', [APIController::class, 'ciudades']);
