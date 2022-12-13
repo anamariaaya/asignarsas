@@ -7,6 +7,7 @@ const ciudad = {
 
 const checkCiudad = document.querySelectorAll('.check-ciudad');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     leerCheckbox();
 });
