@@ -28,6 +28,12 @@ class PaginasController{
         ]);
     }
 
+    public static function brochure(Router $router){
+        $router->render('paginas/brochure',[
+            'titulo' => 'Nuestro Brochure'
+        ]);
+    }
+
     public static function nosotros(Router $router){
         $nosotros = true;
         

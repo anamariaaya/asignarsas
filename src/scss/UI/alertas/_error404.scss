@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.not-found{
+    background-image: url('../img/404fondo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    place-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4rem auto;
+    @include m.tablet{
+        grid-template-columns: 1fr 2fr;
+        width: 65%;
+    }
+    &__bloque{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include m.tablet{
+            height: 55vh;
+        }
+    }
+
+    &__img{
+        width: 35%;
+        @include m.tablet{
+            width: 100%;
+            height: inherit;
+        }
+    }
+
+    &__h1{
+        margin: 1rem;
+        @include m.tablet{
+            margin: 3.5rem 0;
+        }
+    }
+
+    &__h2{
+        width: 90%;
+        margin: 0;
+        font-size: 2rem;
+        @include m.tablet{
+            width: 75%;
+            margin: 3.5rem 0;
+            font-size: 2.4rem;
+        }
+    }
+}

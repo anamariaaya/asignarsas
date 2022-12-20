@@ -33,6 +33,8 @@
     </div>
 </main>
 
+<a href="/brochure" class="btn-ver--brochure">Conozca nuestro Brochure</a>
+
 <section class="contenedor tipo-servicio" id="seleccion">
     <div class="imagen-servicio left">
         <img src="/build/img/seleccionfondo.png" alt="Selección" loading="lazy">

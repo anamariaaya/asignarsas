@@ -30,7 +30,7 @@ $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 $router->post('/soluciones',[PaginasController::class, 'soluciones']);
 $router->get('/politicas',[PaginasController::class, 'politicas']);
 $router->get('/SQR-empleado',[PaginasController::class, 'SQREmpleado']);
-$router->get('/prueba', [PaginasController::class, 'prueba']);
+$router->get('/brochure', [PaginasController::class, 'brochure']);
 
 //Postulaciones
 $router->get('/postulacion', [AplicantesController::class, 'index']);

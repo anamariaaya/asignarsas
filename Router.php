@@ -35,7 +35,9 @@ class Router{
             //la URL existe
             call_user_func($fn, $this);
         } else{
-            echo 'No existe esta página';
+            //la URL no existe
+            //incluir el template 404error.php dentro de layouts/main-layout.php como el contenido
+            echo $this->render('/templates/404error');
         }
 
     }

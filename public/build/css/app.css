@@ -836,7 +836,7 @@ p {
   cursor: pointer;
 }
 
-.btn-ver, .btn-buscar {
+.btn-ver, .btn-buscar, .btn-ver--brochure {
   background-color: #5388B1;
   color: #FFFFFF;
   font-weight: bold;
@@ -851,8 +851,16 @@ p {
   -webkit-margin-start: auto;
           margin-inline-start: auto;
 }
-.btn-ver:hover, .btn-buscar:hover {
+.btn-ver:hover, .btn-buscar:hover, .btn-ver--brochure:hover {
   cursor: pointer;
+}
+.btn-ver--brochure {
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .btn-ver--brochure {
+    width: 50%;
+  }
 }
 
 .btn-enviar-empleado {
@@ -5943,5 +5951,70 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.not-found {
+  background-image: url("../img/404fondo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 4rem auto;
+}
+@media (min-width: 768px) {
+  .not-found {
+    grid-template-columns: 1fr 2fr;
+    width: 65%;
+  }
+}
+.not-found__bloque {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .not-found__bloque {
+    height: 55vh;
+  }
+}
+.not-found__img {
+  width: 35%;
+}
+@media (min-width: 768px) {
+  .not-found__img {
+    width: 100%;
+    height: inherit;
+  }
+}
+.not-found__h1 {
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .not-found__h1 {
+    margin: 3.5rem 0;
+  }
+}
+.not-found__h2 {
+  width: 90%;
+  margin: 0;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .not-found__h2 {
+    width: 75%;
+    margin: 3.5rem 0;
+    font-size: 2.4rem;
+  }
+}
+
+.brochure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
 }
 /*# sourceMappingURL=app.css.map */

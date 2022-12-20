@@ -48,6 +48,13 @@
     margin: 2rem auto;
     border-radius: 2rem;
     margin-inline-start: auto;
+    &--brochure{
+        @extend .btn-ver;
+        width: 90%;
+        @include m.tablet{
+            width: 50%;
+        }
+    }
 }
 
 .btn-enviar-empleado{
