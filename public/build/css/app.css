@@ -8,10 +8,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -46,12 +44,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -59,10 +54,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -79,13 +72,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -103,10 +93,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -156,14 +144,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -171,8 +155,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -181,8 +164,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -231,18 +213,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -265,10 +241,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -284,10 +258,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -302,10 +274,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -644,9 +614,6 @@ p {
 .dark-mode .ofertas__input::-moz-placeholder {
   color: #FFFFFF;
 }
-.dark-mode .ofertas__input:-ms-input-placeholder {
-  color: #FFFFFF;
-}
 .dark-mode .ofertas__input::placeholder {
   color: #FFFFFF;
 }
@@ -836,6 +803,18 @@ p {
   cursor: pointer;
 }
 
+.btn-pagos {
+  color: #33A78B !important;
+  border: 0.2rem solid #33A78B;
+  background-color: #FFFFFF;
+  padding: 0.5rem 2rem !important;
+  border-radius: 1rem;
+}
+.btn-pagos:hover {
+  background-color: #33A78B !important;
+  color: #FFFFFF !important;
+}
+
 .btn-ver, .btn-buscar, .btn-ver--brochure {
   background-color: #5388B1;
   color: #FFFFFF;
@@ -964,7 +943,6 @@ p {
   border-radius: 0.5rem;
   margin: 2rem 0;
   border-radius: 0.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1065,7 +1043,7 @@ p {
 @media (min-width: 768px) {
   .main-content {
     display: grid;
-    gap: 0;
+    gap: 5rem;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1739,7 +1717,6 @@ p {
   transition: 0.6s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .prev i, .next i {
@@ -1765,19 +1742,8 @@ p {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
@@ -2390,27 +2356,9 @@ p {
   display: block;
   list-style: none;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-animation: bubbles 2.5s linear;
-          animation: bubbles 2.5s linear;
+  animation: bubbles 2.5s linear;
   border-radius: 50%;
   z-index: -1;
-}
-@-webkit-keyframes bubbles {
-  0% {
-    transform: translateX(1000%) rotate(0deg) translateY(20px);
-  }
-  25% {
-    transform: translateX(750%) translateY(40px);
-  }
-  50% {
-    transform: translateX(500%) translateY(-50px);
-  }
-  75% {
-    transform: translateX(250%) translateY(45px);
-  }
-  100% {
-    transform: translateX(0) rotate(360deg) translateY(0);
-  }
 }
 @keyframes bubbles {
   0% {
@@ -2435,8 +2383,7 @@ p {
   background-color: #F2DB8F;
   width: 12rem;
   height: 12rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .circles .aybfondo:nth-of-type(2) {
   top: 12%;
@@ -2444,8 +2391,7 @@ p {
   background-color: rgba(83, 136, 177, 0.5);
   width: 5rem;
   height: 5rem;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 @media (min-width: 768px) {
   .circles .aybfondo:nth-of-type(2) {
@@ -2471,8 +2417,7 @@ p {
   background-color: #ACACAC;
   width: 10rem;
   height: 10rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .circles .aybfondo:nth-of-type(5) {
   top: 52%;
@@ -2494,8 +2439,7 @@ p {
   background-color: rgba(115, 158, 191, 0.5);
   width: 5rem;
   height: 5rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .circles .hotelfondo:nth-of-type(3) {
   top: 12%;
@@ -2503,8 +2447,7 @@ p {
   background-color: #f7e8b8;
   width: 10rem;
   height: 10rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .circles .hotelfondo:nth-of-type(4) {
   top: 72%;
@@ -2519,8 +2462,7 @@ p {
   background-color: #f7e8b8;
   width: 7rem;
   height: 7rem;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .circles .otrosfondo:nth-of-type(1) {
   top: 46%;
@@ -2528,8 +2470,7 @@ p {
   background-color: #F2DB8F;
   width: 12rem;
   height: 12rem;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 @media (min-width: 480px) {
   .circles .otrosfondo:nth-of-type(1) {
@@ -2568,8 +2509,7 @@ p {
   background-color: #f7e8b8;
   width: 10rem;
   height: 10rem;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 @media (min-width: 480px) {
   .circles .otrosfondo:nth-of-type(3) {
@@ -2589,8 +2529,7 @@ p {
   background-color: #c3c3c3;
   width: 7rem;
   height: 7rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 @media (min-width: 480px) {
   .circles .otrosfondo:nth-of-type(4) {
@@ -3016,8 +2955,7 @@ p {
   display: block;
   list-style: none;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-animation: burb 5s linear;
-          animation: burb 5s linear;
+  animation: burb 5s linear;
   border-radius: 50%;
   z-index: -1;
 }
@@ -3027,8 +2965,7 @@ p {
   background-color: rgba(242, 219, 143, 0.5);
   width: 7rem;
   height: 7rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 @media (min-width: 1024px) {
   .burbujas li:nth-of-type(1) {
@@ -3056,8 +2993,7 @@ p {
   background-color: rgba(83, 136, 177, 0.5);
   width: 3rem;
   height: 3rem;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 @media (min-width: 1024px) {
   .burbujas li:nth-of-type(2) {
@@ -3117,8 +3053,7 @@ p {
   background-color: rgba(172, 172, 172, 0.5);
   width: 5rem;
   height: 5rem;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 @media (min-width: 1024px) {
   .burbujas li:nth-of-type(4) {
@@ -3380,23 +3315,6 @@ p {
     height: 14rem;
   }
 }
-@-webkit-keyframes burb {
-  0% {
-    transform: translateY(1000%) rotate(0deg) translateX(15%);
-  }
-  25% {
-    transform: translateY(750%) translateX(-20%);
-  }
-  50% {
-    transform: translateY(500%) translateX(25%);
-  }
-  75% {
-    transform: translateY(250%) translateX(-15%);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-}
 @keyframes burb {
   0% {
     transform: translateY(1000%) rotate(0deg) translateX(15%);
@@ -3501,8 +3419,7 @@ p {
   height: 3rem;
   top: 12%;
   left: 27%;
-  -webkit-animation: circgris 5s linear infinite 1s;
-          animation: circgris 5s linear infinite 1s;
+  animation: circgris 5s linear infinite 1s;
 }
 @media (min-width: 480px) {
   .compania .grid-compania picture::before {
@@ -3536,8 +3453,7 @@ p {
   height: 5rem;
   bottom: 0%;
   right: 20%;
-  -webkit-animation: circverde 3.5s linear infinite 1s;
-          animation: circverde 3.5s linear infinite 1s;
+  animation: circverde 3.5s linear infinite 1s;
 }
 @media (min-width: 480px) {
   .compania .grid-compania picture::after {
@@ -3562,41 +3478,6 @@ p {
   .compania .grid-compania picture::after {
     width: 10rem;
     height: 10rem;
-  }
-}
-@-webkit-keyframes circgris {
-  0% {
-    transform: translateX(0%) translateY(450%);
-  }
-  10% {
-    transform: translateX(-40%) translateY(360%);
-  }
-  20% {
-    transform: translateX(-80%) translateY(270%);
-  }
-  30% {
-    transform: translateX(-60%) translateY(180%);
-  }
-  40% {
-    transform: translateX(-40%) translateY(90%);
-  }
-  50% {
-    transform: translateX(20%) translateY(0%);
-  }
-  60% {
-    transform: translateX(-40%) translateY(90%);
-  }
-  70% {
-    transform: translateX(-60%) translateY(180%);
-  }
-  80% {
-    transform: translateX(-80%) translateY(270%);
-  }
-  90% {
-    transform: translateX(-40%) translateY(360%);
-  }
-  100% {
-    transform: translateX(0%) translateY(450%);
   }
 }
 @keyframes circgris {
@@ -3632,41 +3513,6 @@ p {
   }
   100% {
     transform: translateX(0%) translateY(450%);
-  }
-}
-@-webkit-keyframes circverde {
-  0% {
-    transform: translateX(10%) translateY(-35%);
-  }
-  10% {
-    transform: translateX(-36%) translateY(9%);
-  }
-  20% {
-    transform: translateX(-72%) translateY(18%);
-  }
-  30% {
-    transform: translateX(-108%) translateY(27%);
-  }
-  40% {
-    transform: translateX(-144%) translateY(36%);
-  }
-  50% {
-    transform: translateX(-180%) translateY(45%);
-  }
-  60% {
-    transform: translateX(-140%) translateY(29%);
-  }
-  70% {
-    transform: translateX(-100%) translateY(13%);
-  }
-  80% {
-    transform: translateX(-60%) translateY(-3%);
-  }
-  90% {
-    transform: translateX(-20%) translateY(-19%);
-  }
-  100% {
-    transform: translateX(10%) translateY(-35%);
   }
 }
 @keyframes circverde {
@@ -4054,7 +3900,6 @@ p {
   display: block;
   border: none;
   border-radius: 0.5rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 5rem auto;
@@ -4622,10 +4467,6 @@ p {
   color: #070056;
   font-weight: 500;
 }
-.formulario input:-ms-input-placeholder, .formulario textarea:-ms-input-placeholder {
-  color: #070056;
-  font-weight: 500;
-}
 .formulario input::placeholder, .formulario textarea::placeholder {
   color: #070056;
   font-weight: 500;
@@ -5015,12 +4856,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: left;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     -webkit-user-select: contain;
        -moz-user-select: contain;
-        -ms-user-select: element;
             user-select: contain;
     padding: 1rem;
     width: 100%;
@@ -5881,19 +5720,7 @@ p {
 .modal-alerta__icono {
   font-size: 8rem;
   color: #de9560;
-  -webkit-animation: transform 3s ease-in-out infinite;
-          animation: transform 3s ease-in-out infinite;
-}
-@-webkit-keyframes transform {
-  0% {
-    transform: rotateY(360deg);
-  }
-  50% {
-    transform: scale(0deg);
-  }
-  100% {
-    transform: scale(360deg);
-  }
+  animation: transform 3s ease-in-out infinite;
 }
 @keyframes transform {
   0% {

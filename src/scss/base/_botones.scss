@@ -43,6 +43,18 @@
     margin-inline-start: auto;
 }
 
+.btn-pagos{
+    color: v.$verde !important;
+    border: .2rem solid v.$verde;
+    background-color: v.$blanco;
+    padding: .5rem 2rem !important;
+    border-radius: 1rem;
+    &:hover{
+        background-color: v.$verde !important;
+        color: v.$blanco !important;
+    }
+}
+
 .btn-ver{
     @include m.boton(v.$azulClaro, block);
     margin: 2rem auto;

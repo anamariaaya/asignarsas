@@ -1,6 +1,6 @@
 <header class="header">
     <div class="contenido-header">
-        <div class="barra contenedor">
+        <div class="barra">
             <a href="/">
                 <img src="/build/img/logo.svg" loading="lazy" alt="logotipo Asignar">
             </a>
@@ -11,6 +11,8 @@
 
             <div class="derecha">
                 <nav class="navegacion">
+                    <a class="btn-pagos" target="_blank" href="https://www.pagosvirtualesavvillas.com.co/personal/pagos/1685">Paga tu factura</a>
+
                     <a class="<?php echo isset($inicio) ? 'active' : ''; ?>" href="/">Inicio</a>
 
                     <a class="<?php pagina_actual('servicios'); ?>" href="/servicios">Servicios</a>

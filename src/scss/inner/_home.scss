@@ -4,7 +4,7 @@
 
 .main-content{
     @include m.tablet{
-        @include m.grid(3, 0);
+        @include m.grid(3, 5rem);
     }
 
     .enlaces-main{
