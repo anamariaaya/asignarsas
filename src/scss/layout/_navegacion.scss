@@ -104,6 +104,10 @@
     padding-bottom: 1rem;    
     border-bottom: 0.1rem solid v.$asignar;
     z-index: 11;
+    width: 90%;
+    @include m.bigScreen{
+        width: 100%;
+    }
 
     img{
         width: 10rem;

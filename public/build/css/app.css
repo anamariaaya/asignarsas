@@ -4723,6 +4723,12 @@ p {
   padding-bottom: 1rem;
   border-bottom: 0.1rem solid #070056;
   z-index: 11;
+  width: 90%;
+}
+@media (min-width: 1250px) {
+  .barra {
+    width: 100%;
+  }
 }
 .barra img {
   width: 10rem;
