@@ -79,6 +79,10 @@ web_modules/
 .env.production.local
 .env.local
 
+includes/.env
+
+composer.lock
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -134,3 +138,4 @@ dist
 
 # #src
 # /src
+composer.lock

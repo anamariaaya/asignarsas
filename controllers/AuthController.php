@@ -64,6 +64,7 @@ class AuthController{
         }       
     }
 
+    /*    
     public static function registro(Router $router) {
         $alertas = [];
         $usuario = new Usuarios;
@@ -112,4 +113,5 @@ class AuthController{
             'alertas' => $alertas
         ]);
     }
+    */
 }

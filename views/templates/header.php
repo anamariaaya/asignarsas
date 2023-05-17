@@ -17,7 +17,7 @@
 
                     <a class="<?php pagina_actual('servicios'); ?>" href="/servicios">Servicios</a>
 
-                    <a class="<?php pagina_actual('ofertas'); ?>" href="/ofertas">Ofertas Laborales</a>
+                    <!-- <a class="< ?php pagina_actual('ofertas'); ?>" href="/ofertas">Ofertas Laborales</a> -->
 
                     <a class="<?php pagina_actual('nosotros'); ?>" href="/nosotros">Nosotros</a>
 

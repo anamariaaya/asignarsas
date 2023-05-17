@@ -24,5 +24,5 @@
         <input type="submit" value="Iniciar Sesión" class="btn-form">
     </form>
 
-    <a href="/registro" class="btn-auth">¿No te has registrado? Crear Cuenta</a>
+    <!-- <a href="/registro" class="btn-auth">¿No te has registrado? Crear Cuenta</a> -->
 </main>

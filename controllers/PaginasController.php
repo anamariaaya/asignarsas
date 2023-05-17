@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Model\SQR;
 use MVC\Router;
-use Model\Ofertas;
+// use Model\Ofertas;
 use Model\Ciudades;
 use Model\Contactos;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -50,11 +50,11 @@ class PaginasController{
         ]);
     }
 
-    public static function ofertas(Router $router){
-        $router->render('paginas/ofertas', [
-            'titulo' => 'Ofertas Laborales',
-        ]);
-    }
+    // public static function ofertas(Router $router){
+    //     $router->render('paginas/ofertas', [
+    //         'titulo' => 'Ofertas Laborales',
+    //     ]);
+    // }
 
     public static function vacantes(Router $router){        
         $router->render('paginas/vacantes',[
