@@ -229,6 +229,7 @@
           position: absolute;
           padding: .5rem;
           background-color: lighten(v.$azulClaro, 25%);
+          transform: translate(-31%, 0);
           a{
             display: flex;
             align-items: center;

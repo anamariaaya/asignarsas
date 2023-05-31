@@ -1158,7 +1158,7 @@ p {
   .main-content .enlaces-main:hover .enlaces {
     flex-direction: row;
     justify-content: space-around;
-    gap: 0;
+    gap: 0.3rem;
   }
 }
 .main-content .enlaces-main:hover picture {
@@ -4857,6 +4857,7 @@ p {
     position: absolute;
     padding: 0.5rem;
     background-color: #abc5d9;
+    transform: translate(-31%, 0);
   }
   .navegacion .submenu a {
     display: flex;

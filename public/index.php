@@ -29,7 +29,6 @@ $router->get('/vacante',[PaginasController::class, 'vacante']);
 $router->get('/soluciones',[PaginasController::class, 'soluciones']);
 $router->post('/soluciones',[PaginasController::class, 'soluciones']);
 $router->get('/politicas',[PaginasController::class, 'politicas']);
-$router->get('/SQR-empleado',[PaginasController::class, 'SQREmpleado']);
 $router->get('/brochure', [PaginasController::class, 'brochure']);
 
 //Postulaciones
@@ -39,6 +38,9 @@ $router->post('/api/candidatos', [AplicantesController::class, 'postular']);
 //SQR
 $router->get('/SQR-empresa', [SQRController::class, 'sqrEmpresa']);
 $router->post('/SQR-empresa', [SQRController::class, 'sqrEmpresa']);
+
+$router->get('/SQR-empleado',[SQRController::class, 'sqrEmpleado']);
+$router->post('/SQR-empleado', [SQRController::class, 'sqrEmpleado']);
 
 //API de ofertas
 $router->get('/api/ciudades', [APIController::class, 'ciudades']);

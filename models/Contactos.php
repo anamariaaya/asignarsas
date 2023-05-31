@@ -30,25 +30,25 @@ class Contactos extends ActiveRecord{
 
     public function validar(){
         if(!$this->nombres){
-            self::$errores[] = 'Añade un nombre';
+            self::$alertas['error'][] = 'Añade un nombre';
         }
         if(!$this->apellidos){
-            self::$errores[] = 'Añade un apellido';
+            self::$alertas['error'][] = 'Añade un apellido';
 
         }if(!$this->ciudad){
-            self::$errores[] = 'Añade una ciudad';
+            self::$alertas['error'][] = 'Añade una ciudad';
 
         }if(!$this->correo){
-            self::$errores[] = 'Añade un correo';
+            self::$alertas['error'][] = 'Añade un correo';
 
         }if(!$this->celular){
-            self::$errores[] = 'Añade un número de celular';
+            self::$alertas['error'][] = 'Añade un número de celular';
 
         }if(!$this->mensaje){
-            self::$errores[] = 'Añade un mensaje';
+            self::$alertas['error'][] = 'Añade un mensaje';
         }
         
-        return self::$errores;
+        return self::$alertas;
     }
 
     public function mensajeVisto(){

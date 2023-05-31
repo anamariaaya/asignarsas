@@ -1,6 +1,5 @@
 //Variables para comprobación REGEX
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 const num = /^[0-9]+$/;
 
 //Variables para ciudades
@@ -47,7 +46,6 @@ const candidato = {
     fechaRec: null
 };
 
-
 document.addEventListener('DOMContentLoaded', () => {
     initApi();
 });
@@ -67,7 +65,7 @@ function currency(number) {
 //Api Ofertas
 async function consultaCiudades(){
     try{
-        const resultado = await fetch('http://localhost:3000/api/ciudades');
+        const resultado = await fetch('/api/ciudades');
         const datos = await resultado.json();
         mostrarCiudades(datos);
         tituloCiudad(datos);
@@ -140,7 +138,7 @@ function tituloCiudad(ciudades){
 
 async function consultaOfertas(){
     try{
-        const resultado = await fetch('http://localhost:3000/api/vacantes');
+        const resultado = await fetch('/api/vacantes');
         const datos = await resultado.json();
         ofertasIndex(datos);
         mostrarOfertas(datos);
@@ -434,8 +432,7 @@ function validarCandidato(e){
         const error = document.querySelector('.alerta__error');
         if(error){
             error.remove();
-        }
-       
+        }       
     } else {
         //console.log('No hay nada');
         mostrarError('Todos los campos son obligatorios');
@@ -479,15 +476,15 @@ function mostrarError(mensaje){
 }
 
 function llenarCandidato(){
-        candidato.identificacion = identificacion.value;
-        candidato.nombre = nombreCandidato.value;
-        candidato.apellido = apellidoCandidato.value;
-        candidato.edad = edadCandidato.value;
-        candidato.telefono = telefonoCandidato.value;
-        candidato.email = emailCandidato.value;
-        candidato.ciudad = ciudadCandidato.value;
-        candidato.estudios = estudiosCandidato.value;
-        candidato.hdv = hdvCandidato.files[0];
+    candidato.identificacion = identificacion.value;
+    candidato.nombre = nombreCandidato.value;
+    candidato.apellido = apellidoCandidato.value;
+    candidato.edad = edadCandidato.value;
+    candidato.telefono = telefonoCandidato.value;
+    candidato.email = emailCandidato.value;
+    candidato.ciudad = ciudadCandidato.value;
+    candidato.estudios = estudiosCandidato.value;
+    candidato.hdv = hdvCandidato.files[0];
     
     btnPostular.onclick= function(e){
         e.preventDefault();
@@ -498,8 +495,8 @@ function llenarCandidato(){
 
 async function enviarCandidato(){
     const {identificacion, nombre, apellido, edad, telefono, email, ciudad, estudios, hdv, idOferta} = candidato;
-
     const datos = new FormData();
+
     datos.append('identificacion', identificacion);
     datos.append('nombre', nombre);
     datos.append('apellido', apellido);
@@ -512,7 +509,7 @@ async function enviarCandidato(){
     datos.append('idOferta', idOferta);
 
     try{
-        const url = 'http://localhost:3000/api/candidatos';
+        const url = '/api/candidatos';
 
         const response = await fetch(url, {
             method: 'POST',
@@ -543,4 +540,3 @@ async function enviarCandidato(){
         });   
     }
 }
-

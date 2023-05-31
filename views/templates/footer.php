@@ -11,8 +11,8 @@
                     </div>                        
                     <div class="sedes">
                         <p>Sede Rionegro:</p>
-                        <p>Cra. 50 # 45-05</p>
-                        <p>Bloque 3, Local 3. C.C. Córdoba</p>
+                        <p>Cra 48a # 49-05</p>
+                        <p>Centro comercial Colonial piso 5 local 504</p>
                     </div>
                     <div class="sedes">
                         <p>Sede Bogotá:</p>
@@ -39,14 +39,14 @@
         <div class="info-contacto">
             <a href="tel:6043220310">Línea IP Nacional: (57) 604 322 03 10</a>
             <div class="redes">
-                <a href="">
+                <a href="https://www.instagram.com/asignar_sas/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/asignartemporal" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="">
-                    <i class="fa-brands fa-twitter"></i>
+                <a href="https://www.linkedin.com/company/asignar-sas/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
         </div>

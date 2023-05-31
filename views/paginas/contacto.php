@@ -4,7 +4,6 @@
 
 <section class="contenedor bottom">
     <p>Si tienes alguna pregunta, ¡No dudes en contactarnos! Nos encanta escuchar a nuestros empleados y queremos asegurarnos de resolver tus inquietudes.</p>
-    <a class="btn-contacto" href="/soluciones">Si eres empresa da click aquí</a>
 </section>
 
 <section class="contenedor">

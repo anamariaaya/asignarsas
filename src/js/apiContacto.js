@@ -12,7 +12,6 @@ const contacto = {
 }
 
 const btnEnviar = document.querySelector('#enviar');
-
 const formulario = document.querySelector('#enviar-mensaje');
 const fieldset = document.querySelector('#fieldset');
 
@@ -24,11 +23,10 @@ const correo = document.querySelector('#correoInput');
 const celular = document.querySelector('#celularInput');
 const mensaje = document.querySelector('#mensajeInput');
 
-
 // //Formatear la fecha
 function padTo2Digits(num) {
     return num.toString().padStart(2, '0');
-  }
+}
 
 const fecha = new Date();
 const mes = padTo2Digits(fecha.getMonth() + 1);
@@ -41,9 +39,7 @@ const fechaFormateada = `${year}-${mes}-${dia} ${hora}:${minutos}:${segundos}`;
 
 contacto.fecha = fechaFormateada;
 
-
 const er = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 const num = /^[0-9]+$/;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -58,7 +54,6 @@ function eventListeners() {
     correoInput.addEventListener('blur', validarFormulario);
     celularInput.addEventListener('blur', validarFormulario);
     mensajeInput.addEventListener('input', validarFormulario);
-
 }
 
 function iniciarForm() {
@@ -94,10 +89,10 @@ function validarFormulario(e) {
     if(er.test(correoInput.value) && nombresInput.value !== '' && apellidosInput.value !== '' && ciudadInput.value !== '' && celularInput.value !== '' && mensajeInput.value !== ''){
         btnEnviar.disabled = false;
         btnEnviar.classList.remove('btn-disabled');
-        console.log('se puede enviar');
+        // console.log('se puede enviar');
         llenarMensaje();
     } else{
-        console.log('No se puede enviar');
+        // console.log('No se puede enviar');
     }
 }
 
@@ -113,7 +108,6 @@ function mostrarError(mensaje){
 }
 
 function llenarMensaje(){
-
     contacto.nombres = nombres.value;
     contacto.apellidos = apellidos.value;
     contacto.ciudad = ciudad.value;
@@ -127,11 +121,10 @@ function llenarMensaje(){
     }
 }
 
-
 async function apiContacto() {
     const {nombres, apellidos, ciudad, correo, celular, mensaje, estado, fecha} = contacto;
-
     const datos = new FormData();
+
     datos.append('nombres', nombres);
     datos.append('apellidos', apellidos);
     datos.append('ciudad', ciudad);
@@ -142,7 +135,7 @@ async function apiContacto() {
     datos.append('fecha', fecha);
 
     try {
-        const url = 'http://localhost:3000/api/mensaje';
+        const url = '/api/mensaje';
         
         const respuesta = await fetch(url, {
             method: 'POST',
@@ -162,7 +155,7 @@ async function apiContacto() {
         };
 
     } catch(error) {
-        console.log(error);
+        // console.log(error);
         Swal.fire({
             title: 'Error',
             text: 'Mensaje no enviado. Intenta de nuevo',

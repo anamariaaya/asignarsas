@@ -28,7 +28,7 @@
                         </div>
                     </div>
 
-                    <div id="pqr" class="<?php pagina_actual('SQR'); ?> submenu-btn" >SQRs
+                    <div id="pqr" class="<?php pagina_actual('SQR'); ?> submenu-btn" >SQR
                         <div class="submenu" id="menu-pqr">
                             <a href="/SQR-empresa">&raquo; SQR Empresas</a>
                             <a href="/SQR-empleado">&raquo; SQR Empleados</a>

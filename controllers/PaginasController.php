@@ -4,12 +4,10 @@ namespace Controllers;
 
 use Model\SQR;
 use MVC\Router;
-// use Model\Ofertas;
+use Model\Ofertas;
 use Model\Ciudades;
 use Model\Contactos;
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\PHPMailer;
-
 
 class PaginasController{
     public static function index(Router $router){
@@ -50,11 +48,11 @@ class PaginasController{
         ]);
     }
 
-    // public static function ofertas(Router $router){
-    //     $router->render('paginas/ofertas', [
-    //         'titulo' => 'Ofertas Laborales',
-    //     ]);
-    // }
+    public static function ofertas(Router $router){
+        $router->render('paginas/ofertas', [
+            'titulo' => 'Ofertas Laborales',
+        ]);
+    }
 
     public static function vacantes(Router $router){        
         $router->render('paginas/vacantes',[
@@ -68,7 +66,6 @@ class PaginasController{
 
     public static function soluciones(Router $router){ 
         $mensaje = null;
-        
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             $respuestas = $_POST['contacto'];
@@ -85,6 +82,7 @@ class PaginasController{
             //Configurar el contenido del Email
             $mail->setFrom('gerenciaop@asignar.com.co');//La persona que nos envía el email.
             $mail->addAddress('gerenciaop@asignar.com.co', 'Contacto Comercial'); //La dirección donde se recibirá el email y opcional el nombre.
+            $mail->addAddress('rtangarife@gmail.com', 'Control TIC'); //La dirección donde se recibirá el email y opcional el nombre.
             $mail->Subject = 'Nuevo Contacto empresarial';
 
             //Habilitar HTML
@@ -165,19 +163,19 @@ class PaginasController{
         ]);
     }
 
-    public static function SQREmpresa(Router $router){
-        $sqr = new SQR();
-        $router->render('paginas/SQR-Empresa', [
-            'titulo' => 'SQRs Empresas',
-            'sqr' => $sqr
-        ]);
-    }
+    // public static function SQREmpresa(Router $router){
+    //     $sqr = new SQR();
+    //     $router->render('paginas/SQR-empresa', [
+    //         'titulo' => 'SQR Empresas',
+    //         'sqr' => $sqr
+    //     ]);
+    // }
 
-    public static function SQREmpleado(Router $router){ 
-        $router->render('paginas/SQR-Empleado', [
-            'titulo' => 'SQRs Empleados',
-        ]);
-    }
+    // public static function SQREmpleado(Router $router){ 
+    //     $router->render('paginas/SQR-empleado', [
+    //         'titulo' => 'SQR Empleados',
+    //     ]);
+    // }
 
     public static function politicas(Router $router){ 
         $router->render('paginas/politicas');

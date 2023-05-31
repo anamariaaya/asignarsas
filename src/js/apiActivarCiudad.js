@@ -7,7 +7,6 @@ const ciudad = {
 
 const checkCiudad = document.querySelectorAll('.check-ciudad');
 
-
 document.addEventListener('DOMContentLoaded', () => {
     leerCheckbox();
 });
@@ -21,27 +20,27 @@ function leerCheckbox() {
 }
 
 function guardarSeleccion(e) {
-        ciudad.id = e.target.id;
-        ciudad.nombre = e.target.dataset.nombre;
-        if(e.target.value === '1'){
-            ciudad.activa = '0';
-        } else {
-            ciudad.activa = '1';
-        }
+    ciudad.id = e.target.id;
+    ciudad.nombre = e.target.dataset.nombre;
+    if(e.target.value === '1'){
+        ciudad.activa = '0';
+    } else {
+        ciudad.activa = '1';
+    }
 
     enviarSeleccion();
 }
 
 async function enviarSeleccion() {
     const { id, nombre, activa } = ciudad;
-
     const infoCiudad = new FormData();
+    
     infoCiudad.append('id', id);
     infoCiudad.append('nombre', nombre);
     infoCiudad.append('activa', activa);
 
     try{
-        const url = 'http://localhost:3000/api/ciudad';
+        const url = '/api/ciudad';
 
         const respuesta = await fetch(url, {
             method: 'POST',

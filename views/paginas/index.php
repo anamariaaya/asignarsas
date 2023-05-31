@@ -18,7 +18,7 @@
         <div class="enlaces">
             <a href="/brochure">Ver brochure</a>
             <a href="/soluciones">Contactar</a>
-            <a href="https://www.asignar.com.co/_admin/">Ingreso Empresas</a>
+            <a href="https://www.asignar.com.co/_admin/">Ingreso empresas cliente</a>
         </div>
         <div class="blend-main">
             <picture>
@@ -66,14 +66,14 @@
     </div>
 </section>
 
-<!-- <section class="contenedor vacantes-index">
+<section class="contenedor vacantes-index">
     <h2>Ofertas Laborales</h2>
     
     <div class="grid-index-v">
     </div>
 
     <a href="/ofertas" class="btn-ver-mas">Ver todas las ofertas</a>
-</section> -->
+</section>
 
 <section class="contenedor valor-corporativo">
     <h2>Valores Corporativos</h2>
